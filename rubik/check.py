@@ -1,6 +1,7 @@
-import rubik.cube as rubik
+#import rubik.cube as rubik
 
 def _check(parms):
+    forbiddenchars = '`~!@#$%^&*()-_=+[]{}\|";:?/.>,<\''
     result={}
     encodedCube = parms.get('cube',None)  
     numOfUniqueChars = set(encodedCube)     
@@ -25,7 +26,11 @@ def _check(parms):
         result['status'] = 'error: cube requires more unique chars (exactly 6 are required)' 
         
     elif(' ' in encodedCube ):
-        result['status'] = 'error: cube has white space'  
+        result['status'] = 'error: cube has white space'
+    
+    elif any(c in forbiddenchars for c in encodedCube):
+        result['status'] = 'error: cube cannot contain chars including:`~!@#$%^&*()-_=+[]{}\|";:?/.>,<\''  
+      
         
     else:
         result['status'] = 'ok'

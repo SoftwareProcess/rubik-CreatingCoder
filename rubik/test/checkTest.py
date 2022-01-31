@@ -3,7 +3,7 @@ import rubik.check as check
 
 class CheckTest(TestCase):
         
-     #############Start of Happy Tests########################   
+#############Start of Happy Tests########################   
         
     def test_check_char_ShouldReturnOkOnSolvedCube(self):
         parm = {'op':'check',
@@ -242,7 +242,7 @@ class CheckTest(TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube must 6 unique centers')  
       
-    #Test for when cube is not a str value 
+    #Test if cube is string or not
     def test_check_IsntString(self):
         parm = {'op':'check',
                 'cube': 2 }

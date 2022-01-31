@@ -3,6 +3,7 @@
 #Shane Morgan
 #szm0152@auburn.edu
 #Behold, my if-elif-else statements
+#I am but a humble Java user in search of a switch statement in this strange land of python
 
 def _check(parms):
     #String that has chars 

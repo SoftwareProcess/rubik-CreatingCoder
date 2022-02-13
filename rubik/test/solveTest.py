@@ -1,6 +1,18 @@
 import unittest
 import rubik.solve as solve
 
+#Dev Strat
+#
+#    Validate parms
+#    Load parms['cube'] into cube model
+#    rotate cube
+#    serialize cube in string
+#    return str + status of 'ok'
+
+
+
+
+
 class Test(unittest.TestCase):
 
 
@@ -27,12 +39,8 @@ class Test(unittest.TestCase):
         
         #extracts data from status, or returns none
         status = result.get('status', None)
-        
-        
-        
-        
-        
-        cubeAfter = result.get('cube', none)
+             
+        cubeAfter = result.get('cube', None)
         
         # checks that status is equal to 'ok'
         self.assertEqual(status, 'ok')

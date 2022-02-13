@@ -6,8 +6,13 @@ class Cube:
     '''
 
 # methods: instantiate:  inputs no input, out empty instance of cube
-#          load
-#          get
+#          load : takes serialized string and loads it into the cube
+#          get : takes content of the cube and returns it as a string
+
+
+#Load cube
+#Rotate cube
+#Extract cube===
 
     #empty cube
     def __init__(self):   #, cube

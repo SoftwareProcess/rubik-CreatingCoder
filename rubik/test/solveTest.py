@@ -4,8 +4,6 @@ import rubik.solve as solve
 class Test(unittest.TestCase):
 
 
-#Interface Analysis
-
 
 
     def setUp(self):
@@ -15,8 +13,31 @@ class Test(unittest.TestCase):
         pass
 
 
-
-
+    def test_solve_num_ShouldReturnOkOnSolvedCube(self):
+        #args to be passed to solve()
+        parm = {'op':'solve',
+                'rotate': 'R',
+                'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'}
+        
+        #returns parms from solve()
+        result = solve._solve(parm)
+        
+        #checks to see for status
+        self.assertIn('status', result)
+        
+        #extracts data from status, or returns none
+        status = result.get('status', None)
+        
+        
+        
+        
+        
+        cubeAfter = result.get('cube', none)
+        
+        # checks that status is equal to 'ok'
+        self.assertEqual(status, 'ok')
+        
+        self.assertEqual(cubeAfter, 'ggyggyggyrrrrrrrrrwbbwbbwbbooooooooowwgwwgwwgyybyybyyb')
 
 
 

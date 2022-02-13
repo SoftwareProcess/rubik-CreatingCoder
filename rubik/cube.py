@@ -3,7 +3,8 @@ class Cube:
     Rubik's cube
     '''
 
-    def __init__(self):
-        pass
+   # methods: instantiate:  inputs no input, out empty instance of cube
+   #          load
+   #          get
 
  

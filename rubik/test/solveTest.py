@@ -25,54 +25,12 @@ class Test(unittest.TestCase):
         pass
 
 
-    def test_solve_num_ShouldReturnOkOnSolvedCube(self):
-        #args to be passed to solve()
-        parm = {'op':'solve',
-                'rotate': 'R',
-                'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'}
-        
-        #returns parms from solve()
-        result = solve._solve(parm)
-        
-        #checks to see for status
-        self.assertIn('status', result)
-        
-        #extracts data from status, or returns none
-        status = result.get('status', None)
-             
-        cubeAfter = result.get('cube', None)
-        
-        # checks that status is equal to 'ok'
-        self.assertEqual(status, 'ok')
-        
-        self.assertEqual(cubeAfter, 'ggyggyggyrrrrrrrrrwbbwbbwbbooooooooowwgwwgwwgyybyybyyb')
 
 
 
+    #@unittest.skip('skipping this test until cube model is complete')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @unittest.skip('skipping this test until cube model is complete')
-    #Example Red light test
-    #clockwise turn 
-    def test_solve_ShouldRotateValidNominalCubeF(self):
+    def test_solve_ShouldRotateValidNominalCube_Front(self):
         
         #Here are the actual items
         inputDict = {}
@@ -90,23 +48,217 @@ class Test(unittest.TestCase):
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
 
-    @unittest.skip('skipping this test until cube model is complete')
-    #Front prime test, double check for valid string
-    def test_solve_ShouldRotateValidNominalCube_F_Prime(self):
+    
+    
+        
+        
+    def test_solve_ShouldRotateValidNominalCube_FrontPrime(self):
         
         #Here are the actual items
-        inputDict = {}   
-        inputDict['cube'] = 'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb'
-        inputDict['rotate'] = 'F'
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'f'
         inputDict['op'] = 'solve'
         
         #Here are the expected results
         expectedResult = {}
-        expectedResult['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        expectedResult['cube'] = 'gyrgbybwbgogrrrybwogrbgooggbwowoywoywwybygwoyorrbwyrrb'
         expectedResult['status'] = 'ok'
         
         actualResult = solve._solve(inputDict)
         
         self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
         self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
     
+        
+    def test_solve_ShouldRotateValidNominalCube_Back(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'B'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'bggwbybyrwoborrybroboggggorywoworworgrwbygyyoyrgbwybww'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+    
+        
+    def test_solve_ShouldRotateValidNominalCube_BackPrime(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'b'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'bggwbybyrwoworwybyroggggoborwororborwwbbygyyoyrgbwywrg'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))   
+        
+        
+    def test_solve_ShouldRotateValidNominalCube_Right(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'R'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'bggwbybybyowbrowrgogrggoyggbwoworworwwgbyyyyryrobwbrro'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+        
+    
+    def test_solve_ShouldRotateValidNominalCube_RightPrime(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'r'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'bgywbgbyogrworbwoybgrygogggbwoworworwwobybyyoyrgbwyrrr'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        
+   
+    def test_solve_ShouldRotateValidNominalCube_Left(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'L'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'wggbbyyyrwogorrybwogrbgbogywwboowrrogwyoygryobrgwwybrb'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+    
+    
+    def test_solve_ShouldRotateValidNominalCube_LeftPrime(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'l' #lowercase l in eclipse is weird
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'yggbbyryrwogorrybwogybgbogworrwoobwwbwywygbyogrgowyrrb'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+        
+        
+    def test_solve_ShouldRotateValidNominalCube_Up(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'U'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'wogwbybyrogrorrybwbwobgooggbggworworybwyywogyyrgbwyrrb'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+        
+        
+    
+    def test_solve_ShouldRotateValidNominalCube_UpPrime(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'u'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'bwowbybyrbggorrybwwogbgooggogrworworygowyywbyyrgbwyrrb'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+        
+    def test_solve_ShouldRotateValidNominalCube_Down(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'D'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'bggwbyworwogorrbyrogrbgoybwbwoworoggwwybygyyorbyrwrbyg'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status')) 
+        
+        
+    def test_solve_ShouldRotateValidNominalCube_DownPrime(self):
+        
+        #Here are the actual items
+        inputDict = {}
+        inputDict['cube'] = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        inputDict['rotate'] = 'd'
+        inputDict['op'] = 'solve'
+        
+        #Here are the expected results
+        expectedResult = {}
+        expectedResult['cube'] = 'bggwbyybwwogorroggogrbgoworbwoworbyrwwybygyyogybrwrybr'
+        expectedResult['status'] = 'ok'
+        
+        actualResult = solve._solve(inputDict)
+        
+        self.assertEqual(expectedResult.get('cube'), actualResult.get('cube'))
+        self.assertEqual(expectedResult.get('status'), actualResult.get('status'))
+        

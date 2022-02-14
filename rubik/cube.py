@@ -18,18 +18,21 @@ class Cube:
     def __init__(self):   #, cube
         # input parameter: None
         # Output parameter: empty instance of cube
-       
-        #self.cube = cube
         
-       pass
+        #self.cube = cube
+        #self.rotation = rotation
+        #maybe have finished cube?
+        
+        pass
     
        
     
     def load(self):
         #takes serialized string and loads it into the cube
-        encodedCube = Cube(parms.get('cube', None))
+        
+        #encodedCube = Cube(parms.get('cube', None))
         #encoded cube is set to string with values 
-        pass
+        #return encodedCube
         
         
         
@@ -44,6 +47,6 @@ class Cube:
 
         
         
-    
+   
 
 

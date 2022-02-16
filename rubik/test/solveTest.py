@@ -24,12 +24,21 @@ class Test(unittest.TestCase):
     
     def test_solve_ShouldRotateValidNominalCube_Front(self):
     
-        parm = {'op':'check',
-                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
+        parm = {'op':'solve',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
+                'rotate':'F'
+        }
+        
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'ok')
+        
+        
+        # result = solve._solve(parm)
+        # self.assertIn('status', result)
+        # status = result.get('status', None)
+        # self.assertEqual(status, 'ok')
     
     
     

@@ -25,7 +25,7 @@ class Test(unittest.TestCase):
     def test_solve_ShouldRotateValidNominalCube_Front(self):
     
         parm = {'op':'solve',
-                'cube':'bbbbbbbbbrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
                 'rotate':'F'
         }
         

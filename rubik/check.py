@@ -1,4 +1,4 @@
-import rubik.cube as rubik
+#import rubik.cube as rubik
 
 #Shane Morgan
 #szm0152@auburn.edu

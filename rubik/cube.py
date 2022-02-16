@@ -1,10 +1,11 @@
-
+from rubik.check import *
 
 class Cube:
-    '''
-    Rubik's cube
-    '''
 
+    
+    
+    
+    
 # methods: instantiate:  inputs no input, out empty instance of cube
 #          load : takes serialized string and loads it into the cube
 #          get : takes content of the cube and returns it as a string
@@ -12,41 +13,62 @@ class Cube:
 
 #Load cube
 #Rotate cube
-#Extract cube===
+#Extract cube
 
-    #empty cube
-    def __init__(self):   #, cube
+    #empty cube, constructor in python essentially
+    def __init__(self, cubeStr):   
         # input parameter: None
         # Output parameter: empty instance of cube
+        self.cube = cube
         
-        #self.cube = cube
         #self.rotation = rotation
-        #maybe have finished cube?
         
-        pass
-    
-       
-    
-    def load(self):
-        #takes serialized string and loads it into the cube
-        
-        #encodedCube = Cube(parms.get('cube', None))
-        #encoded cube is set to string with values 
-        #return encodedCube
-        
-        
-        
-        
-        
-        
-        
-    
-    def get(self):
-        #takes contest of cube and returns it as str
-        pass
 
         
+    
+    def load(self, cube):
+        result = check._check(parms)
         
+        if(result == 'ok'):
+            
+            self.cube = parms.get('cube', None)
+
+            return cubeStr
+        
+        else: return "error"
+    
+    
+    
+
+    
+    #
+    #
+    #
+    # def get(self):
+    #     #takes contest of cube and returns it as str
+    #     pass
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        
+    
    
 
 

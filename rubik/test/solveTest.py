@@ -62,7 +62,20 @@ class Test(unittest.TestCase):
                 'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         updatedParms = {
-                'status':'eror: invalid rotation'
+                'status':'error: invalid rotation'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
+        
+        
+    def test_solve_ShouldRotateValidNominalCube_RightPrime(self):
+        parms = {'op':'solve',
+                 'rotate':'r',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        }
+        updatedParms = {
+                'cube':'',
+                'status':'ok'
         }
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)

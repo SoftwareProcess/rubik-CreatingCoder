@@ -37,7 +37,7 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         #self.assertIn('status', result)
         #status = result.get('status', None)
-        self.assertEqual(encodedCube, 'bbwbbwbbwrrrrrrrrryggyggyggoooooooooyybyybyybwwgwwgwwg')
+        self.assertEqual(encodedCube, 'cube:''bbwbbwbbwrrrrrrrrryggyggyggoooooooooyybyybyybwwgwwgwwg')
     
     
     

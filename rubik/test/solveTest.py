@@ -55,10 +55,22 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
         
-        
+    #Rotate contains letter for rotation that isn't recoginized   
     def test_solve_ErrorMsgForInvalidRotation(self):
         parms = {'op':'solve',
                  'rotate':'z',
+                'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        }
+        updatedParms = {
+                'status':'error: invalid rotation'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
+        
+     #Rotate contains letter for rotation that isn't recoginized   
+    def test_solve_ErrorMsgForInvalidRotationMultiple(self):
+        parms = {'op':'solve',
+                 'rotate':'Rzr',
                 'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         updatedParms = {

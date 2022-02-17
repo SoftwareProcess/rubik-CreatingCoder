@@ -26,7 +26,7 @@ class Test(unittest.TestCase):
     
         parms = {'op':'solve',
                 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
-                'rotate':'R'
+                'rotate':'F'
         }
         
         ##checks that status is ok

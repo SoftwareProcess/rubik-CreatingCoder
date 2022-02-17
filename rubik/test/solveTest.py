@@ -71,10 +71,10 @@ class Test(unittest.TestCase):
     def test_solve_ShouldRotateValidNominalCube_RightPrime(self):
         parms = {'op':'solve',
                  'rotate':'r',
-                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+                'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         updatedParms = {
-                'cube':'',
+                'cube':'ggbggbggbrrrrrrrrrgbbgbbgbbooooooooowwywwywwyyywyywyyw',
                 'status':'ok'
         }
         encodedCube = solve._solve(parms)

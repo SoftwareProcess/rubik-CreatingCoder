@@ -49,7 +49,7 @@ class Test(unittest.TestCase):
     
     
     
-    def test_solve_ShouldRotateValidNominalCube_Right_ExampleFromSlide(self):
+    def test_solve_ShouldRotateValidNominalCube_Right_Twice(self):
         parms = {'op':'solve',
                  'rotate':'RR',
                 'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'

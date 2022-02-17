@@ -35,11 +35,13 @@ def _solve(parms):
             parms['status'] = 'ok'
         
         #removes op and rotate key value from dict
-            del parms['op']
-            del parms['rotate']
+        #else
+            
+            
     
         
-    
+    del parms['op']
+    del parms['rotate']
     #must return dictionary
     return parms
 

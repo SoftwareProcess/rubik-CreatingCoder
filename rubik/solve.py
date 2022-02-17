@@ -23,9 +23,13 @@ def _solve(parms):
         
         
     if (rotation == 'R'):
+        #performs R rotation
         rot = right(encodedCube)
+        ##sets dict after being rotated
         parms['cube'] = rot
+        #sets status to ok
         parms['status'] = 'ok'
+        #removes op key value from dict
         del parms['op']
     
         

@@ -11,23 +11,23 @@ import rubik.check as check
     
 
 def _solve(parms):
-    result = {}
+    #result = {}
     #rotation =""
     
-    result = check._check(parms)
-    status = result.get('status', None)
+    #result = check._check(parms)
+    #status = result.get('status', None) #status returns ok
     rotation = parms.get('rotate', None)
     
-    if (status == 'ok'):
-        encodedCube = parms.get('cube',None)
+    #if (status == 'ok'):
+    encodedCube = parms.get('cube',None)
         
         
     if (rotation == 'R'):
         right(encodedCube)
         
-    
+    poop = "foo"
          
-    return encodedCube
+    return poop
 
 
  

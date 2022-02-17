@@ -11,6 +11,7 @@ import rubik.check as check
     
 
 def _solve(parms):
+    rot = ""
     #result = {}
     #rotation =""
     
@@ -23,17 +24,17 @@ def _solve(parms):
         
         
     if (rotation == 'R'):
-        right(encodedCube)
+        rot = right(encodedCube)
         
     
          
-    return rotation
+    return rot
 
 
  
-def right(updatedCube):
+def right(var):
     
-    updatedCube = list(updatedCube)
+    updatedCube = list(var)
     #makes empty array with 54 positions
     tempArray = [None] * 54
 
@@ -71,6 +72,7 @@ def right(updatedCube):
     updatedCube[53] = tempArray[18]  
 
     listToString = ''.join(updatedCube)
+    print(listToString)
     return listToString
     
     

@@ -74,7 +74,7 @@ class Test(unittest.TestCase):
                 'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         updatedParms = {
-                'cube':'ggbggbggbrrrrrrrrrgbbgbbgbbooooooooowwywwywwyyywyywyyw',
+                'cube':'ggwggwggwrrrrrrrrrybbybbybbooooooooowwbwwbwwbyygyygyyg',
                 'status':'ok'
         }
         encodedCube = solve._solve(parms)

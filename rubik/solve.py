@@ -25,9 +25,9 @@ def _solve(parms):
     if (rotation == 'R'):
         right(encodedCube)
         
-    poop = "foo"
+    
          
-    return poop
+    return rotation
 
 
  

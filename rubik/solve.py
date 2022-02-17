@@ -33,6 +33,8 @@ def _solve(parms):
         
         #sets status to ok
             parms['status'] = 'ok'
+            
+            encodedCube = rot
         
         #removes op and rotate key value from dict
         #else

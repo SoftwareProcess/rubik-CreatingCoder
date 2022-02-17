@@ -28,7 +28,10 @@ class Test(unittest.TestCase):
                 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
                 'rotate':'R'
         }
-        
+        updatedParms = {
+                'cube':'bbwbbwbbwrrrrrrrrryggyggyggoooooooooyybyybyybwwgwwgwwg',
+                'status':'ok'
+        }
         ##checks that status is ok
         #result = check._check(parms)
         #self.assertIn('status', result)
@@ -37,7 +40,8 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         #self.assertIn('status', result)
         #status = result.get('status', None)
-        self.assertEqual(encodedCube, 'cube:''bbwbbwbbwrrrrrrrrryggyggyggoooooooooyybyybyybwwgwwgwwg')
+        
+        self.assertEqual(encodedCube, updatedParms)
     
     
     

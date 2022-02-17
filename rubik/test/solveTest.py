@@ -20,10 +20,8 @@ class Test(unittest.TestCase):
         pass
 
     # @unittest.skip('skipping this test until cube model is complete')
-    #
-    
+
     def test_solve_ShouldRotateValidNominalCube_Right(self):
-    
         parms = {'op':'solve',
                  'rotate':'R',
                 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
@@ -32,15 +30,8 @@ class Test(unittest.TestCase):
                 'cube':'bbwbbwbbwrrrrrrrrryggyggyggoooooooooyybyybyybwwgwwgwwg',
                 'status':'ok'
         }
-        ##checks that status is ok
-        #result = check._check(parms)
-        #self.assertIn('status', result)
-        #status = result.get('status', None)
-        #self.assertEqual(status, 'ok')
-        encodedCube = solve._solve(parms)
-        #self.assertIn('status', result)
-        #status = result.get('status', None)
         
+        encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
     
     

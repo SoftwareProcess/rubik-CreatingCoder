@@ -22,23 +22,21 @@ def _solve(parms):
     encodedCube = parms.get('cube',None)
         
         
-    for element in rotation:
-        print(element)
-        
-    if (rotation == 'R'):
+    for letter in rotation:
+        if(letter == 'R'):
         
         #performs R rotation
-        rot = right(encodedCube)
+            rot = right(encodedCube)
         
         ##sets dict after being rotated
-        parms['cube'] = rot
+            parms['cube'] = rot
         
         #sets status to ok
-        parms['status'] = 'ok'
+            parms['status'] = 'ok'
         
         #removes op and rotate key value from dict
-        del parms['op']
-        del parms['rotate']
+            del parms['op']
+            del parms['rotate']
     
         
     

@@ -22,6 +22,9 @@ def _solve(parms):
     encodedCube = parms.get('cube',None)
         
         
+    for element in rotation:
+        print(element)
+        
     if (rotation == 'R'):
         
         #performs R rotation

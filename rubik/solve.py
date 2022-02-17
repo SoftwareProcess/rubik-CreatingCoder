@@ -20,7 +20,7 @@ def _solve(parms):
         encodedCube = parms.get('cube',None)
         rotation = parms.get('rotate', None)
         
-    if (rotation == 'F'):
+    if (rotation == 'R'):
         right(encodedCube)
         
     

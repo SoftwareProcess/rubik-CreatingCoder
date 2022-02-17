@@ -24,10 +24,14 @@ def _solve(parms):
         
     if (rotation == 'R'):
         rot = right(encodedCube)
-        
+        parms['cube'] = rot
+        parms['status'] = 'ok'
+        del parms['op']
     
-         
-    return rot
+        
+    print(type(rot))
+    #must return dictionary
+    return parms
 
 
 

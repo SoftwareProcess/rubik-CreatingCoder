@@ -31,6 +31,7 @@ def _solve(parms):
         parms['status'] = 'ok'
         #removes op key value from dict
         del parms['op']
+        del parms['rotate']
     
         
     print(type(rot))

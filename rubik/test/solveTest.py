@@ -30,7 +30,7 @@ class Test(unittest.TestCase):
         }
         
         ##checks that status is ok
-        result = check._check(parms)
+        #result = check._check(parms)
         #self.assertIn('status', result)
         #status = result.get('status', None)
         #self.assertEqual(status, 'ok')

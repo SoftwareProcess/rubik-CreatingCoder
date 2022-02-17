@@ -12,13 +12,15 @@ import rubik.check as check
 
 def _solve(parms):
     result = {}
+    #rotation =""
     
     result = check._check(parms)
     status = result.get('status', None)
+    rotation = parms.get('rotate', None)
     
     if (status == 'ok'):
         encodedCube = parms.get('cube',None)
-        rotation = parms.get('rotate', None)
+        
         
     if (rotation == 'R'):
         right(encodedCube)

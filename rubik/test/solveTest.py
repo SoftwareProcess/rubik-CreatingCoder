@@ -29,7 +29,7 @@ class Test(unittest.TestCase):
                 'rotate':'R'
         }
         
-         ##checks that status is ok
+        ##checks that status is ok
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)

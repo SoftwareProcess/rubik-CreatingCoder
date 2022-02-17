@@ -14,8 +14,6 @@ import rubik.check as check
 class Test(unittest.TestCase):
 
 
-
-
     def test_solve_ShouldRotateValidNominalCube_Right(self):
         parms = {'op':'solve',
                  'rotate':'R',
@@ -67,7 +65,7 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
         
-     #Rotate contains letter for rotation that isn't recoginized   
+    #Rotate contains letter for rotation that isn't recoginized   
     def test_solve_ErrorMsgForInvalidRotationMultiple(self):
         parms = {'op':'solve',
                  'rotate':'Rzr',
@@ -92,7 +90,17 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
     
-    
+    def test_solve_ShouldRotateValidNominalCube_Front(self):
+        parms = {'op':'solve',
+                 'rotate':'F',
+                'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        }
+        updatedParms = {
+                'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
     
     
     

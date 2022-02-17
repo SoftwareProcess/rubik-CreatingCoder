@@ -40,7 +40,7 @@ def _solve(parms):
             encodedCube = rot
     
         if(letter == 'r'):
-            #performs R rotation
+            #performs r rotation
             rot = rightPrime(encodedCube)
             ##sets dict after being rotated
             parms['cube'] = rot
@@ -49,7 +49,7 @@ def _solve(parms):
             #updates encodedCube for subsequent calls for rotations
             encodedCube = rot
         
-    
+            
     
     
     

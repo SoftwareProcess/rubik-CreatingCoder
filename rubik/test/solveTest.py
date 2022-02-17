@@ -26,7 +26,7 @@ class Test(unittest.TestCase):
     
         parms = {'op':'solve',
                 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
-                'rotate':'F'
+                'rotate':'R'
         }
         
         ##checks that status is ok
@@ -34,9 +34,6 @@ class Test(unittest.TestCase):
         #self.assertIn('status', result)
         #status = result.get('status', None)
         #self.assertEqual(status, 'ok')
-       
-        
-        
         encodedCube = solve._solve(parms)
         #self.assertIn('status', result)
         #status = result.get('status', None)

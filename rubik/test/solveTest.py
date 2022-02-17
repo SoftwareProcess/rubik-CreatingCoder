@@ -29,10 +29,12 @@ class Test(unittest.TestCase):
                 'rotate':'F'
         }
         
+         ##checks that status is ok
         result = check._check(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'ok')
+       
         
         
         encodedCube = solve._solve(parm)

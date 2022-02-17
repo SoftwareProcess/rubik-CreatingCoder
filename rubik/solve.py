@@ -25,6 +25,9 @@ def _solve(parms):
 
 
  
+ 
+ 
+ 
 
     #result = {}
     #result['solution'] = 'FfRrBbLlUuDd'        #example rotations

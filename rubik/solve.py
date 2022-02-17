@@ -12,6 +12,7 @@ import rubik.check as check
 
 def _solve(parms):
     rot = ""
+    allowedLettersForRotation = 'FfRrBbLlUuDd'
     #result = {}
     #rotation =""
     
@@ -23,6 +24,9 @@ def _solve(parms):
         
         
     for letter in rotation:
+        if (letter not in allowedLettersForRotation):
+            parms['status']= 'error: invalid rotation'
+            del parms['cube']
         
         if(letter == 'R'):
             #performs R rotation
@@ -80,7 +84,7 @@ def right(var):
     updatedCube[10] = tempArray[12]
     updatedCube[11] = tempArray[9]
     updatedCube[12] = tempArray[16]
-    updatedCube[13] = tempArray[13] #center doesnt change
+    updatedCube[13] = tempArray[13] #center doesn't change
     updatedCube[14] = tempArray[10]
     updatedCube[15] = tempArray[17]
     updatedCube[16] = tempArray[14]

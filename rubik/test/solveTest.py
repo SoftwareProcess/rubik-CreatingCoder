@@ -19,7 +19,6 @@ class Test(unittest.TestCase):
     def tearDown(self):
         pass
 
-    # @unittest.skip('skipping this test until cube model is complete')
 
     def test_solve_ShouldRotateValidNominalCube_Right(self):
         parms = {'op':'solve',
@@ -48,10 +47,9 @@ class Test(unittest.TestCase):
     
     
     
-    
     def test_solve_ShouldRotateValidNominalCube_Right_Twice(self):
         parms = {'op':'solve',
-                 'rotate':'R',
+                 'rotate':'RR',
                 'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         updatedParms = {

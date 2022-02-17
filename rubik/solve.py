@@ -23,8 +23,8 @@ def _solve(parms):
         
         
     for letter in rotation:
-        if(letter == 'R'):
         
+        if(letter == 'R'):
             #performs R rotation
             rot = right(encodedCube)
             ##sets dict after being rotated
@@ -33,13 +33,25 @@ def _solve(parms):
             parms['status'] = 'ok'
             #updates encodedCube for subsequent calls for rotations
             encodedCube = rot
-        
-        #removes op and rotate key value from dict
-        #else
-            
-            
+    
     
         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    #removes op and rotate key value from dict
+    #else
     del parms['op']
     del parms['rotate']
     #must return dictionary

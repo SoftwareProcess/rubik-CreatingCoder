@@ -72,7 +72,6 @@ def right(var):
     updatedCube[53] = tempArray[18]  
 
     listToString = ''.join(updatedCube)
-    print(listToString)
     return listToString
     
     

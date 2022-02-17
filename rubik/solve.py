@@ -34,7 +34,7 @@ def _solve(parms):
         del parms['rotate']
     
         
-    print(type(rot))
+    print(parms)
     #must return dictionary
     return parms
 

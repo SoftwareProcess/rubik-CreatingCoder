@@ -34,7 +34,7 @@ def _solve(parms):
         del parms['rotate']
     
         
-    print(parms)
+    
     #must return dictionary
     return parms
 
@@ -89,9 +89,7 @@ def right(var):
  
  
 
-    #result = {}
-    #result['solution'] = 'FfRrBbLlUuDd'        #example rotations
-    #result['status'] = 'ok'     
+    
 
 
 

@@ -25,8 +25,8 @@ class Test(unittest.TestCase):
     def test_solve_ShouldRotateValidNominalCube_Right(self):
     
         parms = {'op':'solve',
-                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
-                'rotate':'R'
+                 'rotate':'R',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         }
         updatedParms = {
                 'cube':'bbwbbwbbwrrrrrrrrryggyggyggoooooooooyybyybyybwwgwwgwwg',

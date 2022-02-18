@@ -227,5 +227,19 @@ class Test(unittest.TestCase):
         }
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
+        
+    
+    #From pg 17 
+    def test_solve_ShouldRotateValidNominalCube_ExampleFromSlides(self):
+        parms = {'op':'solve',
+                 'rotate':'FLFFBUUdLfDrFLdRRdLLdRRu',
+                'cube':'rbbgbobbgrgwyrywyobggrggywgoryyowowwyoobyrgwyrorrwbwob'
+        }
+        updatedParms = {
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
      
     

@@ -9,6 +9,7 @@ import rubik.check as check
 #    rotate cube
 #    serialize cube in string
 #    return str + status of 'ok'
+#    localhost:5000/rubik?op=check
 
 
 class Test(unittest.TestCase):

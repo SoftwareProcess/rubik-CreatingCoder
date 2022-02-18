@@ -103,6 +103,16 @@ class Test(unittest.TestCase):
         self.assertEqual(encodedCube, updatedParms)
         
     
-    
+    def test_solve_ShouldRotateValidNominalCube_FrontPrime(self):
+        parms = {'op':'solve',
+                 'rotate':'f',
+                'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        }
+        updatedParms = {
+                'cube':'gyrgbybwbgogrrrybwogrbgooggbwowoywoywwybygwoyorrbwyrrb',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
     
     

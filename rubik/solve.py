@@ -85,7 +85,13 @@ def _solve(parms):
             rot = up(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
-            encodedCube = rot   
+            encodedCube = rot
+            
+        if(letter == 'u'):   
+            rot = upPrime(encodedCube)
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot     
     
     
     
@@ -521,6 +527,50 @@ def up(var):
     listToString = ''.join(updatedCube)
     return listToString
 
+def upPrime(var):
+    
+    updatedCube = list(var)
+    #makes empty array with 54 positions
+    tempArray = [None] * 54
+
+    #populates array with elements from cubeList
+    for i in range(0, 54):
+        tempArray[i] = updatedCube[i]
+        
+    #face 1  BLUE 
+    updatedCube[0] = tempArray[27] 
+    updatedCube[1] = tempArray[28]   
+    updatedCube[2] = tempArray[29]
+
+    #face 2  RED 
+    updatedCube[9] = tempArray[0] 
+    updatedCube[10] = tempArray[1]   
+    updatedCube[11] = tempArray[2]
+
+    #face 3 GREEN
+    updatedCube[18] = tempArray[9] 
+    updatedCube[19] = tempArray[10] 
+    updatedCube[20] = tempArray[11]
+    
+    #face 4 ORANGE
+    updatedCube[27] = tempArray[18] 
+    updatedCube[28] = tempArray[19] 
+    updatedCube[29] = tempArray[20]
+
+    #face 5 YELLOW ROTATE
+    updatedCube[36] = tempArray[38]
+    updatedCube[37] = tempArray[41]
+    updatedCube[38] = tempArray[44]
+    updatedCube[39] = tempArray[37]
+    updatedCube[40] = tempArray[40]
+    updatedCube[41] = tempArray[43]
+    updatedCube[42] = tempArray[36]
+    updatedCube[43] = tempArray[39]
+    updatedCube[44] = tempArray[42]
+
+    #face 6 WHITE no change
+    listToString = ''.join(updatedCube)
+    return listToString
 
     
 

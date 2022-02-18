@@ -97,7 +97,13 @@ def _solve(parms):
             rot = down(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
-            encodedCube = rot 
+            encodedCube = rot
+            
+        if(letter == 'd'):   
+            rot = downPrime(encodedCube)
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot  
     
     
     

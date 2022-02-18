@@ -35,7 +35,7 @@ def _solve(parms):
     #and performs the necessary moves
     for letter in rotation:
         
-        if(parms.get('rotate', None)):
+        if(parms.get('rotate')==None):
             rot = front(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'

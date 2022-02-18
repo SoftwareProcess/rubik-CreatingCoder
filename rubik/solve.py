@@ -33,6 +33,12 @@ def _solve(parms):
     #and performs the necessary moves
     for letter in rotation:
         
+        if(rotation == None):
+             rot = front(encodedCube)
+             parms['cube'] = rot
+             parms['status'] = 'ok'
+             encodedCube = rot
+        
         if (letter not in allowedLettersForRotation):
             parms['status']= 'error: invalid rotation'
             del parms['cube']

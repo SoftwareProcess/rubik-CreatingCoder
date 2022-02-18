@@ -29,6 +29,8 @@ def _solve(parms):
         parms['status'] = 'ok'
         encodedCube = rot
             
+    #for statement iterates through Rotation letters one at a time
+    #and performs the necessary moves
     for letter in rotation:
         
         if (letter not in allowedLettersForRotation):

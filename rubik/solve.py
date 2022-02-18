@@ -55,7 +55,7 @@ def _solve(parms):
             encodedCube = rot
         
         #NOTE: if letter is found empty, do F turn 
-        if(letter == 'F' or letter ==''):   
+        if(letter == 'F'):   
             rot = front(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'

@@ -34,6 +34,9 @@ def _solve(parms):
     #for statement iterates through Rotation letters one at a time
     #and performs the necessary moves
     for letter in rotation:
+        
+        if(rotation == None):
+            break
     
         if (letter not in allowedLettersForRotation):
             parms['status']= 'error: invalid rotation'

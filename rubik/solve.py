@@ -419,7 +419,7 @@ def back(var):
 
     #face 6 WHITE
     updatedCube[51] = tempArray[27]
-    updatedCube[5] = tempArray[30]
+    updatedCube[52] = tempArray[30]
     updatedCube[53] = tempArray[33]
     
      

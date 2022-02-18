@@ -13,7 +13,6 @@ import rubik.check as check
 def _solve(parms):
     rot = ""
     allowedLettersForRotation = 'FfRrBbLlUuDd'
-    notAllowedLettersForRotaion ='QqWwEeTtYyIiOoPpAaSsGgHhJjKkZzXxCcVvNnMm'
     #result = {}
     #rotation =""
     
@@ -40,7 +39,7 @@ def _solve(parms):
         #and performs the necessary moves
         for letter in rotation:
         
-            if (letter in notAllowedLettersForRotation):
+            if (letter not in allowedLettersForRotation):
                 parms['status']= 'error: invalid rotation'
                 del parms['cube']
                 break

@@ -23,7 +23,7 @@ def _solve(parms):
     encodedCube = parms.get('cube',None)
     
     #NOTE: if letter is found empty, do F turn 
-    if(rotation.isEmpty() == True):   
+    if(rotation ==''):   
         rot = front(encodedCube)
         parms['cube'] = rot
         parms['status'] = 'ok'

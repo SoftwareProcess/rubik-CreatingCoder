@@ -108,11 +108,12 @@ def _solve(parms):
             encodedCube = rot  
             
         #NOTE: if letter is found empty, do F turn 
-        elif(letter.isEmpty() == True):   
+        if(letter.isEmpty() == True):   
             rot = front(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
+            break
         
     
     #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result'   

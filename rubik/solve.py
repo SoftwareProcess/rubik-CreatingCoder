@@ -12,7 +12,7 @@ import rubik.check as check
 
 def _solve(parms):
     rot = ""
-    allowedLettersForRotation = 'FfRrBbLlUuDd'
+    allowedLettersForRotation = 'FfRrBbLlUuDd '
     #result = {}
     #rotation =""
     

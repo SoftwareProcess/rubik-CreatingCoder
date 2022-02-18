@@ -24,6 +24,15 @@ def _solve(parms):
         
         
     for letter in rotation:
+                #NOTE: if letter is found empty, do F turn 
+        if(letter.isEmpty() == True):   
+            rot = front(encodedCube)
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot
+            break
+        
+        
         if (letter not in allowedLettersForRotation):
             parms['status']= 'error: invalid rotation'
             del parms['cube']
@@ -106,14 +115,7 @@ def _solve(parms):
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot  
-            
-        #NOTE: if letter is found empty, do F turn 
-        if(letter.isEmpty() == True):   
-            rot = front(encodedCube)
-            parms['cube'] = rot
-            parms['status'] = 'ok'
-            encodedCube = rot
-            break
+        
         
     
     #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result'   

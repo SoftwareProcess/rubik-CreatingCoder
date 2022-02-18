@@ -13,19 +13,6 @@ import rubik.check as check
 
 class Test(unittest.TestCase):
    
-    
-    def test_solve_ShouldRotateValidNominalCube_Right_ExampleFromSlide(self):
-        parms = {'op':'solve',
-                 'rotate':'R',
-                'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
-        }
-        updatedParms = {
-                'cube':'ggyggyggyrrrrrrrrrwbbwbbwbbooooooooowwgwwgwwgyybyybyyb',
-                'status':'ok'
-        }
-        encodedCube = solve._solve(parms)
-        self.assertEqual(encodedCube, updatedParms)
-        
             
     def test_solve_ShouldRotateValidNominalCube_RightPrime(self):
         parms = {'op':'solve',
@@ -215,4 +202,30 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)   
     
+    
+    def test_solve_ShouldRotateValidNominalCube_Right_ExampleFromSlide(self):
+        parms = {'op':'solve',
+                 'rotate':'R',
+                'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        }
+        updatedParms = {
+                'cube':'ggyggyggyrrrrrrrrrwbbwbbwbbooooooooowwgwwgwwgyybyybyyb',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
+        
+    #From pg 16 
+    def test_solve_ShouldRotateValidNominalCube_ExampleFromSlides(self):
+        parms = {'op':'solve',
+                 'rotate':'B',
+                'cube':'gggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
+        }
+        updatedParms = {
+                'cube':'gggggggggrryrryrrybbbbbbbbbwoowoowoorrrwwwwwwyyyyyyooo',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
+     
     

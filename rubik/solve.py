@@ -33,13 +33,13 @@ def _solve(parms):
         
     
     #if statement skips over for loop if NoneType
-    if(parms.get('rotate', None) != None):
+    if(parms.get('rotate') != None):
         
         #for statement iterates through Rotation letters one at a time
         #and performs the necessary moves
         for letter in rotation:
         
-            if (letter not in allowedLettersForRotation and (letter !="" or letter !=  None)):
+            if (letter not in allowedLettersForRotation):
                 parms['status']= 'error: invalid rotation'
                 del parms['cube']
                 break

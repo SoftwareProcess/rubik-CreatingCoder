@@ -82,7 +82,7 @@ def _solve(parms):
             encodedCube = rot
     
         if(letter == 'U'):   
-            rot = backPrime(encodedCube)
+            rot = up(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot   

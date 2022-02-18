@@ -40,6 +40,7 @@ def _solve(parms):
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
+            break
         
         if (letter not in allowedLettersForRotation):
             parms['status']= 'error: invalid rotation'

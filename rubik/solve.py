@@ -12,7 +12,7 @@ import rubik.check as check
 
 def _solve(parms):
     rot = ""
-    allowedLettersForRotation = 'FfRrBbLlUuDd '
+    allowedLettersForRotation = 'FfRrBbLlUuDd'
     #result = {}
     #rotation =""
     
@@ -51,6 +51,7 @@ def _solve(parms):
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
+            
             
         if(letter == 'f'):   
             rot = frontPrime(encodedCube)
@@ -105,6 +106,13 @@ def _solve(parms):
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot  
+            
+        #NOTE: if letter is found empty, do F turn 
+        if(rotation ==''):   
+            rot = front(encodedCube)
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot
         
     
     #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result'   

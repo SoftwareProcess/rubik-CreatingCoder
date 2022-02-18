@@ -168,7 +168,7 @@ class Test(unittest.TestCase):
         
     def test_solve_ShouldRotateValidNominalCube_Up(self):
         parms = {'op':'solve',
-                 'rotate':'b',
+                 'rotate':'U',
                 'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
         }
         updatedParms = {

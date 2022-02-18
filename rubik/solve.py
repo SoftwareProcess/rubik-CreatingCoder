@@ -39,7 +39,7 @@ def _solve(parms):
         #and performs the necessary moves
         for letter in rotation:
         
-            if (letter not in allowedLettersForRotation):
+            if (letter not in allowedLettersForRotation and (letter !="" or letter !=  None)):
                 parms['status']= 'error: invalid rotation'
                 del parms['cube']
                 break

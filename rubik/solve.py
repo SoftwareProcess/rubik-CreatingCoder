@@ -42,44 +42,37 @@ def _solve(parms):
         if(letter == 'r'):
             #performs r rotation
             rot = rightPrime(encodedCube)
-            ##sets dict after being rotated
             parms['cube'] = rot
-            #sets status to ok
             parms['status'] = 'ok'
-            #updates encodedCube for subsequent calls for rotations
             encodedCube = rot
         
         if(letter == 'F'):   
             #performs F rotation
             rot = front(encodedCube)
-            ##sets dict after being rotated
             parms['cube'] = rot
-            #sets status to ok
             parms['status'] = 'ok'
-            #updates encodedCube for subsequent calls for rotations
             encodedCube = rot
             
         if(letter == 'f'):   
             #performs f rotation
             rot = frontPrime(encodedCube)
-            ##sets dict after being rotated
             parms['cube'] = rot
-            #sets status to ok
             parms['status'] = 'ok'
-            #updates encodedCube for subsequent calls for rotations
             encodedCube = rot
             
         if(letter == 'L'):   
             #performs L rotation
             rot = left(encodedCube)
-            ##sets dict after being rotated
             parms['cube'] = rot
-            #sets status to ok
             parms['status'] = 'ok'
-            #updates encodedCube for subsequent calls for rotations
             encodedCube = rot
     
-    
+        if(letter == 'l'):   
+            #performs l rotation
+            rot = leftPrime(encodedCube)
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot
     
     
     
@@ -331,12 +324,26 @@ def left(var):
     updatedCube[45] = tempArray[0] 
     updatedCube[48] = tempArray[3]   
     updatedCube[51] = tempArray[6] 
-    
-       
-    
+
     listToString = ''.join(updatedCube)
     return listToString
+
  
+def leftPrime(var):
+    
+    updatedCube = list(var)
+    #makes empty array with 54 positions
+    tempArray = [None] * 54
+
+    #populates array with elements from cubeList
+    for i in range(0, 54):
+        tempArray[i] = updatedCube[i]
+        
+    #face 1  BLUE CENTER
+     
+
+    listToString = ''.join(updatedCube)
+    return listToString
  
 
     

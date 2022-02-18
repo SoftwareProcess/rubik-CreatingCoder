@@ -40,55 +40,52 @@ def _solve(parms):
             encodedCube = rot
     
         if(letter == 'r'):
-            #performs r rotation
             rot = rightPrime(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
         
         if(letter == 'F'):   
-            #performs F rotation
             rot = front(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
             
         if(letter == 'f'):   
-            #performs f rotation
             rot = frontPrime(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
             
         if(letter == 'L'):   
-            #performs L rotation
             rot = left(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
     
         if(letter == 'l'):   
-            #performs l rotation
             rot = leftPrime(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
             
         if(letter == 'B'):   
-            #performs B rotation
             rot = back(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
             
         if(letter == 'b'):   
-            #performs b rotation
             rot = backPrime(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot
     
-    
+        if(letter == 'U'):   
+            rot = backPrime(encodedCube)
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot   
     
     
     
@@ -460,7 +457,7 @@ def backPrime(var):
     updatedCube[25] = tempArray[21]
     updatedCube[26] = tempArray[24]
 
-     #face 4 ORANGE
+    #face 4 ORANGE
     updatedCube[27] = tempArray[51] 
     updatedCube[30] = tempArray[52] 
     updatedCube[33] = tempArray[53]

@@ -21,17 +21,15 @@ def _solve(parms):
     rotation = parms.get('rotate', None)
     #if (status == 'ok'):
     encodedCube = parms.get('cube',None)
-        
-        
+    
+    #NOTE: if letter is found empty, do F turn 
+    if(rotation.isEmpty() == True):   
+        rot = front(encodedCube)
+        parms['cube'] = rot
+        parms['status'] = 'ok'
+        encodedCube = rot
+            
     for letter in rotation:
-                #NOTE: if letter is found empty, do F turn 
-        if(rotation.isEmpty() == True):   
-            rot = front(encodedCube)
-            parms['cube'] = rot
-            parms['status'] = 'ok'
-            encodedCube = rot
-            break
-        
         
         if (letter not in allowedLettersForRotation):
             parms['status']= 'error: invalid rotation'

@@ -45,6 +45,7 @@ def _solve(parms):
             parms['status'] = 'ok'
             encodedCube = rot
         
+        #NOTE: if letter is found empty, do F turn  or letter ==''
         if(letter == 'F'):   
             rot = front(encodedCube)
             parms['cube'] = rot
@@ -105,9 +106,9 @@ def _solve(parms):
             parms['status'] = 'ok'
             encodedCube = rot  
         
-        
+    
+    #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result'   
     result = parms
-    print(type(result))   
     #removes op and rotate key value from dict
     del result['op']
     del result['rotate']

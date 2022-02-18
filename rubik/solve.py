@@ -340,6 +340,38 @@ def leftPrime(var):
         tempArray[i] = updatedCube[i]
         
     #face 1  BLUE CENTER
+    updatedCube[0] = tempArray[45] 
+    updatedCube[3] = tempArray[48] 
+    updatedCube[6] = tempArray[51] 
+
+    #face 2 RED No change
+
+    #face 3 GREEN
+    updatedCube[20] = tempArray[42] 
+    updatedCube[23] = tempArray[39] 
+    updatedCube[26] = tempArray[36]
+
+
+    #face 4 ORANGE CENTER ROTATE
+    updatedCube[27] = tempArray[29]
+    updatedCube[28] = tempArray[32]
+    updatedCube[29] = tempArray[35]
+    updatedCube[30] = tempArray[28]
+    updatedCube[31] = tempArray[31] #no change
+    updatedCube[32] = tempArray[34]
+    updatedCube[33] = tempArray[27]
+    updatedCube[34] = tempArray[30]
+    updatedCube[35] = tempArray[33]
+
+    #face 5 YELLOW CENTER
+    updatedCube[36] = tempArray[0] 
+    updatedCube[39] = tempArray[3] 
+    updatedCube[42] = tempArray[6]
+
+    #face 6 WHITE CENTER
+    updatedCube[45] = tempArray[26] 
+    updatedCube[48] = tempArray[23]   
+    updatedCube[51] = tempArray[20]
      
 
     listToString = ''.join(updatedCube)

@@ -81,7 +81,6 @@ def _solve(parms):
     
         
     #removes op and rotate key value from dict
-    #else
     del parms['op']
     del parms['rotate']
     #must return dictionary
@@ -277,6 +276,9 @@ def frontPrime(var):
     
     listToString = ''.join(updatedCube)
     return listToString
+
+
+#def left()
  
  
 

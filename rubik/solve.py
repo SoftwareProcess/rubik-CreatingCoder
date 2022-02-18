@@ -104,17 +104,13 @@ def _solve(parms):
             parms['cube'] = rot
             parms['status'] = 'ok'
             encodedCube = rot  
-    
-    
-    
-    
-    
         
     #removes op and rotate key value from dict
     del parms['op']
     del parms['rotate']
     #must return dictionary
     return parms
+###End of Solve###
 
 
 

@@ -25,7 +25,7 @@ def _solve(parms):
         
     for letter in rotation:
                 #NOTE: if letter is found empty, do F turn 
-        if(letter.isEmpty() == True):   
+        if(rotation.isEmpty() == True):   
             rot = front(encodedCube)
             parms['cube'] = rot
             parms['status'] = 'ok'

@@ -1,5 +1,6 @@
 #import rubik.cube as rubik
 import rubik.check as check 
+from pickle import TRUE
 
 # Dev Strat
 #    Validate parms
@@ -13,11 +14,15 @@ import rubik.check as check
 def _solve(parms):
     rot = ""
     allowedLettersForRotation = 'FfRrBbLlUuDd'
-    #result = {}
-    #rotation =""
     
-    #result = check._check(parms)
-    #status = result.get('status', None) #status returns ok
+   
+    dict = check._check(parms)
+    status = dict.get('status', None)
+    if(status =='ok'):
+        checkReturnsOkCube = True
+    else: checkReturnsOkCube = False
+    
+    
     if('rotate' in parms):
         rotation = parms.get('rotate', None)
     else:

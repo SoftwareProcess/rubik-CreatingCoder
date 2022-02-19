@@ -280,7 +280,7 @@ class Test(unittest.TestCase):
         
     def test_solve_ShouldRotateValidNominalCube_RotateDoesntExist(self):
         parms = {'op':'solve',
-                'cube':'ggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+                'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
         }
         updatedParms = {
                 'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb',

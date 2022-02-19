@@ -285,8 +285,8 @@ class Test(unittest.TestCase):
         }
         result = solve._solve(parms)
         #self.assertIn('status', result)
-        status = result.get('status', None)
-        self.assertEqual(status, 'error: cube is greater than the required length of 54')
+        #status = result.get('status', None)
+        self.assertEqual(result, 'error: cube is greater than the required length of 54')
 
      
             

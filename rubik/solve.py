@@ -18,6 +18,7 @@ def _solve(parms):
    
     dict = check._check(parms)
     status = dict.get('status', None)
+    
     if(status =='ok'):
         checkReturnsOkCube = True
     else: checkReturnsOkCube = False
@@ -32,7 +33,7 @@ def _solve(parms):
     encodedCube = parms.get('cube',None)
     
     #NOTE: if letter is found empty, do F turn 
-    if(rotation =='' or rotation == None or 'rotate' not in parms):   
+    if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):   
         rot = front(encodedCube)
         parms['cube'] = rot
         parms['status'] = 'ok'
@@ -42,7 +43,7 @@ def _solve(parms):
         
     
     #if statement skips over for loop if NoneType
-    if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms):
+    if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms and checkReturnsOkCube == True):
         
         #for statement iterates through Rotation letters one at a time
         #and performs the necessary moves

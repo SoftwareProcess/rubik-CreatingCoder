@@ -141,9 +141,11 @@ def _solve(parms):
         
     if('rotate' in result):
         del result['rotate']
+        del result['cube']
   
     #removes op and rotate key value from dict
     del result['op']
+    
         
     return result
 ###End of Solve###

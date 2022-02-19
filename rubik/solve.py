@@ -145,6 +145,7 @@ def _solve(parms):
     
     if(checkReturnsOkCube == False):
         result['status'] = status
+        del result['cube']
         
     return result
 ###End of Solve###

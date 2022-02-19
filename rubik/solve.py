@@ -142,6 +142,9 @@ def _solve(parms):
     if('rotate' in result):
         del result['rotate']
     #must return dictionary
+    
+    if(checkReturnsOkCube == False):
+        result = status
     return result
 ###End of Solve###
 

@@ -278,16 +278,17 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)   
         
-    def test_solve_ShouldRotateValidNominalCube_RotateDoesntExist(self):
+    def test_solve_ShouldRotateValidNominalCube_BadCube(self):
         parms = {'op':'solve',
-                'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+                 'rotate':'B',
+                'cube':'ggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         updatedParms = {
-                'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb',
+                'cube':'gggggggggrryrryrrybbbbbbbbbwoowoowoorrrwwwwwwyyyyyyooo',
                 'status':'ok'
         }
         encodedCube = solve._solve(parms)
-        self.assertEqual(encodedCube, updatedParms)   
+        self.assertEqual(encodedCube, updatedParms)
        
     
      

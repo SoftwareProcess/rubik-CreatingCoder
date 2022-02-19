@@ -393,3 +393,87 @@ class Test(unittest.TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube must have exactly 6 unique chars, and 9 of each unique chars') 
+        
+        
+    #Number of unique values doesn't equal six
+    #Does not pass\returns error msg
+    def test_check_HasLessThanSixUniqueValues(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbbBBBBBBBBBgggggggggoooooooooyyyyyyyyyyyyyyyyyy'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube requires more unique chars (exactly 6 are required)')
+    
+     
+    #Has more than 6 unique characters in string
+    def test_check_HasMoreThanSixUniqueValues(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbvvbbbbbbbgggggggggopoooooooyyyyyyyyyyyyyyyyyyxx'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube requires less unique chars (exactly 6 are required)')
+      
+    #Tests for symbols not permitted (recall that a-z, A-Z, and 0-9 are permitted)
+    def test_check_ContainsForrbidenSymbols(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbb!!!!!!!!!eeeeeeeeerrrrrrrrrtttttttttyyyyyyyyy'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube cannot contain chars including:`~!@#$%^&*()-_=+[]{}\|";:?/.>,<\'')
+    
+    #checks first face center with other center pieces
+    def test_check_01_HasEqualCenterValues(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbrbrrrrbrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube must 6 unique centers') 
+        
+    #checks 2nd face center with other center pieces
+    def test_check_02_HasEqualCenterValues(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbbrrrrrrrgrggggrggggoooooooooyyyyyyyyywwwwwwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube must 6 unique centers') 
+     
+    #checks 3rd face center with other center pieces   
+    def test_check_03_HasEqualCenterValues(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggogoooogooooyyyyyyyyywwwwwwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube must 6 unique centers') 
+    
+    #checks fourth face center with other center pieces
+    def test_check_04_HasEqualCenterValues(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggooooooyooyyyyoyyyywwwwwwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube must 6 unique centers') 
+    
+    #checks 5th face center with other center pieces
+    def test_check_05_HasEqualCenterValues(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbwbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwbwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube must 6 unique centers')  
+      
+    #Test if cube is string or not
+    def test_check_IsntString(self):
+        parm = {'op':'check',
+                'cube': 2 }
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube must be a String')  

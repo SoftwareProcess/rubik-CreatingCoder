@@ -134,17 +134,17 @@ def _solve(parms):
         
         
     
-    #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result'   
+    if(checkReturnsOkCube == False):
+        parms['status'] = status
+        
     result = parms
-    #removes op and rotate key value from dict
-    del result['op']
-    
+        
     if('rotate' in result):
         del result['rotate']
-    #must return dictionary
-    
-    if(checkReturnsOkCube == False):
-        result = status
+  
+    #removes op and rotate key value from dict
+    del result['op']
+        
     return result
 ###End of Solve###
 

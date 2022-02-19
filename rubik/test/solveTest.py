@@ -283,15 +283,10 @@ class Test(unittest.TestCase):
                  'rotate':'B',
                 'cube':'ggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
-        updatedParms = {
-                'status':'error: cube is less than the required length of 54'
-        }
-        encodedCube = solve._solve(parms)
-        self.assertEqual(encodedCube, updatedParms)
-        
-        
-       
-       
+        result = solve._solve(parms)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is greater than the required length of 54')
     
      
     

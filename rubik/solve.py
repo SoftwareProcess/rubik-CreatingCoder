@@ -136,14 +136,12 @@ def _solve(parms):
     
     
     
-    
-    
-    if(checkReturnsOkCube == False):
-        parms['status'] = status
-        
     if('rotate' in result):
         del result['rotate']
     #must return dictionary
+    
+    if(checkReturnsOkCube == False):
+        parms['status'] = status
         
     #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result'   
     result = parms

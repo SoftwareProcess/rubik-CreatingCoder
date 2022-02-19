@@ -285,10 +285,13 @@ class Test(unittest.TestCase):
         }
         updatedParms = {
                 'cube':'gggggggggrryrryrrybbbbbbbbbwoowoowoorrrwwwwwwyyyyyyooo',
-                'status':'ok'
+                'status':'error: cube is less than the required length of 54'
         }
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
+        
+        
+       
        
     
      

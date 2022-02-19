@@ -287,6 +287,11 @@ class Test(unittest.TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube is greater than the required length of 54')
-    
+
+     
+            
+        
+     
+     
      
     

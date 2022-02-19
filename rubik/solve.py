@@ -16,8 +16,8 @@ def _solve(parms):
     allowedLettersForRotation = 'FfRrBbLlUuDd'
     
    
-    dict = check._check(parms)
-    status = dict.get('status', None)
+    checkVal = check._check(parms)
+    status = checkVal.get('status', None)
     
     if(status =='ok'):
         checkReturnsOkCube = True

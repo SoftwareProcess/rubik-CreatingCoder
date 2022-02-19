@@ -144,7 +144,7 @@ def _solve(parms):
     #must return dictionary
     
     if(checkReturnsOkCube == False):
-        parms['status'] = status
+        result['status'] = status
         
     return result
 ###End of Solve###

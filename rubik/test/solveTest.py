@@ -284,9 +284,11 @@ class Test(unittest.TestCase):
                 'cube':'ggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         result = solve._solve(parms)
+        self.assertIn('status', result)
+        
         #self.assertIn('status', result)
         #status = result.get('status', None)
-        self.assertEqual(result, {"'status'":'error: cube is less than the required length of 54'})
+        self.assertEqual(result, {"'"status"'":'error: cube is less than the required length of 54'})
 
      
             

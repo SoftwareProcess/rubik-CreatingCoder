@@ -33,7 +33,7 @@ def _solve(parms):
         
     
     #if statement skips over for loop if NoneType
-    if(parms.get('rotate') != None and parms.get('rotate') != ""):
+    if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms):
         
         #for statement iterates through Rotation letters one at a time
         #and performs the necessary moves

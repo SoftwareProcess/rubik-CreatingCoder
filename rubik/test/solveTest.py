@@ -348,7 +348,7 @@ class Test(unittest.TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube must have exactly 6 unique chars, and 9 of each unique chars')    
     
-        def test_check_03_HasUnequalAmountOfElements(self):
+    def test_check_03_HasUnequalAmountOfElements(self):
         parm = {'op':'check',
                  #cube string has 9b, 8r, 10g, 9o, 9y, 9w
                 'cube':'bbbbbbbbbrrrrrrrrggggggggggoooooooooyyyyyyyyywwwwwwwww'}

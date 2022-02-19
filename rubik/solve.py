@@ -130,9 +130,8 @@ def _solve(parms):
     #removes op and rotate key value from dict
     del result['op']
     
-    if('rotate' in parms):
+    if('rotate' in result):
         del result['rotate']
-    
     #must return dictionary
     return result
 ###End of Solve###

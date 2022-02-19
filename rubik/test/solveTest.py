@@ -301,6 +301,14 @@ class Test(unittest.TestCase):
                
         
      
-     
+      #Given string has whitespace    
+    def test_check_HasWhiteSpace(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbbrrrrrrr rgggggggggoooooooooyyyyyyyyywwwwwwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube has white space' )   
+    
      
     

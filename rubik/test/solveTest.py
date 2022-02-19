@@ -284,7 +284,6 @@ class Test(unittest.TestCase):
                 'cube':'ggggggggrrrrrrrrrbbbbbbbbbooooooooowwwwwwwwwyyyyyyyyy'
         }
         updatedParms = {
-                'cube':'gggggggggrryrryrrybbbbbbbbbwoowoowoorrrwwwwwwyyyyyyooo',
                 'status':'error: cube is less than the required length of 54'
         }
         encodedCube = solve._solve(parms)

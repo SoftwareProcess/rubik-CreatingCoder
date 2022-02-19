@@ -39,7 +39,7 @@ def _solve(parms):
         #and performs the necessary moves
         for letter in rotation:
         
-            if (letter not in allowedLettersForRotation):
+            if (letter not in allowedLettersForRotation and letter !="" and letter != None):
                 parms['status']= 'error: invalid rotation'
                 del parms['cube']
                 break
@@ -129,6 +129,7 @@ def _solve(parms):
     #removes op and rotate key value from dict
     del result['op']
     del result['rotate']
+    
     #must return dictionary
     return result
 ###End of Solve###

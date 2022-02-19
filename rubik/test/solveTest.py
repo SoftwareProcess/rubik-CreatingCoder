@@ -277,6 +277,8 @@ class Test(unittest.TestCase):
         }
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)   
+    
+    
         
     def test_solve_ShouldRotateValidNominalCube_BadCube(self):
         parms = {'op':'solve',
@@ -301,7 +303,7 @@ class Test(unittest.TestCase):
                
         
      
-      #Given string has whitespace    
+    #Given string has whitespace    
     def test_check_HasWhiteSpace(self):
         parm = {'op':'check',
                 'cube':'bbbbbbbbbrrrrrrr rgggggggggoooooooooyyyyyyyyywwwwwwwww'}

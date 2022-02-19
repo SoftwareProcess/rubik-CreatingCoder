@@ -18,7 +18,11 @@ def _solve(parms):
     
     #result = check._check(parms)
     #status = result.get('status', None) #status returns ok
-    rotation = parms.get('rotate', None)
+    if('rotate' in parms):
+        rotation = parms.get('rotate', None)
+    else:
+        rotation = ''
+    
     #if (status == 'ok'):
     encodedCube = parms.get('cube',None)
     

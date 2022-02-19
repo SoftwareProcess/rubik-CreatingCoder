@@ -290,18 +290,7 @@ class Test(unittest.TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube is less than the required length of 54')
 
-     
-    
-    #Length is less than 54  
-    def test_check_LengthIsLessThan54(self):
-        parms = {'op':'check',
-                'cube':'bbbbbbbbrrrrrrrrggggggggoooooooooyyyyyyyywwwwwwww'}
-        result = solve._solve(parms)
-        self.assertIn('status', result)
-        status = result.get('status', None)
-        self.assertEqual(status, 'error: cube is less than the required length of 54')
-               
-        
+
      
     #Given string has whitespace    
     def test_check_HasWhiteSpace(self):
@@ -312,5 +301,47 @@ class Test(unittest.TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube has white space' )   
     
-     
+        
+    def test_check_CubeIsNone(self):
+        parm = {'op':'check',
+                'cube': None}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is missing')   
+
+    
+    def test_check_CubeIsEmptyString(self):
+        parm = {'op':'check',
+                'cube': ''}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube cannot be an empty string')   
+    
+    
+    #Length is less than 54  
+    def test_check_LengthIsLessThan54(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbrrrrrrrrggggggggoooooooooyyyyyyyywwwwwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is less than the required length of 54')
+        
+    
+    
+    #Length is greater than 54 
+    def test_check_LengthIsGreaterThan54(self):
+        parm = {'op':'check',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwwww'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is greater than the required length of 54')
+    
+    
+
+    
+        
     

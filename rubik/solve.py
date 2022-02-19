@@ -42,6 +42,7 @@ def _solve(parms):
             if (letter not in allowedLettersForRotation and letter !="" and letter != None):
                 parms['status']= 'error: invalid rotation'
                 del parms['cube']
+                del parms['rotate']#######################################sdfsdf
                 break
             
             if(letter == 'R'):
@@ -128,7 +129,9 @@ def _solve(parms):
     result = parms
     #removes op and rotate key value from dict
     del result['op']
-    del result['rotate']
+    
+    if('rotate' in parms):
+        del result['rotate']
     
     #must return dictionary
     return result

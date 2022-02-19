@@ -300,15 +300,6 @@ class Test(unittest.TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube has white space' )   
-    
-     
-    # def test_check_CubeIsNone(self):
-    #     parm = {'op':'check',
-    #             'cube': None}
-    #     result = solve._solve(parm)
-    #     self.assertIn('status', result)
-    #     status = result.get('status', None)
-    #     self.assertEqual(status, 'error: cube is missing')   
 
     
     def test_check_CubeIsEmptyString(self):
@@ -469,11 +460,21 @@ class Test(unittest.TestCase):
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube must 6 unique centers')  
       
-    #Test if cube is string or not
-    def test_check_IsntString(self):
-        parm = {'op':'check',
-                'cube': 2 }
-        result = solve._solve(parm)
-        self.assertIn('status', result)
-        status = result.get('status', None)
-        self.assertEqual(status, 'error: cube must be a String')  
+    # #Test if cube is string or not
+    # def test_check_IsntString(self):
+    #     parm = {'op':'check',
+    #             'cube': 2 }
+    #     result = solve._solve(parm)
+    #     self.assertIn('status', result)
+    #     status = result.get('status', None)
+    #     self.assertEqual(status, 'error: cube must be a String') 
+        
+    
+        # def test_check_CubeIsNone(self):
+    #     parm = {'op':'check',
+    #             'cube': None}
+    #     result = solve._solve(parm)
+    #     self.assertIn('status', result)
+    #     status = result.get('status', None)
+    #     self.assertEqual(status, 'error: cube is missing')       
+     

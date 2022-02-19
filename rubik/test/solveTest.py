@@ -320,27 +320,6 @@ class Test(unittest.TestCase):
         self.assertEqual(status, 'error: cube cannot be an empty string')   
     
     
-    #Length is less than 54  
-    def test_check_LengthIsLessThan54(self):
-        parm = {'op':'check',
-                'cube':'bbbbbbbbrrrrrrrrggggggggoooooooooyyyyyyyywwwwwwww'}
-        result = solve._solve(parm)
-        self.assertIn('status', result)
-        status = result.get('status', None)
-        self.assertEqual(status, 'error: cube is less than the required length of 54')
-        
-    
-    
-    #Length is greater than 54 
-    def test_check_LengthIsGreaterThan54(self):
-        parm = {'op':'check',
-                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwwww'}
-        result = solve._solve(parm)
-        self.assertIn('status', result)
-        status = result.get('status', None)
-        self.assertEqual(status, 'error: cube is greater than the required length of 54')
-    
-    
 
     
         

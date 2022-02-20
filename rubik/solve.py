@@ -2,6 +2,7 @@ import rubik.cube as rubik
 import rubik.check as check 
 
 
+
 # Dev Strat
 #    Validate parms
 #    load parms['cube'] into cube model
@@ -58,7 +59,7 @@ def _solve(parms):
             
             if(letter == 'R'):
                 #performs R rotation
-                rot = rubik.Cube().right(encodedCube)
+                rot = rubik.right(encodedCube)
                 ##sets dict after being rotated
                 parms['cube'] = rot
                 #sets status to ok

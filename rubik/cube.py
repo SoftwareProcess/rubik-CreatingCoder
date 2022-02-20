@@ -46,8 +46,7 @@ class Cube:
     
     
     
-    #@staticmethod
-    
+    @staticmethod
     def right(self):
     
         updatedCube = list(self)

@@ -36,7 +36,7 @@ def _solve(parms):
     if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
         #if():
                
-        if(len(encodedCube) == 54 and rotation != None):
+        if(len(encodedCube) == 54 or rotation != None):
             rot = front(encodedCube)
         parms['cube'] = rot
         parms['status'] = 'ok'

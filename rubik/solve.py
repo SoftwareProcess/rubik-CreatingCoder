@@ -1,6 +1,6 @@
 #import rubik.cube as rubik
 import rubik.check as check 
-from pickle import TRUE
+
 
 # Dev Strat
 #    Validate parms

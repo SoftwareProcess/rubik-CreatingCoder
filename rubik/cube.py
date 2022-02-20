@@ -45,9 +45,9 @@ class Cube:
     
     
     
-    def right(var):
+    def right(self):
     
-        updatedCube = list(var)
+        updatedCube = list(self)
         #makes empty array with 54 positions
         tempArray = [None] * 54
     

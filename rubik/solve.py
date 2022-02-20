@@ -58,7 +58,7 @@ def _solve(parms):
             
             if(letter == 'R'):
                 #performs R rotation
-                rot = rubik.right(encodedCube)
+                rot = rubik.Cube().right(encodedCube)
                 ##sets dict after being rotated
                 parms['cube'] = rot
                 #sets status to ok

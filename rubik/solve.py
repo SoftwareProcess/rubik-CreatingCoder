@@ -34,7 +34,6 @@ def _solve(parms):
     
     #NOTE: if letter is found empty, do F turn 
     if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
-        #if():
                
         if(encodedCube != "" and len(encodedCube) == 54):
             rot = front(encodedCube)

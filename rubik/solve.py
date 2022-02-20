@@ -10,7 +10,6 @@ import rubik.check as check
 #    return string + status of 'ok'
 
     
-
 def _solve(parms):
     rot = ""
     allowedLettersForRotation = 'FfRrBbLlUuDd'

@@ -33,8 +33,10 @@ def _solve(parms):
     encodedCube = parms.get('cube',None)
     
     #NOTE: if letter is found empty, do F turn 
-    if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):   
-        if(len(encodedCube) == 54):
+    if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
+        #if():
+               
+        if(len(encodedCube) == 54 and rotation != None):
             rot = front(encodedCube)
         parms['cube'] = rot
         parms['status'] = 'ok'

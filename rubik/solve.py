@@ -14,7 +14,7 @@ import rubik.check as check
 def _solve(parms):
     rot = ""
     allowedLettersForRotation = 'FfRrBbLlUuDd'
-    
+    CubeObject = rubik.Cube()
    
     checkVal = check._check(parms)
     status = checkVal.get('status', None)
@@ -58,8 +58,9 @@ def _solve(parms):
                 break
             
             if(letter == 'R'):
+
                 #performs R rotation
-                rot = rubik.right(encodedCube)
+                rot = CubeObject.right(encodedCube)
                 ##sets dict after being rotated
                 parms['cube'] = rot
                 #sets status to ok

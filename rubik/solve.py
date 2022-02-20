@@ -36,7 +36,7 @@ def _solve(parms):
     if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
         
         #set string to bypass when type None
-        ecLength = len(encodedCube)       
+        ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):  #and str(encodedCube)== True
             rot = front(encodedCube)
         parms['cube'] = rot

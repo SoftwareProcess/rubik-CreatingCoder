@@ -470,11 +470,11 @@ class Test(unittest.TestCase):
         self.assertEqual(status, 'error: cube must be a String') 
         
     
-        # def test_check_CubeIsNone(self):
-    #     parm = {'op':'check',
-    #             'cube': None}
-    #     result = solve._solve(parm)
-    #     self.assertIn('status', result)
-    #     status = result.get('status', None)
-    #     self.assertEqual(status, 'error: cube is missing')       
+    def test_check_CubeIsNone(self):
+        parm = {'op':'check',
+                'cube': None}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is missing')       
      

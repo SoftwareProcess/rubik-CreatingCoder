@@ -318,14 +318,6 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
   
-  
-  
-  
-  
-  
-  
-  
-    
         
     def test_solve_ShouldRotateValidNominalCube_BadCubeLessThan5(self):
         parms = {'op':'solve',

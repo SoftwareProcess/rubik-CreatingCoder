@@ -278,6 +278,32 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)   
     
+  
+    
+    def test_solve_ShouldRotateValidNominalCube_MultipleTurns(self):
+        parms = {'op':'solve',
+                 'rotate':'FFU',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        }
+        updatedParms = {
+                'cube':'orrbbbbbbgggorrorroorggggggbbbooroorwyywyywyyyyywwwwww',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
         
     def test_solve_ShouldRotateValidNominalCube_BadCubeLessThan5(self):
@@ -289,8 +315,6 @@ class Test(unittest.TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube is less than the required length of 54')
-
-
      
     #Given string has whitespace    
     def test_check_HasWhiteSpace(self):
@@ -477,4 +501,7 @@ class Test(unittest.TestCase):
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube is missing')       
+        
+        
+        
      

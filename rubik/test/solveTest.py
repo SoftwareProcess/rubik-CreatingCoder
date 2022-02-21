@@ -282,7 +282,7 @@ class Test(unittest.TestCase):
     
     def test_solve_ShouldRotateValidNominalCube_MultipleTurns(self):
         parms = {'op':'solve',
-                 'rotate':'FFu',
+                 'rotate':'FFU',
                 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         }
         updatedParms = {

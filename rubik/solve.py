@@ -58,7 +58,6 @@ def _solve(parms):
                 break
             
             if(letter == 'R'):
-
                 #performs R rotation
                 rot = CubeObject.right(encodedCube)
                 ##sets dict after being rotated

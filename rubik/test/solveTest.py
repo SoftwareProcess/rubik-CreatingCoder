@@ -280,7 +280,33 @@ class Test(unittest.TestCase):
     
   
     
-    def test_solve_ShouldRotateValidNominalCube_MultipleTurns(self):
+    def test_solve_ShouldRotateValidNominalCube_MultipleTurns02(self):
+        parms = {'op':'solve',
+                 'rotate':'fUB',
+                'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
+        }
+        updatedParms = {
+                'cube':'wrrbbbbbbggwwrwwrwggoggoggyybbyoyroygrrryyryyooowwwboo',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
+  
+    
+    def test_solve_ShouldRotateValidNominalCube_MultipleTurnsWithNumbers(self):
+        parms = {'op':'solve',
+                 'rotate':'FB',
+                'cube':'111111111123456789333333333444444444555555555666666666'
+        }
+        updatedParms = {
+                'cube':'111111111526556586333333333546546546369555444741666444',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parms)
+        self.assertEqual(encodedCube, updatedParms)
+  
+        
+    def test_solve_ShouldRotateValidNominalCube_MultipleTurns01(self):
         parms = {'op':'solve',
                  'rotate':'FFU',
                 'cube':'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
@@ -291,11 +317,6 @@ class Test(unittest.TestCase):
         }
         encodedCube = solve._solve(parms)
         self.assertEqual(encodedCube, updatedParms)
-  
-  
-  
-  
-  
   
   
   

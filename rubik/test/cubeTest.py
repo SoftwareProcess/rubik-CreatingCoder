@@ -13,19 +13,7 @@ class CubeTest(unittest.TestCase):
         self.assertIsInstance(myCube, cube.Cube)
 
 
-    def test_load(self):
-        parms = {'op':'rotate',
-                'cube':'BBBBBBBBBRRRRRRRRRGGGGGGGGGOOOOOOOOOYYYYYYYYYWWWWWWWWW'}
-        #myCube = cube.Cube.load( parms)
-        encodedCube = parms.get('cube', None)
-        cubeStr = cube.Cube.load(encodedCube)
-        self.assertEqual(cubeStr, 'BBBBBBBBBRRRRRRRRRGGGGGGGGGOOOOOOOOOYYYYYYYYYWWWWWWWWW')
-        
-    
-    
-        
-        
-        
+
         
         
         

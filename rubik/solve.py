@@ -79,8 +79,7 @@ def _solve(parms):
                 parms['cube'] = rot
                 parms['status'] = 'ok'
                 encodedCube = rot
-                
-                
+                  
             if(letter == 'f'):   
                 rot = CubeObject.frontPrime(encodedCube)
                 parms['cube'] = rot

@@ -7,6 +7,7 @@ class CubeTest(unittest.TestCase):
 
 
 #Interface Analysis
+    pass
 
 
 

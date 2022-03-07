@@ -134,12 +134,10 @@ def _solve(parms):
                 parms['status'] = 'ok'
                 encodedCube = rot  
         
-        
-    
+          
     neededKeys = [ 'op', 'cube', 'status']
     
     
-    #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result' 
     
     result = {}  
     
@@ -147,19 +145,14 @@ def _solve(parms):
         if key in neededKeys:
             result[key] = parms[key] 
     
-    #result = parms
-    
-    
-    
+            
     #removes op and rotate key value from dict
     del result['op']
-    
-    
+        
     if('rotate' in result):
         del result['rotate']
 
  
-    
     if(checkReturnsOkCube == False):
         result['status'] = status
         del result['cube']

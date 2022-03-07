@@ -513,9 +513,24 @@ class Test(unittest.TestCase):
         result = solve._solve(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
-        self.assertEqual(status, 'error: cube is missing')       
+        self.assertEqual(status, 'error: cube is missing')
+        
+    #Failed test from A3    
+    def test_check_CubeIsMissing(self):
+        parm = {'op':'solve'
+                }
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is missing')
+      
         
         
+        
+        
+
+        
+    #Failed test from A3    
     def test_shouldIgnoreExtraneousParms(self):
         parm = {'op':'check',
                 'rotate':'r',
@@ -528,5 +543,9 @@ class Test(unittest.TestCase):
         }
         encodedCube = solve._solve(parm)
         self.assertEqual(encodedCube, updatedParms) 
+        
+        
+    
+    
         
      

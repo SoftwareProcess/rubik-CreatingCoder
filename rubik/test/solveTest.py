@@ -518,7 +518,7 @@ class Test(unittest.TestCase):
         
     def test_shouldIgnoreExtraneousParms(self):
         parm = {'op':'check',
-                'rotate':'R',
+                'rotate':'r',
                  'extraneousKey': 'this should be ignored',
                 'cube': 'YssKjscjsjjcTssKKYKTsKKYTYTKYccYcYcjcjYKcYjjTscTsTTjTK'}
          

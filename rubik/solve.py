@@ -136,14 +136,29 @@ def _solve(parms):
         
         
     
-    #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result'   
-    result = parms
+    neededKeys = [ 'op', 'cube', 'status']
+    
+    
+    #wasn't sure if reqs demanded the return var 'result', so made sure dictionary return was named 'result' 
+    
+    result = {}  
+    
+    for key in parms:
+        if key in neededKeys:
+            result[key] = parms[key] 
+    
+    #result = parms
+    
+    
+    
     #removes op and rotate key value from dict
     del result['op']
     
+    
     if('rotate' in result):
         del result['rotate']
-    #must return dictionary
+
+ 
     
     if(checkReturnsOkCube == False):
         result['status'] = status

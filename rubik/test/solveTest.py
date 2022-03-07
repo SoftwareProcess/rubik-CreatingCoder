@@ -516,5 +516,16 @@ class Test(unittest.TestCase):
         self.assertEqual(status, 'error: cube is missing')       
         
         
+    def test_shouldIgnoreExtraneousParms(self):
+        parm = {'op':'check',
+                 'extraneousKey': 'this should be ignored',
+                'cube': 'YssKjscjsjjcTssKKYKTsKKYTYTKYccYcYcjcjYKcYjjTscTsTTjTK'}
+         
+        updatedParms = {
+                'cube':'YsYKjYcjTcsYjsKjTKKTsTKYTYTKYccYcYcjcjTKcKjjKscssTsjTs',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parm)
+        self.assertEqual(encodedCube, updatedParms) 
         
      

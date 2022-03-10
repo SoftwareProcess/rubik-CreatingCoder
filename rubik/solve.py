@@ -153,9 +153,11 @@ def _solve(parms):
             result[key] = parms[key] 
     
     
-    if(result['cube']== "" ):
-        result['status'] = status
-        del result['cube']
+    #===========================================================================
+    # if(result['cube']== "" ):
+    #     result['status'] = status
+    #     del result['cube']
+    #===========================================================================
     
             
     #removes op and rotate key value from dict

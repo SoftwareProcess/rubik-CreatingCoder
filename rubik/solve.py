@@ -173,8 +173,10 @@ def _solve(parms):
         result['status'] = status
         del result['cube']
         
-    if (result['cube'] == ""):
-        del result['cube']    
+    #===========================================================================
+    # if (result['cube'] == ""):
+    #     del result['cube']    
+    #===========================================================================
 
         
     return result

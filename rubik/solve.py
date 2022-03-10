@@ -44,6 +44,9 @@ def _solve(parms):
         parms['status'] = 'ok'
         encodedCube = rot
         
+        
+        
+        
     
     
     #if statement skips over for loop if NoneType

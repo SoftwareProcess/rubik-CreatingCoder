@@ -548,20 +548,6 @@ class Test(unittest.TestCase):
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
     #===========================================================================
     # def test_shouldReturnWhiteCross_WhiteOnTop(self):
     #     parm = {'op':'check',

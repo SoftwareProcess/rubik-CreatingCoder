@@ -49,5 +49,10 @@ class CubeTest(unittest.TestCase):
        
         
         
-    
+    def test_left_prime_rotation(self):
+        cubeBeforeRot = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        CubeObject = rubik.Cube()
+        cubeAfterRot = 'yggbbyryrwogorrybwogybgbogworrwoobwwbwywygbyogrgowyrrb'
+        encodedCube = CubeObject.leftPrime(cubeBeforeRot)
+        self.assertEqual(encodedCube, cubeAfterRot)
 

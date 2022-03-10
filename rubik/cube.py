@@ -2,7 +2,7 @@ from rubik.check import *
 
 class Cube:
 
-       
+       pass
 # methods: instantiate:  inputs no input, out empty instance of cube
 #          load : takes serialized string and loads it into the cube
 #          get : takes content of the cube and returns it as a string

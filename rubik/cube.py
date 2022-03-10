@@ -596,40 +596,40 @@ class Cube:
             #spins top element until not white
             if(updatedCube[43] == updatedCube[49]):
                 while(updatedCube[43]== updatedCube[49]):
-                    Cube.up()
+                    Cube.up(self)
     
-            Cube.front()
-            Cube.front()
+            Cube.front(self)
+            Cube.front(self)
         #####################################
     
         if(updatedCube[48] == updatedCube[49]):
             #spins top element until not white
             if(updatedCube[39] == updatedCube[49]):
                 while(updatedCube[39]== updatedCube[49]):
-                    Cube.up()
+                    Cube.up(self)
     
-            Cube.left()
-            Cube.left()
+            Cube.left(self)
+            Cube.left(self)
         #########################################
     
         if(updatedCube[50] == updatedCube[49]):
             #spins top element until not white
             if(updatedCube[41] == updatedCube[49]):
                 while(updatedCube[41]== updatedCube[49]):
-                    Cube.up()
+                    Cube.up(self)
     
-            Cube.right()
-            Cube.right()
+            Cube.right(self)
+            Cube.right(self)
         ########################################
     
         if(updatedCube[52] == updatedCube[49]):
             #spins top element until not white
             if(updatedCube[37] == updatedCube[49]):
                 while(updatedCube[37]== updatedCube[49]):
-                    Cube.up()
+                    Cube.up(self)
     
-            Cube.back()
-            Cube.back()
+            Cube.back(self)
+            Cube.back(self)
             ####################end of calcs when white on bottom###########
 
          

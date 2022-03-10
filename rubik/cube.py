@@ -631,5 +631,8 @@ class Cube:
             Cube.back(self)
             Cube.back(self)
             ####################end of calcs when white on bottom###########
+            
+        listToString = ''.join(updatedCube)
+        return listToString
 
          

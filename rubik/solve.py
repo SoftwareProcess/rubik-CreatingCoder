@@ -158,6 +158,12 @@ def _solve(parms):
         result['status'] = status
         del result['cube']
         
+        
+    if(result['cube'] == ""):
+        result['status'] =  'unable to parse JSON: ''cube''' 
+        del result['cube']
+        return
+        
     return result
 ###End of Solve###
 

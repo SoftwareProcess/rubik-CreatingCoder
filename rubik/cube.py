@@ -583,5 +583,53 @@ class Cube:
       
         #face 6 WHITE no change
         listToString = ''.join(updatedCube)
-        return listToString     
- 
+        return listToString
+    
+    
+    @staticmethod
+    def moveWhiteTop(self):
+        
+        updatedCube = list(self)
+    
+            #start with bottom face
+        if(updatedCube[46] == updatedCube[49]):
+            #spins top element until not white
+            if(updatedCube[43] == updatedCube[49]):
+                while(updatedCube[43]== updatedCube[49]):
+                    Cube.up()
+    
+            Cube.front()
+            Cube.front()
+        #####################################
+    
+        if(updatedCube[48] == updatedCube[49]):
+            #spins top element until not white
+            if(updatedCube[39] == updatedCube[49]):
+                while(updatedCube[39]== updatedCube[49]):
+                    Cube.up()
+    
+            Cube.left()
+            Cube.left()
+        #########################################
+    
+        if(updatedCube[50] == updatedCube[49]):
+            #spins top element until not white
+            if(updatedCube[41] == updatedCube[49]):
+                while(updatedCube[41]== updatedCube[49]):
+                    Cube.up()
+    
+            Cube.right()
+            Cube.right()
+        ########################################
+    
+        if(updatedCube[52] == updatedCube[49]):
+            #spins top element until not white
+            if(updatedCube[37] == updatedCube[49]):
+                while(updatedCube[37]== updatedCube[49]):
+                    Cube.up()
+    
+            Cube.back()
+            Cube.back()
+            ####################end of calcs when white on bottom###########
+
+         

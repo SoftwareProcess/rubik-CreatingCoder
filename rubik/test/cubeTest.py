@@ -8,14 +8,9 @@ class CubeTest(unittest.TestCase):
 
 #Interface Analysis
     def test_front_rotation(self):
-        cubeBeforeRot = {
-                'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
-        }
+        cubeBeforeRot = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
         CubeObject = rubik.Cube()
-
-        cubeAfterRot = {
-                'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb'
-        }
+        cubeAfterRot = 'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb'
         encodedCube = CubeObject.front(cubeBeforeRot)
         self.assertEqual(encodedCube, cubeAfterRot)
         

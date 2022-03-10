@@ -24,6 +24,14 @@ class CubeTest(unittest.TestCase):
         self.assertEqual(encodedCube, cubeAfterRot)
         
         
+    def test_right_rotation(self):
+        cubeBeforeRot = ''
+        CubeObject = rubik.Cube()
+        cubeAfterRot = ''
+        encodedCube = CubeObject.right(cubeBeforeRot)
+        self.assertEqual(encodedCube, cubeAfterRot)
+        
+        
     
         
        

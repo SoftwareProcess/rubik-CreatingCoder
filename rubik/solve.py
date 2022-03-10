@@ -140,6 +140,8 @@ def _solve(parms):
                 parms['cube'] = rot
                 parms['status'] = 'ok'
                 encodedCube = rot  
+                
+            
         
           
     neededKeys = [ 'op', 'cube', 'status']
@@ -172,8 +174,9 @@ def _solve(parms):
         del result['cube']
         
         
-    
-        
+    if(result['cube'] ==""):
+        del result['cube']
+        result['status'] = status
         
     return result
 ###End of Solve###

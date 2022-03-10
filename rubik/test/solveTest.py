@@ -547,19 +547,21 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parm)
         self.assertEqual(encodedCube, updatedParms) 
         
-    def test_shouldReturnWhiteCross_WhiteOnTop(self):
-        parm = {'op':'check',
-                'cube': ''}
-         
-        updatedParms = {
-                'cube':'',
-                'status':'ok'
-        }
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        pass
+    #===========================================================================
+    # def test_shouldReturnWhiteCross_WhiteOnTop(self):
+    #     parm = {'op':'check',
+    #             'cube': ''}
+    #      
+    #     updatedParms = {
+    #             'cube':'',
+    #             'status':'ok'
+    #     }
+    #     encodedCube = solve._solve(parm)
+    #     #self.assertEqual(encodedCube, updatedParms)
+    #     cubeString = encodedCube.get('cube')
+    #     cubeList = list(cubeString)
+    #     
+    #===========================================================================
         
         
            

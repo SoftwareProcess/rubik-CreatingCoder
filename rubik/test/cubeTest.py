@@ -25,9 +25,9 @@ class CubeTest(unittest.TestCase):
         
         
     def test_right_rotation(self):
-        cubeBeforeRot = ''
+        cubeBeforeRot = 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'
         CubeObject = rubik.Cube()
-        cubeAfterRot = ''
+        cubeAfterRot = 'bbwbbwbbwrrrrrrrrryggyggyggoooooooooyybyybyybwwgwwgwwg'
         encodedCube = CubeObject.right(cubeBeforeRot)
         self.assertEqual(encodedCube, cubeAfterRot)
         

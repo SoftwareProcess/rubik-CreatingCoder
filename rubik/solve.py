@@ -170,11 +170,11 @@ def _solve(parms):
 
  
     if(checkReturnsOkCube == False):
-        result['status'] = status
+        
         del result['cube']
         
         
-
+    result['status'] = status
         
     return result
 ###End of Solve###

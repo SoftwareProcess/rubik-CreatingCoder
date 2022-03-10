@@ -338,4 +338,51 @@ class Cube:
            
         listToString = ''.join(updatedCube)
         return listToString   
+    
+    
+    
+    @staticmethod
+    def backPrime(self):
+          
+        updatedCube = list(self)
+        #makes empty array with 54 positions
+        tempArray = [None] * 54
+      
+        #populates array with elements from cubeList
+        for i in range(0, 54):
+            tempArray[i] = updatedCube[i]
+              
+        #face 1  BLUE no change
+        updatedCube[11] = tempArray[36] 
+        updatedCube[14] = tempArray[37]   
+        updatedCube[17] = tempArray[38]
+      
+        #face 3 GREEN
+        updatedCube[18] = tempArray[20] 
+        updatedCube[19] = tempArray[23] 
+        updatedCube[20] = tempArray[26]
+        updatedCube[21] = tempArray[19]
+        updatedCube[22] = tempArray[22]
+        updatedCube[23] = tempArray[25]
+        updatedCube[24] = tempArray[18]
+        updatedCube[25] = tempArray[21]
+        updatedCube[26] = tempArray[24]
+      
+        #face 4 ORANGE
+        updatedCube[27] = tempArray[51] 
+        updatedCube[30] = tempArray[52] 
+        updatedCube[33] = tempArray[53]
+      
+        #face 5 YELLOW ROTATE
+        updatedCube[36] = tempArray[33]
+        updatedCube[37] = tempArray[30]
+        updatedCube[38] = tempArray[27]
+      
+        #face 6 WHITE
+        updatedCube[51] = tempArray[17]
+        updatedCube[52] = tempArray[14]
+        updatedCube[53] = tempArray[11]
+      
+        listToString = ''.join(updatedCube)
+        return listToString
 

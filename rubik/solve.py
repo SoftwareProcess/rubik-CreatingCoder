@@ -175,7 +175,7 @@ def _solve(parms):
         
         
     if(result['cube'] ==""):
-        del result['cube']
+        #del result['cube']
         result['status'] = status
         
     return result

@@ -481,3 +481,54 @@ class Cube:
         #face 6 WHITE no change
         listToString = ''.join(updatedCube)
         return listToString
+    
+    
+    @staticmethod
+    def down(self):
+          
+        updatedCube = list(self)
+        #makes empty array with 54 positions
+        tempArray = [None] * 54
+      
+        #populates array with elements from cubeList
+        for i in range(0, 54):
+            tempArray[i] = updatedCube[i]
+              
+            #face 1  BLUE 
+        updatedCube[6] = tempArray[33] 
+        updatedCube[7] = tempArray[34]   
+        updatedCube[8] = tempArray[35]
+      
+        #face 2  RED 
+        updatedCube[15] = tempArray[6] 
+        updatedCube[16] = tempArray[7]   
+        updatedCube[17] = tempArray[8]
+      
+        #face 3 GREEN
+        updatedCube[24] = tempArray[15] 
+        updatedCube[25] = tempArray[16] 
+        updatedCube[26] = tempArray[17]
+      
+        #face 4 ORANGE
+        updatedCube[33] = tempArray[24] 
+        updatedCube[34] = tempArray[25] 
+        updatedCube[35] = tempArray[26]
+      
+        #face 5 YELLOW no change
+      
+        #face 6 WHITE rotate
+        updatedCube[45] = tempArray[51] 
+        updatedCube[46] = tempArray[48] 
+        updatedCube[47] = tempArray[45]
+      
+        updatedCube[48] = tempArray[52] 
+        updatedCube[49] = tempArray[49] 
+        updatedCube[50] = tempArray[46]
+      
+        updatedCube[51] = tempArray[53] 
+        updatedCube[52] = tempArray[50] 
+        updatedCube[53] = tempArray[47]
+      
+        #face 6 WHITE no change
+        listToString = ''.join(updatedCube)
+        return listToString

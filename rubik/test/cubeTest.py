@@ -63,4 +63,12 @@ class CubeTest(unittest.TestCase):
         cubeAfterRot = 'bggwbybyrwoborrybroboggggorywoworworgrwbygyyoyrgbwybww'
         encodedCube = CubeObject.back(cubeBeforeRot)
         self.assertEqual(encodedCube, cubeAfterRot)
+        
+        
+    def test_back_prime_rotation(self):
+        cubeBeforeRot = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        CubeObject = rubik.Cube()
+        cubeAfterRot = 'bggwbybyrwoworwybyroggggoborwororborwwbbygyyoyrgbwywrg'
+        encodedCube = CubeObject.backPrime(cubeBeforeRot)
+        self.assertEqual(encodedCube, cubeAfterRot)
 

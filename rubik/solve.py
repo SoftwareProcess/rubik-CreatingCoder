@@ -152,6 +152,11 @@ def _solve(parms):
         if key in neededKeys:
             result[key] = parms[key] 
     
+    
+    if(result['cube']=="" or result['cube']=="" or Nonetype):
+        result['status'] = status
+        del result['cube']
+    
             
     #removes op and rotate key value from dict
     del result['op']

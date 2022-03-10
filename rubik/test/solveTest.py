@@ -559,6 +559,7 @@ class Test(unittest.TestCase):
         #self.assertEqual(encodedCube, updatedParms)
         cubeString = encodedCube.get('cube')
         cubeList = list(cubeString)
+        pass
         
         
            

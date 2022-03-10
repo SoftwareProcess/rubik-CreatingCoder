@@ -56,7 +56,54 @@ class Cube:
         return listToString
      
      
-    
+    @staticmethod   
+    def frontPrime(self):
+          
+        updatedCube = list(self)
+        #makes empty array with 54 positions
+        tempArray = [None] * 54
+      
+        #populates array with elements from cubeList
+        for i in range(0, 54):
+            tempArray[i] = updatedCube[i]
+              
+        #face 1  BLUE CENTER
+        updatedCube[0] = tempArray[2] 
+        updatedCube[1] = tempArray[5] 
+        updatedCube[2] = tempArray[8] 
+        updatedCube[3] = tempArray[1]
+        updatedCube[4] = tempArray[4]
+        updatedCube[5] = tempArray[7]
+        updatedCube[6] = tempArray[0]
+        updatedCube[7] = tempArray[3]
+        updatedCube[8] = tempArray[6]
+      
+        #face 2 RED 
+        updatedCube[9] = tempArray[47]
+        updatedCube[12] = tempArray[46]
+        updatedCube[15] = tempArray[45]
+      
+        #face 3 GREEN No change
+      
+        #face 4 ORANGE CENTER ROTATE
+        updatedCube[29] = tempArray[44]
+        updatedCube[32] = tempArray[43]
+        updatedCube[35] = tempArray[42]
+      
+      
+        #face 5 YELLOW CENTER
+        updatedCube[42] = tempArray[9] 
+        updatedCube[43] = tempArray[12] 
+        updatedCube[44] = tempArray[15]
+      
+        #face 6 WHITE CENTER
+        updatedCube[45] = tempArray[29] 
+        updatedCube[46] = tempArray[32]   
+        updatedCube[47] = tempArray[35]
+             
+          
+        listToString = ''.join(updatedCube)
+        return listToString
     
     
     

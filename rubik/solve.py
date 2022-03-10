@@ -19,7 +19,7 @@ def _solve(parms):
     checkVal = check._check(parms)
     status = checkVal.get('status', None)
     
-    if(status =='ok' and parms.get('cube') != ""):
+    if(status =='ok'):
         checkReturnsOkCube = True
     else: checkReturnsOkCube = False
     

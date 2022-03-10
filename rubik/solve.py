@@ -38,7 +38,7 @@ def _solve(parms):
         
         #set string to bypass when type None
         ecLength = len(str(encodedCube))       
-        if(encodedCube != "" and ecLength == 54 and str(encodedCube)== True):  #
+        if(encodedCube != "" and ecLength == 54):  #and str(encodedCube)== True
             rot = CubeObject.front(encodedCube)
         parms['cube'] = rot
         parms['status'] = 'ok'

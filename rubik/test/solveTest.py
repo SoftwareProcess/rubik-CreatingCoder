@@ -524,12 +524,24 @@ class Test(unittest.TestCase):
         self.assertEqual(status, 'error: cube is missing')
         
         
+     def test_check_CubeIsEmptyString(self):
+        parm = {'op':'check',
+                'cube': ''}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube cannot b an empty string')     
         
         
         
         
-        
-        
+
+
+
+
+
+
+
       
     #BEGIN ITERATION 2 TESTS
         
@@ -546,6 +558,24 @@ class Test(unittest.TestCase):
         }
         encodedCube = solve._solve(parm)
         self.assertEqual(encodedCube, updatedParms) 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
     #===========================================================================
     # def test_shouldReturnWhiteCross_WhiteOnTop(self):

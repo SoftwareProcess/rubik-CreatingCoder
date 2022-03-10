@@ -524,7 +524,7 @@ class Test(unittest.TestCase):
         self.assertEqual(status, 'error: cube is missing')
         
         
-     def test_check_CubeIsEmptyString(self):
+     def test_check_CubeIsEmptyString_test2(self):
         parm = {'op':'check',
                 'cube': ''}
         result = solve._solve(parm)

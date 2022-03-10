@@ -29,9 +29,10 @@ def _solve(parms):
     else:
         rotation = ''
     
-    #if (status == 'ok'):
     encodedCube = parms.get('cube',None)
     
+    
+    #THIS WILL CHANGE TO SOLVE MOVES
     #NOTE: if letter is found empty, do F turn 
     if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
         

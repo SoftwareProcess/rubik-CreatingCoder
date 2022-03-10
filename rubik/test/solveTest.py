@@ -517,18 +517,21 @@ class Test(unittest.TestCase):
         
     #Failed test from A3    
     def test_check_CubeIsMissing(self):
-        parm = {'op':'solve'
-                }
+        parm = {'op':'solve'}
         result = solve._solve(parm)
         self.assertIn('status', result)
         status = result.get('status', None)
         self.assertEqual(status, 'error: cube is missing')
+        
+        
+        
+        
+        
+        
+        
+        
       
-        
-        
-        
-        
-
+    #BEGIN ITERATION 2 TESTS
         
     #Failed test from A3    
     def test_shouldIgnoreExtraneousParms(self):
@@ -543,6 +546,27 @@ class Test(unittest.TestCase):
         }
         encodedCube = solve._solve(parm)
         self.assertEqual(encodedCube, updatedParms) 
+        
+    def test_shouldReturnWhiteCross_WhiteOnTop(self):
+        parm = {'op':'check',
+                'cube': ''}
+         
+        updatedParms = {
+                'cube':'',
+                'status':'ok'
+        }
+        encodedCube = solve._solve(parm)
+        #self.assertEqual(encodedCube, updatedParms)
+        cubeString = encodedCube.get('cube')
+        cubeList = list(cubeString)
+        
+        
+           
+        
+    
+        
+        
+    
         
         
     

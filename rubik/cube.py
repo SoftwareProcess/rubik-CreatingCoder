@@ -386,3 +386,49 @@ class Cube:
         listToString = ''.join(updatedCube)
         return listToString
 
+
+    @staticmethod
+    def up(self):
+          
+        updatedCube = list(self)
+        #makes empty array with 54 positions
+        tempArray = [None] * 54
+      
+        #populates array with elements from cubeList
+        for i in range(0, 54):
+            tempArray[i] = updatedCube[i]
+              
+        #face 1  BLUE 
+        updatedCube[0] = tempArray[9] 
+        updatedCube[1] = tempArray[10]   
+        updatedCube[2] = tempArray[11]
+      
+        #face 2  RED 
+        updatedCube[9] = tempArray[18] 
+        updatedCube[10] = tempArray[19]   
+        updatedCube[11] = tempArray[20]
+      
+        #face 3 GREEN
+        updatedCube[18] = tempArray[27] 
+        updatedCube[19] = tempArray[28] 
+        updatedCube[20] = tempArray[29]
+          
+        #face 4 ORANGE
+        updatedCube[27] = tempArray[0] 
+        updatedCube[28] = tempArray[1] 
+        updatedCube[29] = tempArray[2]
+      
+        #face 5 YELLOW ROTATE
+        updatedCube[36] = tempArray[42]
+        updatedCube[37] = tempArray[39]
+        updatedCube[38] = tempArray[36]
+        updatedCube[39] = tempArray[43]
+        updatedCube[40] = tempArray[40]
+        updatedCube[41] = tempArray[37]
+        updatedCube[42] = tempArray[44]
+        updatedCube[43] = tempArray[41]
+        updatedCube[44] = tempArray[38]
+      
+        #face 6 WHITE no change
+        listToString = ''.join(updatedCube)
+        return listToString

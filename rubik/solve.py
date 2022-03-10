@@ -38,7 +38,7 @@ def _solve(parms):
         
         #set string to bypass when type None
         ecLength = len(str(encodedCube))       
-        if(encodedCube != "" and ecLength == 54 and str(encodedCube)== True):  #
+        if(encodedCube != "" and ecLength == 54):  #and str(encodedCube)== True
             rot = CubeObject.front(encodedCube)
         parms['cube'] = rot
         parms['status'] = 'ok'
@@ -54,6 +54,12 @@ def _solve(parms):
         for letter in rotation:
         
             if (letter not in allowedLettersForRotation and letter !="" and letter != None):
+                parms['status']= 'error: invalid rotation'
+                del parms['cube']
+                break
+            
+            #If cube is empty
+            if(parms['cube'] == ''):
                 parms['status']= 'error: invalid rotation'
                 del parms['cube']
                 break

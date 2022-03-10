@@ -20,7 +20,7 @@ class CubeTest(unittest.TestCase):
         cubeBeforeRot = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
         CubeObject = rubik.Cube()
         cubeAfterRot = 'gyrgbybwbgogrrrybwogrbgooggbwowoywoywwybygwoyorrbwyrrb'
-        encodedCube = CubeObject.front_prime(cubeBeforeRot)
+        encodedCube = CubeObject.frontPrime(cubeBeforeRot)
         self.assertEqual(encodedCube, cubeAfterRot)
         
         

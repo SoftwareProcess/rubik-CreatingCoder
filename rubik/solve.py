@@ -174,9 +174,7 @@ def _solve(parms):
         del result['cube']
         
         
-    if(result['cube'] ==""):
-        #del result['cube']
-        result['status'] = status
+
         
     return result
 ###End of Solve###

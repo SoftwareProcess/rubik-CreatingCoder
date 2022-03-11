@@ -55,7 +55,10 @@ def _solve(parms):
         ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):
             
-            CubeObject.moveWhiteTop(encodedCube)
+            rot = CubeObject.moveWhiteTop(encodedCube)
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot
 
             
             

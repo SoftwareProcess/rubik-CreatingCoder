@@ -355,20 +355,37 @@ def _solve(parms):
                 parms['solution'] = parms['solution'] + 'F' 
                 
 #============================Green Face============================
-            #===================================================================
-            # if(encodedCube[] == encodedCube[49]):
-            #     
-            #     rot = CubeObject.right(encodedCube)
-            #     parms['cube'] = rot
-            #     encodedCube = rot
-            #     parms['solution'] = parms['solution'] + 'R' 
-            #     
-            #     rot = CubeObject.downPrime(encodedCube)
-            #     parms['cube'] = rot
-            #     encodedCube = rot
-            #     parms['solution'] = parms['solution'] + 'd'
-            #===================================================================
-          
+            if(encodedCube[19] == encodedCube[49]):
+                 
+                rot = CubeObject.back(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'B' 
+                 
+                rot = CubeObject.back(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'B'
+                
+                rot = CubeObject.downPrime(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'd'
+                
+                rot = CubeObject.rightPrime(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'r'
+
+                rot = CubeObject.back(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'B'
+                
+                rot = CubeObject.right(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'R'          
 
     
     

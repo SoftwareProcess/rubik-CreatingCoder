@@ -214,7 +214,7 @@ def _solve(parms):
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'L'    
 #=========================================================================================                   
-            if(encodedCube[10] == encodedCube[49]):
+            if(encodedCube[12] == encodedCube[49]):
                 for i in range(4):
                     if(encodedCube[41] == encodedCube[49]):
                         rot = CubeObject.up(encodedCube)

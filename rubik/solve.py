@@ -63,7 +63,7 @@ def _solve(parms):
             #===================================================================
             
             
-            if(encodedCube[43] == encodedCube[49]):
+            while(encodedCube[43] == encodedCube[49]):
                 rot = CubeObject.up(encodedCube)
                 parms['cube'] = rot
                 parms['status'] = 'ok'

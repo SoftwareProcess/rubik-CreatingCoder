@@ -170,10 +170,10 @@ def _solve(parms):
     if('rotate' in result):
         del result['rotate']
 
- 
+    ##
     if(checkReturnsOkCube == False):
         result['status'] = status
-        del result['cube', None]
+        result.pop('cube', None)
         
 
 

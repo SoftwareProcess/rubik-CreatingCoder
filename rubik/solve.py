@@ -63,20 +63,20 @@ def _solve(parms):
             #===================================================================
             
             
-            while(encodedCube[43] == encodedCube[49]):
+            if(encodedCube[43] == encodedCube[49]):
                 rot = CubeObject.up(encodedCube)
                 parms['cube'] = rot
-                parms['status'] = 'ok'
+                
                 encodedCube = rot
                 
             rot = CubeObject.front(encodedCube)
             parms['cube'] = rot
-            parms['status'] = 'ok'
+            
             encodedCube = rot
             
             rot = CubeObject.front(encodedCube)
             parms['cube'] = rot
-            parms['status'] = 'ok'
+            
             encodedCube = rot
             
             
@@ -85,6 +85,7 @@ def _solve(parms):
             
         
     
+            
     
     
     
@@ -106,8 +107,7 @@ def _solve(parms):
     
     
     
-    
-    
+            parms['status'] = 'ok'
     
     
     

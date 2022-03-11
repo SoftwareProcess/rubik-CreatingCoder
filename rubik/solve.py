@@ -36,49 +36,21 @@ def _solve(parms):
     #NOTE: if letter is found empty, do F turn 
     if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
         
-        #=======================================================================
-        # #set string to bypass when type None
-        # ecLength = len(str(encodedCube))       
-        # if(encodedCube != "" and ecLength == 54):  #and str(encodedCube)== True
-        #     rot = CubeObject.front(encodedCube)
-        # parms['cube'] = rot
-        # parms['status'] = 'ok'
-        # encodedCube = rot
-        #=======================================================================
+        #set string to bypass when type None
+        ecLength = len(str(encodedCube))       
+        if(encodedCube != "" and ecLength == 54): 
+            rot = CubeObject.front(encodedCube)
+        parms['cube'] = rot
+        parms['status'] = 'ok'
+        encodedCube = rot
         
         #=======================================================================
         # if(parms.get[])
         # CubeObject.moveWhiteTop(encodedCube)
         #=======================================================================
         
-        #set string to bypass when type None
-        ecLength = len(str(encodedCube))       
-        if(encodedCube != "" and ecLength == 54):  #and str(encodedCube)== True
-            
-            encodedCubeList = list(encodedCube)
-            
-            if(encodedCubeList[46] == encodedCubeList[49]):
-                #spins top element until not white
-                if(encodedCubeList[43] == encodedCubeList[49]):
-                    while(encodedCubeList[43]== encodedCubeList[49]):
-                        
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        parms['status'] = 'ok'
-                        encodedCube = rot
-                        encodedCubeList = list(encodedCube)
 
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                encodedCubeList = list(encodedCube)
-                        
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                encodedCubeList = list(encodedCube)
+
             
             
         

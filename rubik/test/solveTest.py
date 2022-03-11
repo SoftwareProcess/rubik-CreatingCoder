@@ -599,7 +599,7 @@ class Test(unittest.TestCase):
         self.assertEqual(cubeList[43], cubeList[49])
         self.assertEqual(parm['solution'], 'LL')
         
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos48(self):
+    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos48_v2(self):
         parm = {'op':'check',
                 'cube': 'rorgbbggggggoroorororggbbbbbbbrororowywwywywyyywwwyyyw'}
            

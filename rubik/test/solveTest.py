@@ -571,7 +571,7 @@ class Test(unittest.TestCase):
         #plan is to move all white cross elements(except center) to the yellow face
     def test_shouldReturnWhiteCross_WhiteOnTop(self):
         parm = {'op':'check',
-                'cube': 'ggggbbororororogggbbbggborororrorbbbywwwyyywwywyywywyw'}
+                'cube': 'bbbgbbororororoggggggggborororrorbbbwwyyywwwyywyywywyw'}
            
         encodedCube = solve._solve(parm)
         #self.assertEqual(encodedCube, updatedParms)

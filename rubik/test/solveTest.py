@@ -549,19 +549,21 @@ class Test(unittest.TestCase):
     
     
     
-    #plan is to move all white cross elements(except center) to the yellow face
-    def test_shouldReturnWhiteCross_WhiteOnTop(self):
-        parm = {'op':'check',
-                'cube': 'ryyobyrrgggroroogryryggywoboyyrobwbwbbbbyrggogwwwwwowb'}
-          
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
+    #===========================================================================
+    # #plan is to move all white cross elements(except center) to the yellow face
+    # def test_shouldReturnWhiteCross_WhiteOnTop(self):
+    #     parm = {'op':'check',
+    #             'cube': 'ryyobyrrgggroroogryryggywoboyyrobwbwbbbbyrggogwwwwwowb'}
+    #       
+    #     encodedCube = solve._solve(parm)
+    #     #self.assertEqual(encodedCube, updatedParms)
+    #     cubeString = encodedCube.get('cube')
+    #     cubeList = list(cubeString)
+    #     self.assertEqual(cubeList[37], cubeList[49])
+    #     self.assertEqual(cubeList[39], cubeList[49])
+    #     self.assertEqual(cubeList[41], cubeList[49])
+    #     self.assertEqual(cubeList[43], cubeList[49])
+    #===========================================================================
          
         
         

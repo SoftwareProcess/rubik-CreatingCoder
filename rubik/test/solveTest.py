@@ -679,7 +679,7 @@ class Test(unittest.TestCase):
         parm = {'op':'solve',
                 'cube': 'oyyybwrggbgwbroyrbooryggwowgryoobbgwywgwywbrrgwoywbrbo'}
             
-                encodedCube = solve._solve(parm)
+        encodedCube = solve._solve(parm)
         #self.assertEqual(encodedCube, updatedParms)
         cubeString = encodedCube.get('cube')
         cubeList = list(cubeString)

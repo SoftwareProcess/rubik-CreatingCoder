@@ -907,7 +907,7 @@ class Test(unittest.TestCase):
         
         
         
-        def test_shouldReturnWhiteCross_WhiteOnTop_yellowface2(self):
+    def test_shouldReturnWhiteCross_WhiteOnTop_yellowface2(self):
         parm = {'op':'solve',
                 'cube': 'ywrbbborgbyoorgrrwgyyogrrrybwbwoyowwrowbygoowbbygwggyg'}
             

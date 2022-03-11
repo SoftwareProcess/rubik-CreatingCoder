@@ -859,7 +859,7 @@ class Test(unittest.TestCase):
         self.assertEqual(parm['solution'], 'UUUBDbLL')
         
         
-        def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos32(self):
+    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos32(self):
         parm = {'op':'solve',
                 'cube': 'wobrbyyrywgbgrobgbogybgoybrgbgyowgrroowwywowrgboywrwyr'}
             

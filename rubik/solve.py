@@ -103,13 +103,13 @@ def _solve(parms):
     
     
     
-    
+            
             parms['status'] = 'ok'
     
     
     
     
-    ################################end of white cross code#########################################
+    ################################end of white cross code/if statement#########################################
     
     #if statement skips over for loop if NoneType
     if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms and checkReturnsOkCube == True):
@@ -209,7 +209,7 @@ def _solve(parms):
             
         
           
-    neededKeys = [ 'op', 'cube', 'status']
+    neededKeys = [ 'op', 'cube', 'status', 'solution']
     
     
     

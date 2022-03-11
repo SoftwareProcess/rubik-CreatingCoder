@@ -55,9 +55,9 @@ def _solve(parms):
         ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):
             rot = CubeObject.front(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
+            parms['cube'] = rot
+            parms['status'] = 'ok'
+            encodedCube = rot
             
             
         

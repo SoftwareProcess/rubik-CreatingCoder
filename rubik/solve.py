@@ -46,12 +46,11 @@ def _solve(parms):
         # encodedCube = rot
         #=======================================================================
         
-        CubeObject.moveWhiteTop(encodedCube)
+        #=======================================================================
+        # if(parms.get[])
+        # CubeObject.moveWhiteTop(encodedCube)
+        #=======================================================================
         
-        
-        
-        
-    
     
     #if statement skips over for loop if NoneType
     if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms and checkReturnsOkCube == True):

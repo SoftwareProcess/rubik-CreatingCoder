@@ -499,24 +499,22 @@ class Test(unittest.TestCase):
         self.assertEqual(status, 'error: cube must be a String') 
         
     
-    #===========================================================================
-    # def test_check_CubeIsNone(self):
-    #     parm = {'op':'check',
-    #             'cube': None}
-    #     result = solve._solve(parm)
-    #     self.assertIn('status', result)
-    #     status = result.get('status', None)
-    #     self.assertEqual(status, 'error: cube is missing')
-    #     
-    # #Failed test from A3    
-    # def test_check_CubeIsMissing(self):
-    #     parm = {'op':'solve'}
-    #     result = solve._solve(parm)
-    #     self.assertIn('status', result)
-    #     status = result.get('status', None)
-    #     self.assertEqual(status, 'error: cube is missing')
-    #     
-    #===========================================================================
+    def test_check_CubeIsNone(self):
+        parm = {'op':'check',
+                'cube': None}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is missing')
+        
+    #Failed test from A3    
+    def test_check_CubeIsMissing(self):
+        parm = {'op':'solve'}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube is missing')
+        
   
         
 
@@ -539,15 +537,13 @@ class Test(unittest.TestCase):
         
     
         
-    #===========================================================================
-    # def test_check_CubeIsEmptyString(self):
-    #     parm = {'op':'check',
-    #             'cube': ''}
-    #     result = solve._solve(parm)
-    #     self.assertIn('status', result)
-    #     status = result.get('status', None)
-    #     self.assertEqual(status, 'error: cube cannot be an empty string')   
-    #===========================================================================
+    def test_check_CubeIsEmptyString(self):
+        parm = {'op':'check',
+                'cube': ''}
+        result = solve._solve(parm)
+        self.assertIn('status', result)
+        status = result.get('status', None)
+        self.assertEqual(status, 'error: cube cannot be an empty string')   
     
     
     

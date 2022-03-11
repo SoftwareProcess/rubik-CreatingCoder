@@ -46,21 +46,12 @@ def _solve(parms):
         # encodedCube = rot
         #=======================================================================
         
-        #=======================================================================
-        # if(parms.get[])
-        # CubeObject.moveWhiteTop(encodedCube)
-        #=======================================================================
-        
-
         ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):
+            parms['solution'] = ''
             
-            #===================================================================
-            # rot = CubeObject.moveWhiteTop(encodedCube)
-            # parms['cube'] = rot
-            # parms['status'] = 'ok'
-            # encodedCube = rot
-            #===================================================================
+        
+ #=================Start of Logic for finding solution for white cross=================        
             if(encodedCube[46] == encodedCube[49]):
                 for i in range(4):
                     if(encodedCube[43] == encodedCube[49]):

@@ -54,7 +54,32 @@ def _solve(parms):
         #set string to bypass when type None
         ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):  #and str(encodedCube)== True
-            CubeObject.moveWhiteTop(encodedCube)
+            
+            encodedCubeList = list(encodedCube)
+            
+            if(encodedCubeList[46] == encodedCubeList[49]):
+                #spins top element until not white
+                if(encodedCubeList[43] == encodedCubeList[49]):
+                    while(encodedCubeList[43]== encodedCubeList[49]):
+                        
+                        rot = CubeObject.up(encodedCube)
+                        parms['cube'] = rot
+                        parms['status'] = 'ok'
+                        encodedCube = rot
+                        encodedCubeList = list(encodedCube)
+
+                rot = CubeObject.front(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                encodedCubeList = list(encodedCube)
+                        
+                rot = CubeObject.front(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                encodedCubeList = list(encodedCube)
+            
             
         
     

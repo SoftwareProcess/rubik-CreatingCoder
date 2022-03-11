@@ -677,7 +677,7 @@ class Test(unittest.TestCase):
         
     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos5(self):
         parm = {'op':'solve',
-                'cube': ''}
+                'cube': 'oyyybwrggbgwbroyrbooryggwowgryoobbgwywgwywbrrgroywbrbo'}
             
         encodedCube = solve._solve(parm)
         #self.assertEqual(encodedCube, updatedParms)

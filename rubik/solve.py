@@ -173,7 +173,7 @@ def _solve(parms):
  
     if(checkReturnsOkCube == False):
         result['status'] = status
-        del result['cube']
+        del result['cube', None]
         
 
 

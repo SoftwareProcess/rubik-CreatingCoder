@@ -50,579 +50,579 @@ def _solve(parms):
         if(encodedCube != "" and ecLength == 54):
             parms['solution'] = ''
             
-        
+            for i in range(4):
 #=================Start of Logic for finding solution for white cross=================   
 
 #==================move white cross elements from bottom to top==========================     
-            if(encodedCube[46] == encodedCube[49]):
-                for i in range(4):
-                    if(encodedCube[43] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                if(encodedCube[46] == encodedCube[49]):
+                    for i in range(4):
+                        if(encodedCube[43] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
                     
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'
-#=========================================================================================               
-            if(encodedCube[48] == encodedCube[49]):
-                for i in range(4):
-                    if(encodedCube[39] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
+    #=========================================================================================               
+                if(encodedCube[48] == encodedCube[49]):
+                    for i in range(4):
+                        if(encodedCube[39] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
                     
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'
-#=========================================================================================                 
-            if(encodedCube[50] == encodedCube[49]):
-                for i in range(4):
-                    if(encodedCube[41] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
+    #=========================================================================================                 
+                if(encodedCube[50] == encodedCube[49]):
+                    for i in range(4):
+                        if(encodedCube[41] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'
                     
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'       
-#=========================================================================================                 
-            if(encodedCube[52] == encodedCube[49]):
-                for i in range(4):
-                    if(encodedCube[37] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'       
+    #=========================================================================================                 
+                if(encodedCube[52] == encodedCube[49]):
+                    for i in range(4):
+                        if(encodedCube[37] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
                     
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-                
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-#=====================End of white face=====================================
-
-#====================blue face start========================================
-            if(encodedCube[1] == encodedCube[49]):
-                    
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'
-                
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'r'    
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd'
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'        
-#=========================================================================================   
-            if(encodedCube[3] == encodedCube[49]):
-                for i in range(4):
-                    if(encodedCube[39] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
-                    
-                rot = CubeObject.leftPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'l'
-#=========================================================================================   
-            if(encodedCube[5] == encodedCube[49]):
-                for i in range(4):
-                    if(encodedCube[41] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
-                    
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'                
-#=========================================================================================   
-            if(encodedCube[7] == encodedCube[49]):
-                for i in range(4):
-                    if(encodedCube[43] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
-                    
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd'
-                
-                rot = CubeObject.leftPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'l' 
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F' 
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'    
-                
-                
-#===============================Red Face============================================                   
-            if(encodedCube[10] == encodedCube[49]):
-
-                    
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'r'
-                
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'r'
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd' 
-                
-                rot = CubeObject.frontPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'f' 
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F' 
-
-
-
-#=========================================================================================                   
-            if(encodedCube[12] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[41] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
-                    
-                
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'r' 
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd' 
-                
-                rot = CubeObject.frontPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'f'
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R' 
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'        
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+    #=====================End of white face=====================================
     
-#=========================================================================================                   
-            if(encodedCube[14] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[41] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+    #====================blue face start========================================
+                if(encodedCube[1] == encodedCube[49]):
+                        
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
                     
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R' 
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd' 
-                
-                rot = CubeObject.frontPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'f'
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R' 
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'             
-
-#=========================================================================================                   
-            if(encodedCube[16] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[41] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.rightPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'r'    
                     
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd' 
-                
-                rot = CubeObject.frontPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'f' 
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F' 
-                
-#============================Green Face============================
-            if(encodedCube[19] == encodedCube[49]):
-                 
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B' 
-                 
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd'
-                
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'r'
-
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'          
-#====================================================================================
-            if(encodedCube[21] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[37] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd'
                     
-                
-                rot = CubeObject.backPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'b'
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd'
-                
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'r'
-                
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-                
-                rot = CubeObject.right(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'R'
-                
-#====================================================================================
-            if(encodedCube[23] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[37] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'
                     
-                
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-                
-                rot = CubeObject.down(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'D'
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'
-                
-                rot = CubeObject.backPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'b'
-                
-                rot = CubeObject.leftPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'l'
-                
-#====================================================================================
-            if(encodedCube[25] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[37] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
                     
-                
-                rot = CubeObject.down(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'D'
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'
-                
-                rot = CubeObject.backPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'b'
-                
-                rot = CubeObject.leftPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'l'
-#===============================Orange Face============================================                   
-            if(encodedCube[28] == encodedCube[49]):
-       
-                rot = CubeObject.leftPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'l'
-                
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-                
-                rot = CubeObject.down(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'D' 
-                
-                rot = CubeObject.backPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'b' 
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'
-                
-#====================================================================================
-            if(encodedCube[30] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[39] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'        
+    #=========================================================================================   
+                if(encodedCube[3] == encodedCube[49]):
+                    for i in range(4):
+                        if(encodedCube[39] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    rot = CubeObject.leftPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'l'
+    #=========================================================================================   
+                if(encodedCube[5] == encodedCube[49]):
+                    for i in range(4):
+                        if(encodedCube[41] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'                
+    #=========================================================================================   
+                if(encodedCube[7] == encodedCube[49]):
+                    for i in range(4):
+                        if(encodedCube[43] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd'
                     
-                
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'B'
-                
-                rot = CubeObject.down(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'D'
-                
-                rot = CubeObject.backPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'b'
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L' 
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L' 
-#====================================================================================
-            if(encodedCube[32] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[39] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.leftPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'l' 
                     
-                
-                rot = CubeObject.frontPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'f'
-                
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'd'
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L' 
-                
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'L'                            
-
-#====================================================================================
-            if(encodedCube[34] == encodedCube[49]):
-                
-                for i in range(4):
-                    if(encodedCube[39] == encodedCube[49]):
-                        rot = CubeObject.up(encodedCube)
-                        parms['cube'] = rot
-                        encodedCube = rot
-                        parms['solution'] = parms['solution'] + 'U'
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F' 
                     
-                
-                rot = CubeObject.down(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'D'
-                
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'F'
-                
-                rot = CubeObject.leftPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'l'
-                
-                rot = CubeObject.frontPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'f'    
-#====================== 
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'    
+                    
+                    
+    #===============================Red Face============================================                   
+                if(encodedCube[10] == encodedCube[49]):
+    
+                        
+                    rot = CubeObject.rightPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'r'
+                    
+                    rot = CubeObject.rightPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'r'
+                    
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd' 
+                    
+                    rot = CubeObject.frontPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'f' 
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F' 
+    
+    
+    
+    #=========================================================================================                   
+                if(encodedCube[12] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[41] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.rightPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'r' 
+                    
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd' 
+                    
+                    rot = CubeObject.frontPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'f'
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R' 
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'        
+        
+    #=========================================================================================                   
+                if(encodedCube[14] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[41] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R' 
+                    
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd' 
+                    
+                    rot = CubeObject.frontPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'f'
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R' 
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'             
+    
+    #=========================================================================================                   
+                if(encodedCube[16] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[41] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd' 
+                    
+                    rot = CubeObject.frontPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'f' 
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F' 
+                    
+    #============================Green Face============================
+                if(encodedCube[19] == encodedCube[49]):
+                     
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B' 
+                     
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd'
+                    
+                    rot = CubeObject.rightPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'r'
+    
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'          
+    #====================================================================================
+                if(encodedCube[21] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[37] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.backPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'b'
+                    
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd'
+                    
+                    rot = CubeObject.rightPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'r'
+                    
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'
+                    
+    #====================================================================================
+                if(encodedCube[23] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[37] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                    rot = CubeObject.down(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'D'
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
+                    
+                    rot = CubeObject.backPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'b'
+                    
+                    rot = CubeObject.leftPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'l'
+                    
+    #====================================================================================
+                if(encodedCube[25] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[37] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.down(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'D'
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
+                    
+                    rot = CubeObject.backPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'b'
+                    
+                    rot = CubeObject.leftPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'l'
+    #===============================Orange Face============================================                   
+                if(encodedCube[28] == encodedCube[49]):
+           
+                    rot = CubeObject.leftPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'l'
+                    
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                    rot = CubeObject.down(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'D' 
+                    
+                    rot = CubeObject.backPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'b' 
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
+                    
+    #====================================================================================
+                if(encodedCube[30] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[39] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                    rot = CubeObject.down(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'D'
+                    
+                    rot = CubeObject.backPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'b'
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L' 
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L' 
+    #====================================================================================
+                if(encodedCube[32] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[39] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.frontPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'f'
+                    
+                    rot = CubeObject.downPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'd'
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L' 
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'                            
+    
+    #====================================================================================
+                if(encodedCube[34] == encodedCube[49]):
+                    
+                    for i in range(4):
+                        if(encodedCube[39] == encodedCube[49]):
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                        
+                    
+                    rot = CubeObject.down(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'D'
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
+                    
+                    rot = CubeObject.leftPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'l'
+                    
+                    rot = CubeObject.frontPrime(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'f'    
+    #======================end of orange=====================
     
 
     

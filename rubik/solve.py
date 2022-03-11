@@ -51,7 +51,7 @@ def _solve(parms):
             parms['solution'] = ''
             
         
- #=================Start of Logic for finding solution for white cross=================        
+#=================Start of Logic for finding solution for white cross=================        
             if(encodedCube[46] == encodedCube[49]):
                 for i in range(4):
                     if(encodedCube[43] == encodedCube[49]):
@@ -69,6 +69,25 @@ def _solve(parms):
                 parms['cube'] = rot
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'F'
+#=========================================================================================               
+            if(encodedCube[48] == encodedCube[49]):
+                for i in range(4):
+                    if(encodedCube[39] == encodedCube[49]):
+                        rot = CubeObject.up(encodedCube)
+                        parms['cube'] = rot
+                        encodedCube = rot
+                        parms['solution'] = parms['solution'] + 'U'
+                    
+                rot = CubeObject.left(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'L'
+                
+                rot = CubeObject.left(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'L'
+#=========================================================================================                 
             
             
             

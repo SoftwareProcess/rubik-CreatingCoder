@@ -569,7 +569,7 @@ class Test(unittest.TestCase):
          
         
         #plan is to move all white cross elements(except center) to the yellow face
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos50(self):
+    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos46(self):
         parm = {'op':'check',
                 'cube': 'bbbgbbororororoggggggggborororrorbbbwwyyywwwyywyywywyw'}
            
@@ -585,7 +585,19 @@ class Test(unittest.TestCase):
         
            
         
-    
+    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos48(self):
+        parm = {'op':'check',
+                'cube': 'bbbgbbgggrororoorogggggbbbbrorrororowwyyywwwyyywwwyyyw'}
+           
+        encodedCube = solve._solve(parm)
+        #self.assertEqual(encodedCube, updatedParms)
+        cubeString = encodedCube.get('cube')
+        cubeList = list(cubeString)
+        self.assertEqual(cubeList[37], cubeList[49])
+        self.assertEqual(cubeList[39], cubeList[49])
+        self.assertEqual(cubeList[41], cubeList[49])
+        self.assertEqual(cubeList[43], cubeList[49])
+        self.assertEqual(parm['solution'], 'LL')   
         
         
     

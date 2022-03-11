@@ -467,8 +467,7 @@ def _solve(parms):
                             parms['cube'] = rot
                             encodedCube = rot
                             parms['solution'] = parms['solution'] + 'U'
-                        
-                    
+                            
                     rot = CubeObject.down(encodedCube)
                     parms['cube'] = rot
                     encodedCube = rot
@@ -530,8 +529,7 @@ def _solve(parms):
                             parms['cube'] = rot
                             encodedCube = rot
                             parms['solution'] = parms['solution'] + 'U'
-                        
-                    
+                                            
                     rot = CubeObject.back(encodedCube)
                     parms['cube'] = rot
                     encodedCube = rot

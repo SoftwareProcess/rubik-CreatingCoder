@@ -213,7 +213,9 @@ def _solve(parms):
                 parms['cube'] = rot
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'L'    
-#=========================================================================================                   
+                
+                
+#===============================Red Face============================================                   
             if(encodedCube[10] == encodedCube[49]):
 
                     
@@ -352,6 +354,21 @@ def _solve(parms):
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'F' 
                 
+#============================Green Face============================
+            #===================================================================
+            # if(encodedCube[] == encodedCube[49]):
+            #     
+            #     rot = CubeObject.right(encodedCube)
+            #     parms['cube'] = rot
+            #     encodedCube = rot
+            #     parms['solution'] = parms['solution'] + 'R' 
+            #     
+            #     rot = CubeObject.downPrime(encodedCube)
+            #     parms['cube'] = rot
+            #     encodedCube = rot
+            #     parms['solution'] = parms['solution'] + 'd'
+            #===================================================================
+          
 
     
     

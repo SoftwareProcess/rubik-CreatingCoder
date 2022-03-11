@@ -581,7 +581,7 @@ class Test(unittest.TestCase):
         self.assertEqual(cubeList[39], cubeList[49])
         self.assertEqual(cubeList[41], cubeList[49])
         self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUFF')
+        self.assertEqual(parm['solution'], 'UUFF')
         
            
         

@@ -828,6 +828,21 @@ class Test(unittest.TestCase):
         self.assertEqual(cubeList[43], cubeList[49])
         self.assertEqual(parm['solution'], 'UUUDLbl') 
         
+        
+    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos28(self):
+        parm = {'op':'solve',
+                'cube': 'gbgybywrywobgrobgbwgobgoybwywrgoroyggwrrywyworboowrbyr'}
+            
+        encodedCube = solve._solve(parm)
+        #self.assertEqual(encodedCube, updatedParms)
+        cubeString = encodedCube.get('cube')
+        cubeList = list(cubeString)
+        self.assertEqual(cubeList[37], cubeList[49])
+        self.assertEqual(cubeList[39], cubeList[49])
+        self.assertEqual(cubeList[41], cubeList[49])
+        self.assertEqual(cubeList[43], cubeList[49])
+        self.assertEqual(parm['solution'], 'lBDbLL')
+        
     
     
     

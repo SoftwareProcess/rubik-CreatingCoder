@@ -54,7 +54,7 @@ def _solve(parms):
         #set string to bypass when type None
         ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):  #and str(encodedCube)== True
-            #CubeObject.moveWhiteTop(encodedCube)
+            CubeObject.moveWhiteTop(encodedCube)
             
         
     

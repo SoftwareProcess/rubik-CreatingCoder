@@ -159,7 +159,7 @@ def _solve(parms):
             result[key] = parms[key] 
     
     
-    if(result['cube']== "" ):
+    if('cube' in result and result['cube']== ""):
         result['status'] = status
         del result['cube']
     

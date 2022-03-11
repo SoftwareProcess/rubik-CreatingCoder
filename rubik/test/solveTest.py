@@ -630,21 +630,19 @@ class Test(unittest.TestCase):
         
         
     
-    #===========================================================================
-    # def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos52(self):
-    #     parm = {'op':'check',
-    #             'cube': ''}
-    #        
-    #     encodedCube = solve._solve(parm)
-    #     #self.assertEqual(encodedCube, updatedParms)
-    #     cubeString = encodedCube.get('cube')
-    #     cubeList = list(cubeString)
-    #     self.assertEqual(cubeList[37], cubeList[49])
-    #     self.assertEqual(cubeList[39], cubeList[49])
-    #     self.assertEqual(cubeList[41], cubeList[49])
-    #     self.assertEqual(cubeList[43], cubeList[49])
-    #     self.assertEqual(parm['solution'], 'UURR')    
-    #===========================================================================
+    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos52(self):
+        parm = {'op':'check',
+                'cube': 'ggggbbororororobbbbbbggborororrorgggywwwyyywwwywywyywy'}
+            
+        encodedCube = solve._solve(parm)
+        #self.assertEqual(encodedCube, updatedParms)
+        cubeString = encodedCube.get('cube')
+        cubeList = list(cubeString)
+        self.assertEqual(cubeList[37], cubeList[49])
+        self.assertEqual(cubeList[39], cubeList[49])
+        self.assertEqual(cubeList[41], cubeList[49])
+        self.assertEqual(cubeList[43], cubeList[49])
+        self.assertEqual(parm['solution'], 'UUUBB')    
         
     
     

@@ -924,4 +924,20 @@ class Test(unittest.TestCase):
     
     
     
+    def test_shouldReturnWhiteCross(self):
+        parm = {'op':'solve',
+                'cube': 'oggwbrrygyrwwrgywgoywwgywrorbyroobgybbgoygbyrbooowbwbr'}
+            
+        encodedCube = solve._solve(parm)
+        #self.assertEqual(encodedCube, updatedParms)
+        cubeString = encodedCube.get('cube')
+        cubeList = list(cubeString)
+        self.assertEqual(cubeList[46], cubeList[49])
+        self.assertEqual(cubeList[48], cubeList[49])
+        self.assertEqual(cubeList[50], cubeList[49])
+        self.assertEqual(cubeList[52], cubeList[49])
+        
+        #self.assertEqual(parm['solution'], 'FrdRFFDLbllBDbLLUdlFL')
+    
+    
      

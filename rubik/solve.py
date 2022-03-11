@@ -623,7 +623,23 @@ def _solve(parms):
     #======================end of orange=====================
     
 
-    
+            #logic for flipping tiles over from yellow face to white (bottom)
+            #===================================================================
+            # for i in range(4):
+            #     
+            #     if(encodedCube[1] == encodedCube[4] and encodedCube[43] == 49):
+            #         
+            #         rot = CubeObject.front(encodedCube)
+            #         parms['cube'] = rot
+            #         encodedCube = rot
+            #         parms['solution'] = parms['solution'] + 'F'
+            #         
+            #         rot = CubeObject.front(encodedCube)
+            #         parms['cube'] = rot
+            #         encodedCube = rot
+            #         parms['solution'] = parms['solution'] + 'F'
+            #===================================================================
+            
     
     
     

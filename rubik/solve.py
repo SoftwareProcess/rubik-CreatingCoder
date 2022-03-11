@@ -185,8 +185,35 @@ def _solve(parms):
                 parms['cube'] = rot
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'R'                
-                                
-            
+#=========================================================================================   
+            if(encodedCube[7] == encodedCube[49]):
+                for i in range(4):
+                    if(encodedCube[43] == encodedCube[49]):
+                        rot = CubeObject.up(encodedCube)
+                        parms['cube'] = rot
+                        encodedCube = rot
+                        parms['solution'] = parms['solution'] + 'U'
+                    
+                rot = CubeObject.downPrime(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'd'
+                
+                rot = CubeObject.leftPrime(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'l' 
+                
+                rot = CubeObject.front(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'F' 
+                
+                rot = CubeObject.left(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'L'    
+#=========================================================================================               
             
             
         

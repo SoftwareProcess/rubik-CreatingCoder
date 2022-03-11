@@ -254,10 +254,6 @@ def _solve(parms):
                         encodedCube = rot
                         parms['solution'] = parms['solution'] + 'U'
                     
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'r'
                 
                 rot = CubeObject.rightPrime(encodedCube)
                 parms['cube'] = rot

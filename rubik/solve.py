@@ -67,10 +67,9 @@ def _solve(parms):
                 rot = CubeObject.up(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
-            
                 
             rot = CubeObject.front(encodedCube)
-            parms['cube'], encodedCube = rot
+            parms['cube'] = rot
             encodedCube = rot
             
             rot = CubeObject.front(encodedCube)

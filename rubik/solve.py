@@ -387,6 +387,7 @@ def _solve(parms):
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'R'          
 
+
     
     
     

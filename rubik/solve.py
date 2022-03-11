@@ -31,7 +31,7 @@ def _solve(parms):
     
     encodedCube = parms.get('cube',None)
     
-    
+    #CREATE SOLUTION
     #THIS WILL CHANGE TO SOLVE MOVES
     #NOTE: if letter is found empty, do F turn 
     if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
@@ -55,10 +55,15 @@ def _solve(parms):
         ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):
             
-            rot = CubeObject.moveWhiteTop(encodedCube)
-            parms['cube'] = rot
-            parms['status'] = 'ok'
-            encodedCube = rot
+            #===================================================================
+            # rot = CubeObject.moveWhiteTop(encodedCube)
+            # parms['cube'] = rot
+            # parms['status'] = 'ok'
+            # encodedCube = rot
+            #===================================================================
+            
+            
+            if(encodedCube[] == encodedCube[49]):
 
             
             

@@ -569,7 +569,7 @@ class Test(unittest.TestCase):
          
         
         #plan is to move all white cross elements(except center) to the yellow face
-    def test_shouldReturnWhiteCross_WhiteOnTop(self):
+    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos50(self):
         parm = {'op':'check',
                 'cube': 'bbbgbbororororoggggggggborororrorbbbwwyyywwwyywyywywyw'}
            

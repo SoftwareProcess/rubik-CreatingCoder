@@ -595,8 +595,8 @@ class Cube:
         if(updatedCube[46] == updatedCube[49]):
             #spins top element until not white
             if(updatedCube[43] == updatedCube[49]):
-
-                Cube.up(self)
+                while(updatedCube[43]== updatedCube[49]):
+                    Cube.up(self)
     
             Cube.front(self)
             Cube.front(self)
@@ -605,8 +605,8 @@ class Cube:
         if(updatedCube[48] == updatedCube[49]):
             #spins top element until not white
             if(updatedCube[39] == updatedCube[49]):
-
-                Cube.up(self)
+                while(updatedCube[39]== updatedCube[49]):
+                    Cube.up(self)
     
             Cube.left(self)
             Cube.left(self)
@@ -615,8 +615,8 @@ class Cube:
         if(updatedCube[50] == updatedCube[49]):
             #spins top element until not white
             if(updatedCube[41] == updatedCube[49]):
-
-                Cube.up(self)
+                while(updatedCube[41]== updatedCube[49]):
+                    Cube.up(self)
     
             Cube.right(self)
             Cube.right(self)
@@ -625,8 +625,8 @@ class Cube:
         if(updatedCube[52] == updatedCube[49]):
             #spins top element until not white
             if(updatedCube[37] == updatedCube[49]):
-
-                Cube.up(self)
+                while(updatedCube[37]== updatedCube[49]):
+                    Cube.up(self)
     
             Cube.back(self)
             Cube.back(self)

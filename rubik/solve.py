@@ -219,32 +219,32 @@ def _solve(parms):
                 rot = CubeObject.rightPrime(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
-                parms['solution'] = parms['solution'] + ''
+                parms['solution'] = parms['solution'] + 'r'
                 
                 rot = CubeObject.rightPrime(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
-                parms['solution'] = parms['solution'] + '' 
+                parms['solution'] = parms['solution'] + 'r' 
                 
                 rot = CubeObject.downPrime(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
-                parms['solution'] = parms['solution'] + '' 
+                parms['solution'] = parms['solution'] + 'd' 
                 
                 rot = CubeObject.frontPrime(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
-                parms['solution'] = parms['solution'] + ''
+                parms['solution'] = parms['solution'] + 'f'
                 
                 rot = CubeObject.right(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
-                parms['solution'] = parms['solution'] + '' 
+                parms['solution'] = parms['solution'] + 'R' 
                 
                 rot = CubeObject.front(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
-                parms['solution'] = parms['solution'] + ''
+                parms['solution'] = parms['solution'] + 'F'
         
     
             

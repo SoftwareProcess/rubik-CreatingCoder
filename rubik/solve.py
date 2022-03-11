@@ -624,28 +624,66 @@ def _solve(parms):
     
 
             #logic for flipping tiles over from yellow face to white (bottom)
-            #===================================================================
-            # for i in range(4):
-            #     
-            #     if(encodedCube[1] == encodedCube[4] and encodedCube[43] == 49):
-            #         
-            #         rot = CubeObject.front(encodedCube)
-            #         parms['cube'] = rot
-            #         encodedCube = rot
-            #         parms['solution'] = parms['solution'] + 'F'
-            #         
-            #         rot = CubeObject.front(encodedCube)
-            #         parms['cube'] = rot
-            #         encodedCube = rot
-            #         parms['solution'] = parms['solution'] + 'F'
-            #===================================================================
+            for i in range(4):
+                
+                if(encodedCube[1] == encodedCube[4] and encodedCube[43] == encodedCube[49]):
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
+                    
+                    rot = CubeObject.front(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'F'
             
+                if(encodedCube[10] == encodedCube[13] and encodedCube[41] == encodedCube[49]):
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'
+                    
+                    rot = CubeObject.right(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'R'
+                    
+                if(encodedCube[19] == encodedCube[22] and encodedCube[37] == encodedCube[49]):
+                    
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                    rot = CubeObject.back(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'B'
+                    
+                if(encodedCube[28] == encodedCube[31] and encodedCube[39] == encodedCube[49]):
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
+                    
+                    rot = CubeObject.left(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'L'
     
     
+                if(encodedCube[46]== encodedCube[49] and encodedCube[48]== encodedCube[49] 
+                   and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
+                        break
+                    
     
-    
-    
-    
+                rot = CubeObject.up(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'U'
     
     
     

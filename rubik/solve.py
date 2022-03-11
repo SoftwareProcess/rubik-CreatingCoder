@@ -65,15 +65,17 @@ def _solve(parms):
             
             if(encodedCube[43] == encodedCube[49]):
                 rot = CubeObject.up(encodedCube)
-                parms['cube'], encodedCube = rot
+                parms['cube'] = rot
+                encodedCube = rot
             
                 
             rot = CubeObject.front(encodedCube)
             parms['cube'], encodedCube = rot
-
+            encodedCube = rot
             
             rot = CubeObject.front(encodedCube)
-            parms['cube'], encodedCube = rot
+            parms['cube'] = rot
+            encodedCube = rot
             
             
             

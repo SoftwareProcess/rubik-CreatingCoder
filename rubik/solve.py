@@ -622,10 +622,9 @@ def _solve(parms):
                 parms['cube'] = rot
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'f'    
+#====================== 
     
-    
-    
-    
+
     
     
     

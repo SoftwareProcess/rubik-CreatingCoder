@@ -128,7 +128,26 @@ def _solve(parms):
 #=====================End of white face=====================================
 
 #====================blue face start========================================
-
+            #===================================================================
+            # if(encodedCube[] == encodedCube[49]):
+            #     for i in range(4):
+            #         if(encodedCube[] == encodedCube[49]):
+            #             rot = CubeObject.up(encodedCube)
+            #             parms['cube'] = rot
+            #             encodedCube = rot
+            #             parms['solution'] = parms['solution'] + ''
+            #         
+            #     rot = CubeObject.(encodedCube)
+            #     parms['cube'] = rot
+            #     encodedCube = rot
+            #     parms['solution'] = parms['solution'] + ''
+            #     
+            #     rot = CubeObject.(encodedCube)
+            #     parms['cube'] = rot
+            #     encodedCube = rot
+            #     parms['solution'] = parms['solution'] + ''       
+            #===================================================================
+#=========================================================================================   
 
 
                 

@@ -568,359 +568,361 @@ class Test(unittest.TestCase):
     #===========================================================================
          
         
-        #plan is to move all white cross elements(except center) to the yellow face
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos46(self):
-        parm = {'op':'solve',
-                'cube': 'bbbgbbororororoggggggggborororrorbbbwwyyywwwyywyywywyw'}
-           
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUFF')
-        
-           
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos48(self):
-        parm = {'op':'solve',
-                'cube': 'bbbgbbgggrororoorogggggbbbbrorrororowwyyywwwyyywwwyyyw'}
-           
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'LL')
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos48_v2(self):
-        parm = {'op':'solve',
-                'cube': 'rorgbbggggggoroorororggbbbbbbbrororowywwywywyyywwwyyyw'}
-           
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUULL')      
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos50(self):
-        parm = {'op':'solve',
-                'cube': 'bbbgbbbbbrororoorogggggbgggrorrororowwyyywwwywyyywwwyy'}
-           
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UURR') 
-        
-        
-    
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos52(self):
-        parm = {'op':'solve',
-                'cube': 'ggggbbororororobbbbbbggborororrorgggywwwyyywwwywywyywy'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUBB')    
-        
-    
-
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos1(self):
-        parm = {'op':'solve',
-                'cube': 'wwyyboobrgbbyrowggrorggbobwggororrgbywywywbroyobrwygyw'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'FrdRFF')  
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos3(self):
-        parm = {'op':'solve',
-                'cube': 'oorwbyyyoggbbroygwwowggyrggbrwoobyrbobrwywgwyrrbbwyorg'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUl')  
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos5(self):
-        parm = {'op':'solve',
-                'cube': 'oyyybwrggbgwbroyrbooryggwowgryoobbgwywgwywbrrgroywbrbo'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUR')
-        
-    
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos7(self):
-        parm = {'op':'solve',
-                'cube': 'rorgbbywogrgyrogyorbybggwgwoowoorobbbwwyywbwyrgyrwrbyg'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUdlFL') 
-        
-    
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos10(self):
-        parm = {'op':'solve',
-                'cube': 'rbgbbbygwowoorobgyworyggrbwgrgooygroywbwygwwybyrywrorb'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'rrdfRF')
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos12(self):
-        parm = {'op':'solve',
-                'cube': 'rbbbbgygyooywrgoobborrggrbwgrgooygroywrwyywwwbygywborw'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'rdfRF')
-        
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos14(self):
-        parm = {'op':'solve',
-                'cube': 'groyboygwwgbyrwrbwrgybggbbogoroorwooowywyrywbbygbwrgyr'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'RdfRF')
-        
-        
-    
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos16(self):
-        parm = {'op':'solve',
-                'cube': 'grgybrygrrywbrgwwbbgyrggybogoroorwooowowyoywwbybbwbgyr'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'dfRF')
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos19(self):
-        parm = {'op':'solve',
-                'cube': 'wgggbyooryrwgrybgwowyogrrbygobyorbywobgwywrwrbbybwoorg'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'BBdrBR')    
-        
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos21(self):
-        parm = {'op':'solve',
-                'cube': 'rbgobybgbwobgrrybgwgywgyyyorbgoogbrygwroywwwoorrbwywro'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UbdrBR')
-        
-
-    
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos23(self):
-        parm = {'op':'solve',
-                'cube': 'wgbobybgboyygroybrgbgygwgbrwobrogyryowowyrrwworrbwygow'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUBDLbl')    
-        
-    
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos25(self):
-        parm = {'op':'solve',
-                'cube': 'wgwobybgbgyogroybgwbgbgyrwywobrogoryowbwyorwrorrbwygry'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUDLbl') 
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos28(self):
-        parm = {'op':'solve',
-                'cube': 'gbgybywrywobgrobgbwgobgoybwywrgoroyggwrrywyworboowrbyr'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'lBDbLL')
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos30(self):
-        parm = {'op':'solve',
-                'cube': 'wobobybrywgygrobgbrrgbgrybgrbgwoyygowygwywowrwboowroyr'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUBDbLL')
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos32(self):
-        parm = {'op':'solve',
-                'cube': 'wobrbyyrywgbgrobgbogybgoybrgbgyowgrroowwywowrgboywrwyr'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUfdFLL')
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos34(self):
-        parm = {'op':'solve',
-                'cube': 'wobobyorywgwgrobgbgyobgyybgwbgrogrwyborwywowrgborwryyr'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        self.assertEqual(parm['solution'], 'UUUDFlf')
-        
-    
-    def test_shouldReturnWhiteCross_WhiteOnTop_yellowface(self):
-        parm = {'op':'solve',
-                'cube': 'rbgbbwyoorowgrybroroorggybgywyyoyorbggbbyygowrwwgwwwrb'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        
-        self.assertEqual(parm['solution'], 'FFRRlUUUBDbLL')
-        
-        
-        
-        
-    def test_shouldReturnWhiteCross_WhiteOnTop_yellowface2(self):
-        parm = {'op':'solve',
-                'cube': 'ywrbbborgbyoorgrrwgyyogrrrybwbwoyowwrowbygoowbbygwggyg'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        cubeList = list(cubeString)
-        self.assertEqual(cubeList[37], cubeList[49])
-        self.assertEqual(cubeList[39], cubeList[49])
-        self.assertEqual(cubeList[41], cubeList[49])
-        self.assertEqual(cubeList[43], cubeList[49])
-        
-        self.assertEqual(parm['solution'], 'FrdRFFDLbllBDbLLUdlFL')
+#===============================================================================
+#         #plan is to move all white cross elements(except center) to the yellow face
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos46(self):
+#         parm = {'op':'solve',
+#                 'cube': 'bbbgbbororororoggggggggborororrorbbbwwyyywwwyywyywywyw'}
+#            
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUFF')
+#         
+#            
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos48(self):
+#         parm = {'op':'solve',
+#                 'cube': 'bbbgbbgggrororoorogggggbbbbrorrororowwyyywwwyyywwwyyyw'}
+#            
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'LL')
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos48_v2(self):
+#         parm = {'op':'solve',
+#                 'cube': 'rorgbbggggggoroorororggbbbbbbbrororowywwywywyyywwwyyyw'}
+#            
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUULL')      
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos50(self):
+#         parm = {'op':'solve',
+#                 'cube': 'bbbgbbbbbrororoorogggggbgggrorrororowwyyywwwywyyywwwyy'}
+#            
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UURR') 
+#         
+#         
+#     
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBottomAtPos52(self):
+#         parm = {'op':'solve',
+#                 'cube': 'ggggbbororororobbbbbbggborororrorgggywwwyyywwwywywyywy'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUBB')    
+#         
+#     
+# 
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos1(self):
+#         parm = {'op':'solve',
+#                 'cube': 'wwyyboobrgbbyrowggrorggbobwggororrgbywywywbroyobrwygyw'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'FrdRFF')  
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos3(self):
+#         parm = {'op':'solve',
+#                 'cube': 'oorwbyyyoggbbroygwwowggyrggbrwoobyrbobrwywgwyrrbbwyorg'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUl')  
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos5(self):
+#         parm = {'op':'solve',
+#                 'cube': 'oyyybwrggbgwbroyrbooryggwowgryoobbgwywgwywbrrgroywbrbo'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUR')
+#         
+#     
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnBlueFaceAtPos7(self):
+#         parm = {'op':'solve',
+#                 'cube': 'rorgbbywogrgyrogyorbybggwgwoowoorobbbwwyywbwyrgyrwrbyg'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUdlFL') 
+#         
+#     
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos10(self):
+#         parm = {'op':'solve',
+#                 'cube': 'rbgbbbygwowoorobgyworyggrbwgrgooygroywbwygwwybyrywrorb'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'rrdfRF')
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos12(self):
+#         parm = {'op':'solve',
+#                 'cube': 'rbbbbgygyooywrgoobborrggrbwgrgooygroywrwyywwwbygywborw'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'rdfRF')
+#         
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos14(self):
+#         parm = {'op':'solve',
+#                 'cube': 'groyboygwwgbyrwrbwrgybggbbogoroorwooowywyrywbbygbwrgyr'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'RdfRF')
+#         
+#         
+#     
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnRedFaceAtPos16(self):
+#         parm = {'op':'solve',
+#                 'cube': 'grgybrygrrywbrgwwbbgyrggybogoroorwooowowyoywwbybbwbgyr'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'dfRF')
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos19(self):
+#         parm = {'op':'solve',
+#                 'cube': 'wgggbyooryrwgrybgwowyogrrbygobyorbywobgwywrwrbbybwoorg'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'BBdrBR')    
+#         
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos21(self):
+#         parm = {'op':'solve',
+#                 'cube': 'rbgobybgbwobgrrybgwgywgyyyorbgoogbrygwroywwwoorrbwywro'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UbdrBR')
+#         
+# 
+#     
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos23(self):
+#         parm = {'op':'solve',
+#                 'cube': 'wgbobybgboyygroybrgbgygwgbrwobrogyryowowyrrwworrbwygow'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUBDLbl')    
+#         
+#     
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos25(self):
+#         parm = {'op':'solve',
+#                 'cube': 'wgwobybgbgyogroybgwbgbgyrwywobrogoryowbwyorwrorrbwygry'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUDLbl') 
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos28(self):
+#         parm = {'op':'solve',
+#                 'cube': 'gbgybywrywobgrobgbwgobgoybwywrgoroyggwrrywyworboowrbyr'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'lBDbLL')
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos30(self):
+#         parm = {'op':'solve',
+#                 'cube': 'wobobybrywgygrobgbrrgbgrybgrbgwoyygowygwywowrwboowroyr'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUBDbLL')
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos32(self):
+#         parm = {'op':'solve',
+#                 'cube': 'wobrbyyrywgbgrobgbogybgoybrgbgyowgrroowwywowrgboywrwyr'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUfdFLL')
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnOrangeFaceAtPos34(self):
+#         parm = {'op':'solve',
+#                 'cube': 'wobobyorywgwgrobgbgyobgyybgwbgrogrwyborwywowrgborwryyr'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         self.assertEqual(parm['solution'], 'UUUDFlf')
+#         
+#     
+#     def test_shouldReturnWhiteCross_WhiteOnTop_yellowface(self):
+#         parm = {'op':'solve',
+#                 'cube': 'rbgbbwyoorowgrybroroorggybgywyyoyorbggbbyygowrwwgwwwrb'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         
+#         self.assertEqual(parm['solution'], 'FFRRlUUUBDbLL')
+#         
+#         
+#         
+#         
+#     def test_shouldReturnWhiteCross_WhiteOnTop_yellowface2(self):
+#         parm = {'op':'solve',
+#                 'cube': 'ywrbbborgbyoorgrrwgyyogrrrybwbwoyowwrowbygoowbbygwggyg'}
+#             
+#         encodedCube = solve._solve(parm)
+#         #self.assertEqual(encodedCube, updatedParms)
+#         cubeString = encodedCube.get('cube')
+#         cubeList = list(cubeString)
+#         self.assertEqual(cubeList[37], cubeList[49])
+#         self.assertEqual(cubeList[39], cubeList[49])
+#         self.assertEqual(cubeList[41], cubeList[49])
+#         self.assertEqual(cubeList[43], cubeList[49])
+#         
+#         self.assertEqual(parm['solution'], 'FrdRFFDLbllBDbLLUdlFL')
+#===============================================================================
     
     
     

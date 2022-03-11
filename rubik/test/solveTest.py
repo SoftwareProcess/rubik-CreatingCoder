@@ -257,28 +257,30 @@ class Test(unittest.TestCase):
     #     self.assertEqual(encodedCube, updatedParms)
     #===========================================================================
         
-    def test_solve_ShouldRotateValidNominalCube_NoneType(self):
-        parms = {'op':'solve',
-                 'rotate':None,
-                'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
-        }
-        updatedParms = {
-                'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb',
-                'status':'ok'
-        }
-        encodedCube = solve._solve(parms)
-        self.assertEqual(encodedCube, updatedParms)
-        
-    def test_solve_ShouldRotateValidNominalCube_RotateDoesntExist(self):
-        parms = {'op':'solve',
-                'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
-        }
-        updatedParms = {
-                'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb',
-                'status':'ok'
-        }
-        encodedCube = solve._solve(parms)
-        self.assertEqual(encodedCube, updatedParms)   
+    #===========================================================================
+    # def test_solve_ShouldRotateValidNominalCube_NoneType(self):
+    #     parms = {'op':'solve',
+    #              'rotate':None,
+    #             'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+    #     }
+    #     updatedParms = {
+    #             'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb',
+    #             'status':'ok'
+    #     }
+    #     encodedCube = solve._solve(parms)
+    #     self.assertEqual(encodedCube, updatedParms)
+    #     
+    # def test_solve_ShouldRotateValidNominalCube_RotateDoesntExist(self):
+    #     parms = {'op':'solve',
+    #             'cube':'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+    #     }
+    #     updatedParms = {
+    #             'cube':'bwbybgrygyogyrrobwogrbgooggbwyworwogwwybygrroyowbwyrrb',
+    #             'status':'ok'
+    #     }
+    #     encodedCube = solve._solve(parms)
+    #     self.assertEqual(encodedCube, updatedParms)   
+    #===========================================================================
     
   
     
@@ -549,21 +551,19 @@ class Test(unittest.TestCase):
     
     
     
-    #===========================================================================
-    # #plan is to move all white cross elements(except center) to the yellow face
-    # def test_shouldReturnWhiteCross_WhiteOnTop(self):
-    #     parm = {'op':'check',
-    #             'cube': 'ryyobyrrgggroroogryryggywoboyyrobwbwbbbbyrggogwwwwwowb'}
-    #       
-    #     encodedCube = solve._solve(parm)
-    #     #self.assertEqual(encodedCube, updatedParms)
-    #     cubeString = encodedCube.get('cube')
-    #     cubeList = list(cubeString)
-    #     self.assertEqual(cubeList[37], cubeList[49])
-    #     self.assertEqual(cubeList[39], cubeList[49])
-    #     self.assertEqual(cubeList[41], cubeList[49])
-    #     self.assertEqual(cubeList[43], cubeList[49])
-    #===========================================================================
+    #plan is to move all white cross elements(except center) to the yellow face
+    def test_shouldReturnWhiteCross_WhiteOnTop(self):
+        parm = {'op':'check',
+                'cube': 'ryyobyrrgggroroogryryggywoboyyrobwbwbbbbyrggogwwwwwowb'}
+           
+        encodedCube = solve._solve(parm)
+        #self.assertEqual(encodedCube, updatedParms)
+        cubeString = encodedCube.get('cube')
+        cubeList = list(cubeString)
+        self.assertEqual(cubeList[37], cubeList[49])
+        self.assertEqual(cubeList[39], cubeList[49])
+        self.assertEqual(cubeList[41], cubeList[49])
+        self.assertEqual(cubeList[43], cubeList[49])
          
         
         

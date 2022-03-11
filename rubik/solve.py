@@ -51,7 +51,9 @@ def _solve(parms):
             parms['solution'] = ''
             
         
-#=================Start of Logic for finding solution for white cross=================        
+#=================Start of Logic for finding solution for white cross=================   
+
+#==================move white cross elements from bottom to top==========================     
             if(encodedCube[46] == encodedCube[49]):
                 for i in range(4):
                     if(encodedCube[43] == encodedCube[49]):
@@ -123,6 +125,12 @@ def _solve(parms):
                 parms['cube'] = rot
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'B'
+#=====================End of white face=====================================
+
+#====================blue face start========================================
+
+
+
                 
                                 
             

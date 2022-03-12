@@ -106,7 +106,8 @@ class CubeTest(unittest.TestCase):
         
         
     def test_pos46(self):
-        encodedCube = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+                       
+        encodedCube = 'rbogbryobgyywrorwboggygryrooggbowbbryobrygwywgwwowbwyr'
         solution = ""
         CubeObject = rubik.Cube()
         CubeObject.pos46(encodedCube, solution)

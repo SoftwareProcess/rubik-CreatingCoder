@@ -589,21 +589,19 @@ class Cube:
 #=====================================New Methods======================================
     
     
-    #===========================================================================
-    # @staticmethod
-    # def pos46(encodedCube, solution):
-    #     #encodedCube = list(encodedCube)
-    #      
-    #     for i in range(4):
-    #         if(encodedCube[43] == encodedCube[49]):
-    #             rot = Cube.up(encodedCube)
-    #             cube = rot
-    #             encodedCube = rot
-    #             solution = solution + 'U'
-    #     
-    #     
-    #     return (encodedCube, solution)
-    #===========================================================================
+    @staticmethod
+    def pos46(encodedCube, solution):
+        #encodedCube = list(encodedCube)
+         
+        for i in range(4):
+            if(encodedCube[43] == encodedCube[49]):
+                rot = Cube.up(encodedCube)
+                cube = rot
+                encodedCube = rot
+                solution = solution + 'U'
+        
+        
+        return (encodedCube, solution)
     
     
     

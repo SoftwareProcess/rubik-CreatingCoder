@@ -598,35 +598,18 @@ class Cube:
                 rot = Cube.up(encodedCube)
                 cube = rot
                 encodedCube = rot
-
         
         return encodedCube
                     
     @staticmethod               
     def solutionAddU(solution):
-        solution = solution + 'u'
+        solution = solution + 'U'
         return solution
                        
     
                     
         
-    #===========================================================================
-    # @staticmethod
-    # def pos46(encodedCube, cube, solution):
-    #     encodedCube = list(encodedCube)
-    #      
-    #     for i in range(4):
-    #         if(encodedCube[43] == encodedCube[49]):
-    #             rot = Cube.up(encodedCube)
-    #             cube = rot
-    #             encodedCube = rot
-    #             solution = solution + 'U'
-    #             
-    #     rot = Cube.front(encodedCube)
-    #     
-    #     return(encodedCube, cube, solution)
-    #             
-    #===========================================================================
+
           
         
 

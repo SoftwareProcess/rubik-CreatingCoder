@@ -107,9 +107,9 @@ class CubeTest(unittest.TestCase):
         
     def test_pos46(self):
         encodedCube = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
-        solution = ""
+        solution = "f"
         CubeObject = rubik.Cube()
         encodedCube = CubeObject.pos46(encodedCube, solution)
-        self.assertEqual(encodedCube,'s' )
+        self.assertEqual(encodedCube,'rybybwggbrogrrrobwogrbgooggbwywoowowwwybyggryoyybwyrrb' )
         self.assertEqual('FF', solution)   
         

@@ -110,11 +110,7 @@ class CubeTest(unittest.TestCase):
         encodedCube = 'ygbgbbbrrobrorogybyooyggryggborooryywwbrywgwwowwrwbygw'
         solution = ""
         CubeObject = rubik.Cube()
-        rando = CubeObject.pos46(encodedCube, solution)
-        print(rando)
-        
-        
-        
-        #self.assertEqual('', encodedCube )
-        #self.assertEqual(solution, 'UUFF')   
+        afterMethod = CubeObject.pos46(encodedCube, solution)
+        self.assertEqual(afterMethod, 'rrbbbgobgygborooybobryggrygyogrooryybwwwywwwogrwrwbygw', 'UUUFF')
+          
         

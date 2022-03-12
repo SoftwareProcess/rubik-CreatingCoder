@@ -61,12 +61,21 @@ def _solve(parms):
                         break
 #==================move white cross elements from bottom to top==========================     
                 if(encodedCube[46] == encodedCube[49]):
-                    for i in range(4):
-                        if(encodedCube[43] == encodedCube[49]):
-                            rot = CubeObject.up(encodedCube)
-                            parms['cube'] = rot
-                            encodedCube = rot
-                            parms['solution'] = parms['solution'] + 'U'
+                    
+                    
+                    #===========================================================
+                    # for i in range(4):
+                    #     if(encodedCube[43] == encodedCube[49]):
+                    #         rot = CubeObject.up(encodedCube)
+                    #         parms['cube'] = rot
+                    #         encodedCube = rot
+                    #         parms['solution'] = parms['solution'] + 'U'
+                    #===========================================================
+                    rot = CubeObject.pos46(encodedCube)
+                    parms['solution'] = CubeObject.solutionAddU(parms['solution'])
+                    
+                    
+                    
                         
                     rot = CubeObject.front(encodedCube)
                     parms['cube'] = rot

@@ -816,6 +816,8 @@ def _solve(parms):
     if(checkReturnsOkCube == False):
         result['status'] = status
         result.pop('cube', None)
+        result.pop('solution', None)
+        
         
 
 

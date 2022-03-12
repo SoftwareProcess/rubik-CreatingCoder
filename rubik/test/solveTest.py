@@ -987,5 +987,5 @@ class Test(unittest.TestCase):
         self.assertEqual(cubeList[50], cubeList[49])
         self.assertEqual(cubeList[52], cubeList[49])
         
-        self.assertEqual(parm['solution'], 'RFFRRBBL')
+        self.assertEqual(parm['solution'], 'RFFRRBBLl')
      

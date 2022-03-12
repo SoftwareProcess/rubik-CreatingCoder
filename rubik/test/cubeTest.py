@@ -103,3 +103,14 @@ class CubeTest(unittest.TestCase):
         cubeAfterRot = 'bggwbyybwwogorroggogrbgoworbwoworbyrwwybygyyogybrwrybr'
         encodedCube = CubeObject.downPrime(cubeBeforeRot)
         self.assertEqual(encodedCube, cubeAfterRot)
+        
+        
+    def test_pos46(self):
+        encodedCube = 'bggwbybyrwogorrybwogrbgooggbwoworworwwybygyyoyrgbwyrrb'
+        solution = ""
+        CubeObject = rubik.Cube()
+        cubeAfterRot = 'bggwbyybwwogorroggogrbgoworbwoworbyrwwybygyyogybrwrybr'
+        encodedCube = CubeObject.pos46(encodedCube, solution)
+        self.assertEqual(encodedCube, cubeAfterRot)
+        self.assertEqual('FF', solution)   
+        

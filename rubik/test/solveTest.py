@@ -962,6 +962,7 @@ class Test(unittest.TestCase):
         #=======================================================================
         
         self.assertEqual(parm['solution'], 'LLRdfRFUUUfdFLLULLUFFRRUBB')
+        self.assertEqual(parm['status'], 'ok')
         
     def test_alreadysolved(self):
         parm = {'op':'solve',
@@ -979,6 +980,7 @@ class Test(unittest.TestCase):
         #=======================================================================
         
         self.assertEqual(parm['solution'], '')
+        self.assertEqual(parm['status'], 'ok')
      
     
     def test_shouldReturnWhiteCross_3(self):
@@ -997,4 +999,5 @@ class Test(unittest.TestCase):
         #=======================================================================
         
         self.assertEqual(parm['solution'], 'RFFRRBBLL')
+        self.assertEqual(parm['status'], 'ok')
      

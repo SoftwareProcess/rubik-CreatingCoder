@@ -12,9 +12,11 @@ import rubik.check as check
 
     
 def _solve(parms):
+    
     rot = ""
     allowedLettersForRotation = 'FfRrBbLlUuDd'
     CubeObject = rubik.Cube()
+    deleteCube = False
    
     checkVal = check._check(parms)
     status = checkVal.get('status', None)
@@ -49,6 +51,7 @@ def _solve(parms):
         ecLength = len(str(encodedCube))       
         if(encodedCube != "" and ecLength == 54):
             parms['solution'] = ''
+            deleteCube = True
             
             for i in range(4):
 #=================Start of Logic for finding solution for white cross=================   
@@ -687,13 +690,11 @@ def _solve(parms):
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'U'
     
-    
-
-            
+               
             parms['status'] = 'ok'
     
     
-    ################################end of white cross code/if statement#########################################
+    ################################end of white cross code#########################################
     
     #if statement skips over for loop if NoneType
     if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms and checkReturnsOkCube == True):
@@ -828,8 +829,13 @@ def _solve(parms):
         result.pop('solution', None)
         
     
-    if((result['rotate'] =="" or 'rotate' not in result)and 'cube' in result):
-        del result['cube']
+    #===========================================================================
+    # if((result['rotate'] =="" or 'rotate' not in result)and 'cube' in result):
+    #     del result['cube']
+    #===========================================================================
+    
+    if(deleteCube):
+        result.pop('cube', None)
         
     return result
 ###End of Solve###

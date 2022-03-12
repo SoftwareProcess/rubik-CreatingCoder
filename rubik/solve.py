@@ -790,13 +790,10 @@ def _solve(parms):
                 parms['cube'] = rot
                 parms['status'] = 'ok'
                 encodedCube = rot  
-                
-            
-        
+                     
           
     neededKeys = [ 'op', 'rotate', 'cube', 'status', 'solution']
-    
-    
+      
     
     result = {}  
     
@@ -809,12 +806,6 @@ def _solve(parms):
         result['status'] = status
         del result['cube']
     
-    #deletes cube when cube when no rotations are given
-    #if there is no rotate key, pop cube
-    #if(result['rotate'] =="" and 'cube' in result):
-        #del result['cube']
-    
-      
             
     #removes op and rotate key value from dict
     del result['op']
@@ -828,11 +819,7 @@ def _solve(parms):
         result.pop('cube', None)
         result.pop('solution', None)
         
-    
-    #===========================================================================
-    # if((result['rotate'] =="" or 'rotate' not in result)and 'cube' in result):
-    #     del result['cube']
-    #===========================================================================
+
     
     if(deleteCube):
         result.pop('cube', None)

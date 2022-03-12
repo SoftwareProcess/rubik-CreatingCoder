@@ -53,6 +53,9 @@ def _solve(parms):
             for i in range(4):
 #=================Start of Logic for finding solution for white cross=================   
 
+                if(encodedCube[46]== encodedCube[49] and encodedCube[48]== encodedCube[49] 
+                   and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
+                        break
 #==================move white cross elements from bottom to top==========================     
                 if(encodedCube[46] == encodedCube[49]):
                     for i in range(4):

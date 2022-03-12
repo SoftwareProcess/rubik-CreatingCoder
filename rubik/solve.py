@@ -826,7 +826,10 @@ def _solve(parms):
         result['status'] = status
         result.pop('cube', None)
         result.pop('solution', None)
-
+        
+    
+    if((result['rotate'] =="" or 'rotate' not in result)and 'cube' in result):
+        del result['cube']
         
     return result
 ###End of Solve###

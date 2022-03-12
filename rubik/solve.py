@@ -811,7 +811,7 @@ def _solve(parms):
     #deletes cube when cube when no rotations are given
     #if there is no rotate key, pop cube
     if('rotate' not in parms):
-        del result['cube']    
+        result.pop('cube', None)   
     
       
             

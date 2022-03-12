@@ -72,7 +72,8 @@ def _solve(parms):
                     #         parms['solution'] = parms['solution'] + 'U'
                     #===========================================================
                     
-                    #rot = CubeObject.pos46(encodedCube)
+                    CubeObject.pos46(encodedCube, parms['solution'])
+                    
                     #parms['solution'] = CubeObject.solutionAddU(parms['solution'])
                     
                     

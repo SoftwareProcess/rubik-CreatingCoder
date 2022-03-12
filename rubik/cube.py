@@ -601,10 +601,6 @@ class Cube:
                 solution = solution + 'U'
         
         
-        
-        
-        
-        
         return (encodedCube, solution)
     
     

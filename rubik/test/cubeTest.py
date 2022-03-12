@@ -110,6 +110,6 @@ class CubeTest(unittest.TestCase):
         solution = ""
         CubeObject = rubik.Cube()
         encodedCube = CubeObject.pos46(encodedCube, solution)
-        #self.assertEqual(encodedCube, cubeAfterRot)
+        self.assertEqual(encodedCube, cubeAfterRot)
         self.assertEqual('FF', solution)   
         

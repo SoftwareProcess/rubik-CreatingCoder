@@ -587,5 +587,12 @@ class Cube:
     
     
 
+    
+    
+    @staticmethod
+    def pos46(self):
+         updatedCube = list(self)
+          
+        
 
          

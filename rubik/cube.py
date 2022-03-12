@@ -596,9 +596,16 @@ class Cube:
         for i in range(4):
             if(encodedCube[43] == encodedCube[49]):
                 rot = Cube.up(encodedCube)
-                cube = rot
                 encodedCube = rot
                 solution = solution + 'U'
+                
+                
+        rot = Cube.front(encodedCube)
+        encodedCube = rot
+        rot = Cube.front(encodedCube)
+        encodedCube = rot
+        solution = solution + 'FF'
+        
         
         
         return (encodedCube, solution)

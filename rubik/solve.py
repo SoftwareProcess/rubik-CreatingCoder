@@ -79,15 +79,17 @@ def _solve(parms):
                     
                     
                         
-                    rot = CubeObject.front(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'F'
-                    
-                    rot = CubeObject.front(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'F'
+                    #===========================================================
+                    # rot = CubeObject.front(encodedCube)
+                    # parms['cube'] = rot
+                    # encodedCube = rot
+                    # parms['solution'] = parms['solution'] + 'F'
+                    # 
+                    # rot = CubeObject.front(encodedCube)
+                    # parms['cube'] = rot
+                    # encodedCube = rot
+                    # parms['solution'] = parms['solution'] + 'F'
+                    #===========================================================
     #=========================================================================================               
                 if(encodedCube[48] == encodedCube[49]):
                     for i in range(4):

@@ -622,7 +622,6 @@ def _solve(parms):
                     parms['solution'] = parms['solution'] + 'f'    
     #======================end of orange=====================
     
-
             #logic for flipping tiles over from yellow face to white (bottom)
             for i in range(4):
                 
@@ -679,22 +678,16 @@ def _solve(parms):
                    and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
                         break
                     
-    
+                    
                 rot = CubeObject.up(encodedCube)
                 parms['cube'] = rot
                 encodedCube = rot
                 parms['solution'] = parms['solution'] + 'U'
     
     
-    
-    
-    
-    
-    
+
             
             parms['status'] = 'ok'
-    
-    
     
     
     ################################end of white cross code/if statement#########################################

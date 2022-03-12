@@ -109,8 +109,8 @@ class CubeTest(unittest.TestCase):
                        
         encodedCube = 'ygbgbbbrrobrorogybyooyggryggborooryywwbrywgwwowwrwbygw'
         solution = ""
-        CubeObject = rubik.Cube()
-        CubeObject.pos46(encodedCube, solution)
+        #CubeObject = rubik.Cube()
+        rubik.Cube.pos46(encodedCube, solution)
         print(encodedCube)
         print(solution)
         

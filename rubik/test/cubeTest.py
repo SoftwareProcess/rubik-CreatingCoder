@@ -112,5 +112,5 @@ class CubeTest(unittest.TestCase):
         CubeObject = rubik.Cube()
         CubeObject.pos46(encodedCube, solution)
         #self.assertEqual('rbogbryobgyywrorwboggygryrooggbowbbryobrygwywgwwowbwyr', encodedCube )
-        self.assertEqual(solution, 'UUFF')   
+        self.assertEqual( 'UUFF', solution)   
         

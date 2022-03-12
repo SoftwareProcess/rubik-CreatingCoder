@@ -793,7 +793,7 @@ def _solve(parms):
             
         
           
-    neededKeys = [ 'op', 'cube', 'status', 'solution']
+    neededKeys = [ 'op', 'rotate', 'cube', 'status', 'solution']
     
     
     
@@ -808,6 +808,12 @@ def _solve(parms):
         result['status'] = status
         del result['cube']
     
+    #deletes cube when cube when no rotations are given
+    #if there is no rotate key, pop cube
+    if('rotate' not in parms):
+        del result['cube']    
+    
+      
             
     #removes op and rotate key value from dict
     del result['op']
@@ -820,9 +826,6 @@ def _solve(parms):
         result['status'] = status
         result.pop('cube', None)
         result.pop('solution', None)
-        
-        
-
 
         
     return result

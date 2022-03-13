@@ -242,11 +242,11 @@ class CubeTest(unittest.TestCase):
         self.assertEqual(afterMethod, dataShouldEqual)   
         
     def test_shouldReturnWhiteCross_WhiteOnTop_WhiteOnGreenFaceAtPos23(self):
-        encodedCube = ''  
+        encodedCube = 'yowybrgyyrgggrbobgwgyogwrbbbbbrogwyrrwowyoowbwogrwyory'  
         solution = ""
         CubeObject = rubik.Cube()
-        afterMethod = CubeObject.pos21(encodedCube, solution)
-        dataShouldEqual = ('', '')
+        afterMethod = CubeObject.pos23(encodedCube, solution)
+        dataShouldEqual = ('bbbybryyryoogrbgygwrroggrbgbgyoogoygwwbwywbwoorwbwowry', 'UUUBDLbl')
         self.assertEqual(afterMethod, dataShouldEqual)       
         
         

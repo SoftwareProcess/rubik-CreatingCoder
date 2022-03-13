@@ -1069,7 +1069,13 @@ class Cube:
         return (encodedCube, solution)
     
     
-    
-    
+    @staticmethod
+    def orangeAligned(encodedCube, solution):      
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        solution = solution + 'LL'
+        return (encodedCube, solution)
 
          

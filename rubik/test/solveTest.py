@@ -928,7 +928,7 @@ class Test(unittest.TestCase):
     
     def test_shouldReturnWhiteCross(self):
         parm = {'op':'solve',
-                'cube': 'oggwbrrygyrwwrgywgoywwgywrorbyroobgybbgoygbyrbooowbwbr'}
+                'cube': 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'}
             
         encodedCube = solve._solve(parm)
         #self.assertEqual(encodedCube, updatedParms)
@@ -941,28 +941,12 @@ class Test(unittest.TestCase):
         # self.assertEqual(cubeList[52], cubeList[49])
         #=======================================================================
         
-        self.assertEqual(parm['solution'], 'lrdfRFUdfRFUURRURRLLUUFFBB')
+        self.assertEqual(parm['solution'], 'RFFRRBBLL')
         self.assertEqual(parm['status'], 'ok')
     
     
     
-    def test_shouldReturnWhiteCross_2(self):
-        parm = {'op':'solve',
-                'cube': 'rgorborbbyrgbrywobygrgggoowbbgwoygrywrrwybwogbyowwwoyy'}
-            
-        encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        cubeString = encodedCube.get('cube')
-        #=======================================================================
-        # cubeList = list(cubeString)
-        # self.assertEqual(cubeList[46], cubeList[49])
-        # self.assertEqual(cubeList[48], cubeList[49])
-        # self.assertEqual(cubeList[50], cubeList[49])
-        # self.assertEqual(cubeList[52], cubeList[49])
-        #=======================================================================
-        
-        self.assertEqual(parm['solution'], '')
-        self.assertEqual(parm['status'], 'ok')
+
         
     def test_alreadysolved(self):
         parm = {'op':'solve',

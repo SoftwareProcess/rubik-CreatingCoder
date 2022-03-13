@@ -981,10 +981,10 @@ class Test(unittest.TestCase):
          
     def test_shouldReturnWhiteCross_3(self):
         parm = {'op':'solve',
-                'cube': 'wrorbbrwbgwowrowyybbrygbgwybgryoyogywoyoyggbwboorwggrr'}
+                'cube': 'wgyybyyrygrrorygwowbwrgobbbroggogoobbwgbywororbrwwgyyw'}
               
         encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], 'RFFRRBBLL')
+        self.assertEqual(parm['solution'], '')
         self.assertEqual(parm['status'], 'ok')
 
          

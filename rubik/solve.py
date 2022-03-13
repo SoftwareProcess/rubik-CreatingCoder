@@ -50,7 +50,8 @@ def _solve(parms):
                         break
                     
                 if(encodedCube[46] == encodedCube[49]):                
-                    CubeObject.pos46(encodedCube, parms['solution'])
+                    print(type(CubeObject.pos46(encodedCube, parms['solution'])))
+                    
                             
                 if(encodedCube[48] == encodedCube[49]):
                     CubeObject.pos48(encodedCube, parms['solution'])

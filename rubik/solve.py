@@ -111,14 +111,11 @@ def _solve(parms):
                     tup =CubeObject.pos16(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]  
-                    
     #============================Green Face============================
                 if(encodedCube[19] == encodedCube[49]):
                     tup =CubeObject.pos19(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1] 
-                     
-                            
     #====================================================================================
                 if(encodedCube[21] == encodedCube[49]):
                     

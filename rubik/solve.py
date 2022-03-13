@@ -162,9 +162,8 @@ def _solve(parms):
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]
                     
-            
                 if(encodedCube[10] == encodedCube[13] and encodedCube[41] == encodedCube[49]):
-                    
+                
                     rot = CubeObject.right(encodedCube)
                     parms['cube'] = rot
                     encodedCube = rot

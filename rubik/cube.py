@@ -676,7 +676,7 @@ class Cube:
     def pos1(encodedCube, solution):
          
         for i in range(4):
-            if(encodedCube[37] == encodedCube[49]):
+            if(encodedCube[43] == encodedCube[49]):
                 rot = Cube.up(encodedCube)
                 encodedCube = rot
                 solution = solution + 'U'

@@ -747,7 +747,7 @@ class Cube:
         rot = Cube.left(encodedCube)
         encodedCube = rot
 
-        solution = solution + 'dlF'
+        solution = solution + 'dlFL'
         
         return (encodedCube, solution)
     

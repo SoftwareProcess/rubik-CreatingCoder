@@ -17,6 +17,7 @@ def _solve(parms):
     allowedLettersForRotation = 'FfRrBbLlUuDd'
     CubeObject = rubik.Cube()
     deleteCube = False
+    tup =()
    
     checkVal = check._check(parms)
     status = checkVal.get('status', None)

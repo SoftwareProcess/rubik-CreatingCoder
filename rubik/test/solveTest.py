@@ -984,7 +984,7 @@ class Test(unittest.TestCase):
                 'cube': 'wgyybyyrygrrorygwowbwrgobbbroggogoobbwgbywororbrwwgyyw'}
               
         encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], '')
+        self.assertEqual(parm['solution'], 'LLUUUdfRFURRLLUUFFBB')
         self.assertEqual(parm['status'], 'ok')
 
          

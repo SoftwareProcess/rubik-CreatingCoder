@@ -50,43 +50,66 @@ def _solve(parms):
                         break
                     
                 if(encodedCube[46] == encodedCube[49]):                
-                    print(type(CubeObject.pos46(encodedCube, parms['solution'])))
+                    tup = CubeObject.pos46(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
                     
-                            
                 if(encodedCube[48] == encodedCube[49]):
                     CubeObject.pos48(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
                                      
                 if(encodedCube[50] == encodedCube[49]):
                     CubeObject.pos50(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
                            
                 if(encodedCube[52] == encodedCube[49]):
                     CubeObject.pos52(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
     #=====================End of white face=====================================
     
     #====================blue face start========================================
                 if(encodedCube[1] == encodedCube[49]):
                     CubeObject.pos1(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
     #=========================================================================================   
                 if(encodedCube[3] == encodedCube[49]):
                     CubeObject.pos3(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
     #=========================================================================================   
                 if(encodedCube[5] == encodedCube[49]):
-                    CubeObject.pos5(encodedCube, parms['solution'])       
+                    CubeObject.pos5(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]       
     #=========================================================================================   
                 if(encodedCube[7] == encodedCube[49]):
-                    CubeObject.pos7(encodedCube, parms['solution'])   
+                    CubeObject.pos7(encodedCube, parms['solution']) 
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]  
     #===============================Red Face============================================                   
                 if(encodedCube[10] == encodedCube[49]):
-                    CubeObject.pos10(encodedCube, parms['solution']) 
+                    CubeObject.pos10(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1] 
     #=========================================================================================                   
                 if(encodedCube[12] == encodedCube[49]):
-                    CubeObject.pos12(encodedCube, parms['solution'])     
+                    CubeObject.pos12(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]     
     #=========================================================================================                   
                 if(encodedCube[14] == encodedCube[49]):
-                    CubeObject.pos14(encodedCube, parms['solution'])   
+                    CubeObject.pos14(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]   
     #=========================================================================================                   
                 if(encodedCube[16] == encodedCube[49]):
-                    CubeObject.pos16(encodedCube, parms['solution'])  
+                    CubeObject.pos16(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]  
                     
     #============================Green Face============================
                 if(encodedCube[19] == encodedCube[49]):

@@ -123,8 +123,7 @@ class CubeTest(unittest.TestCase):
         afterMethod = CubeObject.pos46(encodedCube, solution)
         dataShouldEqual = ('bborbgbyrggryrygoygoybgobywgrwbobbrrowywywowwyrwgwgroo', 'UUUFF')
         self.assertEqual(afterMethod, dataShouldEqual)
-        
-     ##?   
+         
     def test_pos48(self):
                        
         encodedCube = 'ybrgbogrggrbbrboowrywrgbbygbobyoyygrooywywowywgwwwgorr'
@@ -143,8 +142,7 @@ class CubeTest(unittest.TestCase):
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.pos50(encodedCube, solution)
         dataShouldEqual = ('woybbrwyrgbbbrbgogrrboggrrgygbyoyoybowywywrwooowrwgwgy', 'UUURR')
-        self.assertEqual(afterMethod, dataShouldEqual)
-        
+        self.assertEqual(afterMethod, dataShouldEqual)  
     
     def test_pos52(self):
                        
@@ -153,5 +151,15 @@ class CubeTest(unittest.TestCase):
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.pos52(encodedCube, solution)
         dataShouldEqual = ('obwybboyborroroygrbggygbygorogroryywwwwwywywgbgrbwobrg', 'UUBB')
-        self.assertEqual(afterMethod, dataShouldEqual)   
+        self.assertEqual(afterMethod, dataShouldEqual)  
+        
+#================================Blue face=============================================
+    def test_pos1(self):
+                       
+        encodedCube = 'wwyobbrybrogorrygbobwggbobborryoywrbgwywywgggwgrywoory'
+        solution = ""
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.pos52(encodedCube, solution)
+        dataShouldEqual = ('oggrbyyorroggrrwgbobwggborrorbyobbbrgwywywwwwgybowoyyy', 'FrdRFF')
+        self.assertEqual(afterMethod, dataShouldEqual) 
     

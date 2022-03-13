@@ -266,3 +266,5 @@ class CubeTest(unittest.TestCase):
         afterMethod = CubeObject.pos28(encodedCube, solution)
         dataShouldEqual = ('brrobbwrwbgyyrrgrobbgggggoyrooyoggbbwwrwywywwoboowyryy', 'lBDbLL')
         self.assertEqual(afterMethod, dataShouldEqual)  
+        
+    

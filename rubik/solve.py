@@ -133,37 +133,9 @@ def _solve(parms):
                     parms['solution'] = tup[1]
     #===============================Orange Face============================================                   
                 if(encodedCube[28] == encodedCube[49]):
-           
-                    rot = CubeObject.leftPrime(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'l'
-                    
-                    rot = CubeObject.back(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'B'
-                    
-                    rot = CubeObject.down(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'D' 
-                    
-                    rot = CubeObject.backPrime(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'b' 
-                    
-                    rot = CubeObject.left(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'L'
-                    
-                    rot = CubeObject.left(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'L'
-                    
+                    tup =CubeObject.pos28(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
     #====================================================================================
                 if(encodedCube[30] == encodedCube[49]):
                     

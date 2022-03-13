@@ -158,16 +158,10 @@ def _solve(parms):
             for i in range(4):
                 
                 if(encodedCube[1] == encodedCube[4] and encodedCube[43] == encodedCube[49]):
+                    tup =CubeObject.blueAligned(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
                     
-                    rot = CubeObject.front(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'F'
-                    
-                    rot = CubeObject.front(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'F'
             
                 if(encodedCube[10] == encodedCube[13] and encodedCube[41] == encodedCube[49]):
                     

@@ -315,5 +315,13 @@ class CubeTest(unittest.TestCase):
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.greenAligned(encodedCube, solution)
         dataShouldEqual = ('yyyrbrrbyoobyrgorgwgoygowgbggryobwogworrybbbbywgwwwowr', 'BB')
+        self.assertEqual(afterMethod, dataShouldEqual)
+        
+    def test_shouldReturnWhiteCross_TurntoWhiteSideWhenAlignedOrange(self):
+        encodedCube = 'byyobrobyoobyrgorgwgrygrwgygowboyrggyorwybobbwwgrwwbwr'  
+        solution = ""
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.orangeAligned(encodedCube, solution)
+        dataShouldEqual = ('yyyrbrrbyoobyrgorgwgoygowgbggryobwogworrybbbbywgwwwowr', 'LL')
         self.assertEqual(afterMethod, dataShouldEqual)      
     

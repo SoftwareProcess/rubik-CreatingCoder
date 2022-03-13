@@ -145,8 +145,7 @@ def _solve(parms):
                 if(encodedCube[32] == encodedCube[49]):
                     tup =CubeObject.pos32(encodedCube, parms['solution'])
                     encodedCube = tup[0]
-                    parms['solution'] = tup[1] 
-                    
+                    parms['solution'] = tup[1]       
     #====================================================================================
                 if(encodedCube[34] == encodedCube[49]):
                     

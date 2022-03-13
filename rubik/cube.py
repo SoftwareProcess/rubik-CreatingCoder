@@ -867,6 +867,31 @@ class Cube:
         return (encodedCube, solution)
     
     
+    @staticmethod
+    def pos21(encodedCube, solution):
+        
+        for i in range(4):
+            if(encodedCube[37] == encodedCube[49]):
+                rot = Cube.up(encodedCube)
+                encodedCube = rot
+                solution = solution + 'U'
+                
+        rot = Cube.backPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.downPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.rightPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.back(encodedCube)
+        encodedCube = rot
+        rot = Cube.right(encodedCube)
+        encodedCube = rot
+        
+        solution = solution + 'bdrBR'
+         
+        return (encodedCube, solution)
+    
+    
     
     
     

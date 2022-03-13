@@ -60,36 +60,9 @@ def _solve(parms):
                    and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
                         break
 #==================move white cross elements from bottom to top==========================     
-                if(encodedCube[46] == encodedCube[49]):
-                    
-                    
-                    #===========================================================
-                    # for i in range(4):
-                    #     if(encodedCube[43] == encodedCube[49]):
-                    #         rot = CubeObject.up(encodedCube)
-                    #         parms['cube'] = rot
-                    #         encodedCube = rot
-                    #         parms['solution'] = parms['solution'] + 'U'
-                    #===========================================================
-                    
+                if(encodedCube[46] == encodedCube[49]):                
                     CubeObject.pos46(encodedCube, parms['solution'])
                     
-                    #parms['solution'] = CubeObject.solutionAddU(parms['solution'])
-                    
-                    
-                    
-                        
-                    #===========================================================
-                    # rot = CubeObject.front(encodedCube)
-                    # parms['cube'] = rot
-                    # encodedCube = rot
-                    # parms['solution'] = parms['solution'] + 'F'
-                    # 
-                    # rot = CubeObject.front(encodedCube)
-                    # parms['cube'] = rot
-                    # encodedCube = rot
-                    # parms['solution'] = parms['solution'] + 'F'
-                    #===========================================================
     #=========================================================================================               
                 if(encodedCube[48] == encodedCube[49]):
                     for i in range(4):

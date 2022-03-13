@@ -606,8 +606,6 @@ class Cube:
         encodedCube = rot
         solution = solution + 'FF'
         
-        
-        
         return (encodedCube, solution)
     
     

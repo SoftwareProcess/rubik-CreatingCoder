@@ -993,5 +993,32 @@ class Test(unittest.TestCase):
         encodedCube = solve._solve(parm)     
         self.assertEqual(parm['solution'], 'FFUUlUUURdfRFUFFRRBBLL')
         self.assertEqual(parm['status'], 'ok')
-    
+        
+        
+    def test_shouldReturnWhiteCross_5(self):
+        parm = {'op':'solve',
+                'cube': 'rgobbrwgywyobrbgwyywwyggryogbwyowygorogoyrbwbgrrowrbob'}
+              
+        encodedCube = solve._solve(parm)     
+        self.assertEqual(parm['solution'], 'dfRFBBdrBRfdFLLRRUUBBUFFLL')
+        self.assertEqual(parm['status'], 'ok')
+        
+    def test_shouldReturnWhiteCross_6_blank(self):
+        parm = {'op':'solve',
+                'cube': 'bbyrbgobrbooorggrgwryrggygorbryobwobgyboyywyrywwwwwgwo'}
+              
+        encodedCube = solve._solve(parm)     
+        self.assertEqual(parm['solution'], '')
+        self.assertEqual(parm['status'], 'ok')
+        
+    def test_shouldReturnWhiteCross_7_allOrange(self):
+        parm = {'op':'solve',
+                'cube': 'wbyrbgyborrryrbwobbgyrggorrbooooggbgrwwwywbwgoygowywyy'}
+              
+        encodedCube = solve._solve(parm)     
+        self.assertEqual(parm['solution'], 'lBDbLLUBDbLLdlFLUULLFFUURRUBBLL')
+        self.assertEqual(parm['status'], 'ok')
+        
+        
+
      

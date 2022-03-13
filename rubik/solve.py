@@ -73,12 +73,10 @@ def _solve(parms):
                     CubeObject.pos5(encodedCube, parms['solution'])       
     #=========================================================================================   
                 if(encodedCube[7] == encodedCube[49]):
-                    CubeObject.pos7(encodedCube, parms['solution']) 
-                    
-                    
+                    CubeObject.pos7(encodedCube, parms['solution'])   
     #===============================Red Face============================================                   
                 if(encodedCube[10] == encodedCube[49]):
-                    CubeObject.pos7(encodedCube, parms['solution']) 
+                    CubeObject.pos10(encodedCube, parms['solution']) 
     #=========================================================================================                   
                 if(encodedCube[12] == encodedCube[49]):
                     

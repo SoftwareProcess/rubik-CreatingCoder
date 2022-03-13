@@ -69,90 +69,87 @@ def _solve(parms):
                     tup =CubeObject.pos52(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]
-    #=====================End of white face=====================================
     
-    #====================blue face start========================================
                 if(encodedCube[1] == encodedCube[49]):
                     tup =CubeObject.pos1(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]
-    #=========================================================================================   
+
                 if(encodedCube[3] == encodedCube[49]):
                     tup =CubeObject.pos3(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]
-    #=========================================================================================   
+
                 if(encodedCube[5] == encodedCube[49]):
                     tup =CubeObject.pos5(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]       
-    #=========================================================================================   
+ 
                 if(encodedCube[7] == encodedCube[49]):
                     tup =CubeObject.pos7(encodedCube, parms['solution']) 
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]  
-    #===============================Red Face============================================                   
+               
                 if(encodedCube[10] == encodedCube[49]):
                     tup =CubeObject.pos10(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1] 
-    #=========================================================================================                   
+               
                 if(encodedCube[12] == encodedCube[49]):
                     tup =CubeObject.pos12(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]     
-    #=========================================================================================                   
+                 
                 if(encodedCube[14] == encodedCube[49]):
                     tup =CubeObject.pos14(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]   
-    #=========================================================================================                   
+              
                 if(encodedCube[16] == encodedCube[49]):
                     tup =CubeObject.pos16(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]  
-    #============================Green Face============================
+
                 if(encodedCube[19] == encodedCube[49]):
                     tup =CubeObject.pos19(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1] 
-    #====================================================================================
+
                 if(encodedCube[21] == encodedCube[49]):
                     tup =CubeObject.pos21(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1] 
-    #====================================================================================
+
                 if(encodedCube[23] == encodedCube[49]):
                     tup =CubeObject.pos23(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]
-    #====================================================================================
+
                 if(encodedCube[25] == encodedCube[49]):
                     tup =CubeObject.pos25(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]
-    #===============================Orange Face============================================                   
+               
                 if(encodedCube[28] == encodedCube[49]):
                     tup =CubeObject.pos28(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]
-    #====================================================================================
+
                 if(encodedCube[30] == encodedCube[49]):
                     tup =CubeObject.pos30(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]             
-    #====================================================================================
+
                 if(encodedCube[32] == encodedCube[49]):
                     tup =CubeObject.pos32(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]       
-    #====================================================================================
+
                 if(encodedCube[34] == encodedCube[49]):
                     tup =CubeObject.pos34(encodedCube, parms['solution'])
                     encodedCube = tup[0]
                     parms['solution'] = tup[1]   
 
-    #======================end of orange=====================
     
             #logic for flipping tiles over from yellow face to white (bottom)
             for i in range(4):

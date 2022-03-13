@@ -699,8 +699,19 @@ class Cube:
     
                     
         
-
-          
+    @staticmethod
+    def pos3(encodedCube, solution):
+         
+        for i in range(4):
+            if(encodedCube[39] == encodedCube[49]):
+                rot = Cube.up(encodedCube)
+                encodedCube = rot
+                solution = solution + 'U'
+                
+        rot = Cube.front(encodedCube)
+        encodedCube = rot
+        solution = solution + 'l'
         
+        return (encodedCube, solution)
 
          

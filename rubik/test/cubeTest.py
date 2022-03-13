@@ -136,7 +136,7 @@ class CubeTest(unittest.TestCase):
         
         
     
-def test_pos50(self):
+    def test_pos50(self):
                        
         encodedCube = 'gogbbowyrrrbbrbbbgygbrggyrgworyoyoybrwowywygwooyrwwwgo'
         solution = ""

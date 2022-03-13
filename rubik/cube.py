@@ -708,7 +708,7 @@ class Cube:
                 encodedCube = rot
                 solution = solution + 'U'
                 
-        rot = Cube.front(encodedCube)
+        rot = Cube.leftPrime(encodedCube)
         encodedCube = rot
         solution = solution + 'l'
         

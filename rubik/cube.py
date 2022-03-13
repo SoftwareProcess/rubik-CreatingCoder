@@ -752,7 +752,27 @@ class Cube:
         return (encodedCube, solution)
     
     
-    
+    #===========================================================================
+    # @staticmethod
+    # def pos10(encodedCube, solution):
+    #             
+    #     rot = Cube.rightPrime(encodedCube)
+    #     encodedCube = rot
+    #     rot = Cube.rightPrime(encodedCube)
+    #     encodedCube = rot
+    #     rot = Cube.downPrime(encodedCube)
+    #     encodedCube = rot
+    #     rot = Cube.frontPrime(encodedCube)
+    #     encodedCube = rot
+    #     rot = Cube.right(encodedCube)
+    #     encodedCube = rot
+    #     rot = Cube.front(encodedCube)
+    #     encodedCube = rot
+    #     
+    #     solution = solution + 'rrdfRF'
+    #     
+    #     return (encodedCube, solution)
+    #===========================================================================
     
     
     

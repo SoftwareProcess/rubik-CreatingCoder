@@ -138,38 +138,9 @@ def _solve(parms):
                     parms['solution'] = tup[1]
     #====================================================================================
                 if(encodedCube[30] == encodedCube[49]):
-                    
-                    for i in range(4):
-                        if(encodedCube[39] == encodedCube[49]):
-                            rot = CubeObject.up(encodedCube)
-                            parms['cube'] = rot
-                            encodedCube = rot
-                            parms['solution'] = parms['solution'] + 'U'
-                                            
-                    rot = CubeObject.back(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'B'
-                    
-                    rot = CubeObject.down(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'D'
-                    
-                    rot = CubeObject.backPrime(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'b'
-                    
-                    rot = CubeObject.left(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'L' 
-                    
-                    rot = CubeObject.left(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'L' 
+                    tup =CubeObject.pos30(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]             
     #====================================================================================
                 if(encodedCube[32] == encodedCube[49]):
                     

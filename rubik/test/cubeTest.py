@@ -145,5 +145,13 @@ class CubeTest(unittest.TestCase):
         dataShouldEqual = ('woybbrwyrgbbbrbgogrrboggrrgygbyoyoybowywywrwooowrwgwgy', 'UUURR')
         self.assertEqual(afterMethod, dataShouldEqual)
         
-        
+    
+    def test_pos52(self):
+                       
+        encodedCube = 'ogyybboybrogorrygrobwbgyggboryoorrywgwywywbrgbgrbwowww'
+        solution = ""
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.pos52(encodedCube, solution)
+        dataShouldEqual = ('obwybboyborroroygrbggygbygorogroryywwwwwywywgbgrbwobrg', 'UUBB')
+        self.assertEqual(afterMethod, dataShouldEqual)   
     

@@ -610,7 +610,6 @@ class Cube:
     
     
     
-    
     @staticmethod
     def pos48(encodedCube, solution):
         #encodedCube = list(encodedCube)
@@ -629,6 +628,9 @@ class Cube:
         solution = solution + 'LL'
         
         return (encodedCube, solution)
+    
+    
+    
     
     
     

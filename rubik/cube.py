@@ -610,6 +610,28 @@ class Cube:
     
     
     
+    
+    @staticmethod
+    def pos48(encodedCube, solution):
+        #encodedCube = list(encodedCube)
+         
+        for i in range(4):
+            if(encodedCube[39] == encodedCube[49]):
+                rot = Cube.up(encodedCube)
+                encodedCube = rot
+                solution = solution + 'U'
+                
+                
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        solution = solution + 'LL'
+        
+        return (encodedCube, solution)
+    
+    
+    
                        
     
                     

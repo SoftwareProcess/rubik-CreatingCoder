@@ -143,40 +143,10 @@ def _solve(parms):
                     parms['solution'] = tup[1]             
     #====================================================================================
                 if(encodedCube[32] == encodedCube[49]):
+                    tup =CubeObject.pos32(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1] 
                     
-                    for i in range(4):
-                        if(encodedCube[39] == encodedCube[49]):
-                            rot = CubeObject.up(encodedCube)
-                            parms['cube'] = rot
-                            encodedCube = rot
-                            parms['solution'] = parms['solution'] + 'U'
-                        
-                    
-                    rot = CubeObject.frontPrime(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'f'
-                    
-                    rot = CubeObject.downPrime(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'd'
-                    
-                    rot = CubeObject.front(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'F'
-                    
-                    rot = CubeObject.left(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'L' 
-                    
-                    rot = CubeObject.left(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'L'                            
-    
     #====================================================================================
                 if(encodedCube[34] == encodedCube[49]):
                     

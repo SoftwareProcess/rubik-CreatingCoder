@@ -918,7 +918,7 @@ class Cube:
     
     
     @staticmethod
-    def pos23(encodedCube, solution):
+    def pos25(encodedCube, solution):
         
         for i in range(4):
             if(encodedCube[37] == encodedCube[49]):
@@ -926,8 +926,6 @@ class Cube:
                 encodedCube = rot
                 solution = solution + 'U'
                 
-        rot = Cube.back(encodedCube)
-        encodedCube = rot
         rot = Cube.down(encodedCube)
         encodedCube = rot
         rot = Cube.left(encodedCube)
@@ -937,7 +935,7 @@ class Cube:
         rot = Cube.leftPrime(encodedCube)
         encodedCube = rot
         
-        solution = solution + ''
+        solution = solution + 'DLbl'
          
         return (encodedCube, solution)
     

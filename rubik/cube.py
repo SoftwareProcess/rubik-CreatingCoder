@@ -715,7 +715,6 @@ class Cube:
         return (encodedCube, solution)
     
     
-    
     @staticmethod
     def pos5(encodedCube, solution):
          

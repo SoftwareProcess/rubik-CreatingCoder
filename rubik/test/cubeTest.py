@@ -156,10 +156,10 @@ class CubeTest(unittest.TestCase):
 #================================Blue face=============================================
     def test_pos1(self):
                        
-        encodedCube = 'wwyobbrybrogorrygbobwggbobborryoywrbgwywywgggwgrywoory'
+        encodedCube = 'wwyobrryorogbrrboyobwggbrgborryoyorbgwywywgggwgwywbyob'
         solution = ""
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.pos1(encodedCube, solution)
-        dataShouldEqual = ('oggrbyyorroggrrwgbobwggborrorbyobbbrgwywywwwwgybowoyyy', 'FrdRFF')
+        dataShouldEqual = ('', '')
         self.assertEqual(afterMethod, dataShouldEqual) 
     

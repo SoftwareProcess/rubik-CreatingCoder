@@ -1039,8 +1039,17 @@ class Cube:
     
     
     
-    
-    
+    @staticmethod
+    def blueAligned(encodedCube, solution):      
+        rot = Cube.front(encodedCube)
+        
+        encodedCube = rot
+        rot = Cube.front(encodedCube)
+        encodedCube = rot
+
+        solution = solution + 'FF'
+         
+        return (encodedCube, solution)
     
     
     

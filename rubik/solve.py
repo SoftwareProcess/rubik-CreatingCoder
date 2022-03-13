@@ -70,17 +70,7 @@ def _solve(parms):
                     CubeObject.pos3(encodedCube, parms['solution'])
     #=========================================================================================   
                 if(encodedCube[5] == encodedCube[49]):
-                    for i in range(4):
-                        if(encodedCube[41] == encodedCube[49]):
-                            rot = CubeObject.up(encodedCube)
-                            parms['cube'] = rot
-                            encodedCube = rot
-                            parms['solution'] = parms['solution'] + 'U'
-                        
-                    rot = CubeObject.right(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'R'                
+                    CubeObject.pos7(encodedCube, parms['solution'])       
     #=========================================================================================   
                 if(encodedCube[7] == encodedCube[49]):
                     for i in range(4):

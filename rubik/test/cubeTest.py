@@ -212,6 +212,8 @@ class CubeTest(unittest.TestCase):
         encodedCube = 'bbroborrowoyyrwwoyrboggyogybrwbogrrbywgwyworgwyggwbbyg'  
         solution = ""
         CubeObject = rubik.Cube()
-        afterMethod = CubeObject.pos12(encodedCube, solution)
+        afterMethod = CubeObject.pos14(encodedCube, solution)
         dataShouldEqual = ('brgobbbygwgworyybbgoyogywrbrbobogrrrgwrwywywoygoywrwgo', 'UUURdfRF')
         self.assertEqual(afterMethod, dataShouldEqual)   
+        
+        

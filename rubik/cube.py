@@ -1,3 +1,12 @@
+#===============================================================================
+# Created March 1, 2022
+# This cube.py file is filled with
+# static methods that will be called upon 
+# by the solve.py file to
+# solve and rotate a rubik cube
+# @Author: Shane Morgan
+#===============================================================================
+
 from rubik.check import *
 
 class Cube:

@@ -1,15 +1,16 @@
+#===============================================================================
+# Created March 1, 2022
+# This solveTest.py file is filled with
+# tests for the solve.py file. 
+# These tests were built incrementally 
+#in accordance with the TDD process
+# @Author: Shane Morgan
+#===============================================================================
+
+
 import unittest
 import rubik.solve as solve
 import rubik.check as check 
-
-#Dev Strat
-#
-#    Validate parms
-#    Load parms['cube'] into cube model
-#    rotate cube
-#    serialize cube in string
-#    return str + status of 'ok'
-#    localhost:5000/rubik?op=check
 
 
 class Test(unittest.TestCase):

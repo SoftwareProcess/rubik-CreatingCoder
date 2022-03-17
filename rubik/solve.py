@@ -1,14 +1,15 @@
+#===============================================================================
+# Created March 1, 2022
+# This solve.py file is incrementally
+# being built to solve a cube by giving the rotations 
+# necessary to solve a rubik cube, as well as
+# perform rotations on a cube if told to by the customer
+# 
+# @Author: Shane Morgan
+#===============================================================================
 import rubik.cube as rubik
 import rubik.check as check 
 
-
-
-# Dev Strat
-#    Validate parms
-#    load parms['cube'] into cube model
-#    rotate cube in desired direction
-#    serialize cube model in string
-#    return string + status of 'ok'
 
     
 def _solve(parms):

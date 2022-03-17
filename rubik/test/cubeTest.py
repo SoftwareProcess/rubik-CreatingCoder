@@ -1,4 +1,11 @@
-
+#===============================================================================
+# Created March 1, 2022
+# This cubeTest.py file is filled with
+# tests for the cube.py file. 
+# These tests were built incrementally 
+#in accordance with the TDD process
+# @Author: Shane Morgan
+#===============================================================================
 import unittest
 import rubik.cube as rubik
 

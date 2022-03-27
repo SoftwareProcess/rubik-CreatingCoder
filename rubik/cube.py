@@ -16,6 +16,8 @@ class Cube:
 #          load : takes serialized string and loads it into the cube
 #          get : takes content of the cube and returns it as a string
 
+
+#=====================Begin of Turn methods==================
     @staticmethod
     def front(self):
           
@@ -593,11 +595,12 @@ class Cube:
         #face 6 WHITE no change
         listToString = ''.join(updatedCube)
         return listToString
+      
+#=====================================End of Turn Methdos======================================
     
-    
-#=====================================New Methods======================================
-    
-    
+
+
+#=====================================Start of White Cross Methods=============================
     @staticmethod
     def pos46(encodedCube, solution):
         #encodedCube = list(encodedCube)
@@ -1086,5 +1089,12 @@ class Cube:
         encodedCube = rot
         solution = solution + 'LL'
         return (encodedCube, solution)
+    
+#=====================================End White Cross Methods=============================
 
+#=====================================Start of White Corner Methods=======================  
+
+
+
+  
          

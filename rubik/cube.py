@@ -1184,5 +1184,8 @@ class Cube:
         encodedCube = rot
         solution = solution + 'Bub'
         return (encodedCube, solution)
-  
+    
+    
+    
+    
          

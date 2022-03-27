@@ -1333,6 +1333,18 @@ class Cube:
     
     
 ##Top right corners of faces, that solve##
+    @staticmethod
+    def TopRightCorner2(encodedCube, solution):      
+        rot = Cube.up(encodedCube)
+        encodedCube = rot
+        rot = Cube.right(encodedCube)
+        encodedCube = rot
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.rightPrime(encodedCube)
+        encodedCube = rot
+        solution = solution + 'URur'
+        return (encodedCube, solution)
 
     
     

@@ -1150,8 +1150,7 @@ class Cube:
         encodedCube = rot
         solution = solution + 'luL'
         return (encodedCube, solution)
-    
-    
+     
     @staticmethod
     def whiteOnBottom47(encodedCube, solution):      
         rot = Cube.right(encodedCube)
@@ -1186,7 +1185,7 @@ class Cube:
         return (encodedCube, solution)
     
     
-    
+##Bottom left corners  
     @staticmethod
     def BottomLeftCorner6(encodedCube, solution):      
         rot = Cube.front(encodedCube)
@@ -1233,7 +1232,7 @@ class Cube:
     
     
     
-    
+##Bottom right corners
     @staticmethod
     def BottomRightCorner8(encodedCube, solution):      
         rot = Cube.frontPrime(encodedCube)
@@ -1277,3 +1276,10 @@ class Cube:
         encodedCube = rot
         solution = solution + 'luL'
         return (encodedCube, solution)
+    
+    
+##Top left corners of faces, that solve##
+    
+
+    
+    

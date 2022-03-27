@@ -1093,6 +1093,7 @@ class Cube:
 #=====================================End White Cross Methods=============================
 
 #=====================================Start of White Corner Methods=======================  
+##White on top, move to side
     @staticmethod
     def whiteOnTop36(encodedCube, solution):      
         rot = Cube.left(encodedCube)
@@ -1136,6 +1137,18 @@ class Cube:
         rot = Cube.front(encodedCube)
         encodedCube = rot
         solution = solution + 'fUF'
+        return (encodedCube, solution)
+    
+##White on bottom, but incorrect###  
+    @staticmethod
+    def whiteOnBottom45(encodedCube, solution):      
+        rot = Cube.leftPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        solution = solution + ''
         return (encodedCube, solution)
   
          

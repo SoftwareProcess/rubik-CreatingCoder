@@ -1345,6 +1345,19 @@ class Cube:
         encodedCube = rot
         solution = solution + 'URur'
         return (encodedCube, solution)
+    
+    @staticmethod
+    def TopRightCorner11(encodedCube, solution):      
+        rot = Cube.up(encodedCube)
+        encodedCube = rot
+        rot = Cube.back(encodedCube)
+        encodedCube = rot
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.backPrime(encodedCube)
+        encodedCube = rot
+        solution = solution + 'UBub'
+        return (encodedCube, solution)
 
     
     

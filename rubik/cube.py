@@ -1332,3 +1332,8 @@ class Cube:
         return (encodedCube, solution)
     
     
+##Top right corners of faces, that solve##
+
+    
+    
+    

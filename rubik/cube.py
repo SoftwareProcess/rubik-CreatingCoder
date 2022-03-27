@@ -1093,7 +1093,16 @@ class Cube:
 #=====================================End White Cross Methods=============================
 
 #=====================================Start of White Corner Methods=======================  
-
+    @staticmethod
+    def whiteOnTop36(encodedCube, solution):      
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.leftPrime(encodedCube)
+        encodedCube = rot
+        solution = solution + 'Lul'
+        return (encodedCube, solution)
 
 
   

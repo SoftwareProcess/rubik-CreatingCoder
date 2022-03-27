@@ -341,4 +341,14 @@ class CubeTest(unittest.TestCase):
         afterMethod = CubeObject.whiteOnTop36(encodedCube, solution)
         dataShouldEqual = ('grbrbybbowoogrygrrbogbgyggywrroobrooobygygyyrwwywwwbww', 'Lul')
         self.assertEqual(afterMethod, dataShouldEqual)
+        
+     
+    def test_shouldMoveWhite38toSideFace(self):
+        encodedCube = 'brgrbrbbbyygyrorrbrogbgyyggoyogoboooygwbyoygrwwwwwwwwr'  
+        solution = ""
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.whiteOnTop38(encodedCube, solution)
+        dataShouldEqual = ('gogrbrbbbyyryrorrgyyoggyyggbrwgoboooybbgyorbrwwwwwwwwo', 'rUR')
+        self.assertEqual(afterMethod, dataShouldEqual)   
+    
     

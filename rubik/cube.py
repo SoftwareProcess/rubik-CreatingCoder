@@ -1279,6 +1279,17 @@ class Cube:
     
     
 ##Top left corners of faces, that solve##
+    def TopLeftCorner0(encodedCube, solution):      
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.leftPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.up(encodedCube)
+        encodedCube = rot
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        solution = solution + 'ulUL'
+        return (encodedCube, solution)
     
 
     

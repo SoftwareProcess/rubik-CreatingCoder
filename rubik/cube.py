@@ -1103,6 +1103,18 @@ class Cube:
         encodedCube = rot
         solution = solution + 'Lul'
         return (encodedCube, solution)
+    
+    
+    @staticmethod
+    def whiteOnTop38(encodedCube, solution):      
+        rot = Cube.rightPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.up(encodedCube)
+        encodedCube = rot
+        rot = Cube.right(encodedCube)
+        encodedCube = rot
+        solution = solution + 'rUR'
+        return (encodedCube, solution)
 
 
   

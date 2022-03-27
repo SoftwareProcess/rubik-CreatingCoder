@@ -1127,6 +1127,15 @@ class Cube:
         solution = solution + 'Fuf'
         return (encodedCube, solution)
 
-
+    @staticmethod
+    def whiteOnTop44(encodedCube, solution):      
+        rot = Cube.frontPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.up(encodedCube)
+        encodedCube = rot
+        rot = Cube.front(encodedCube)
+        encodedCube = rot
+        solution = solution + 'fUF'
+        return (encodedCube, solution)
   
          

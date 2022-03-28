@@ -549,6 +549,13 @@ class CubeTest(unittest.TestCase):
         dataShouldEqual = (True)
         self.assertEqual(afterMethod, dataShouldEqual)
         
+        
+    def test_checkCornersAreSolved(self):
+        encodedCube = 'wboobywwbboorrryygygwbgyobygrbgogggbrwgwybryyoorrworww'  
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.CornersAreSolved(encodedCube)
+        dataShouldEqual = (False)
+        self.assertEqual(afterMethod, dataShouldEqual)
     
     
         

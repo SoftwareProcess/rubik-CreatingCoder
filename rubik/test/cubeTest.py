@@ -558,6 +558,8 @@ class CubeTest(unittest.TestCase):
         self.assertEqual(afterMethod, dataShouldEqual)
     
     
+   
+    
         
     
         

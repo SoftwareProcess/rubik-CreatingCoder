@@ -1399,4 +1399,18 @@ class Cube:
         
         
         
+    @staticmethod
+    def RemoveExtraUpSpins(solution):      
+        if('UUUU' in solution):
+            solution = solution.replace("UUUU", "")
+            
+        if('UUU' in solution):
+            solution = solution.replace("UUU", "u")
+            
+        return solution
+            
+        
+        
+        
+        
         

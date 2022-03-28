@@ -1037,7 +1037,7 @@ class Test(unittest.TestCase):
         # self.assertEqual(cubeList[52], cubeList[49])
         #=======================================================================
         
-        self.assertEqual(parm['solution'], 'LuulRur')
+        self.assertEqual(parm['solution'], 'UUULulUURur')
         self.assertEqual(parm['status'], 'ok')
     
         

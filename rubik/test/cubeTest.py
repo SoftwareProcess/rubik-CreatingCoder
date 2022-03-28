@@ -558,7 +558,16 @@ class CubeTest(unittest.TestCase):
         self.assertEqual(afterMethod, dataShouldEqual)
     
     
-   
+    def test_removeUnnecessarySpins(self):
+        solution = "FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLulUUUubUBUUUUUFufUurUR" 
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.RemoveExtraUpSpins(solution)
+        dataShouldEqual = 'FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLulUUUubUBUFufUurUR'
+        self.assertEqual(afterMethod, dataShouldEqual)
+
+        
+        
+        
     
         
     

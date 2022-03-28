@@ -1022,26 +1022,33 @@ class Test(unittest.TestCase):
     
     
         
-    def test_WhiteCornersSolvedGivenExample(self):
+    def test_WhiteCornersSolvedExample(self):
         parm = {'op':'solve',
                 'cube': 'gbwrryrrobroggyyggyoyoogoogbrwobgrbbrbgyybryowwbwwwyww'}
             
         encodedCube = solve._solve(parm)
-        #self.assertEqual(encodedCube, updatedParms)
-        #=======================================================================
-        # cubeString = encodedCube.get('cube')
-        # cubeList = list(cubeString)
-        # self.assertEqual(cubeList[46], cubeList[49])
-        # self.assertEqual(cubeList[48], cubeList[49])
-        # self.assertEqual(cubeList[50], cubeList[49])
-        # self.assertEqual(cubeList[52], cubeList[49])
-        #=======================================================================
                                                #LuulRur
         self.assertEqual(parm['solution'], 'UUULulUURur')
         self.assertEqual(parm['status'], 'ok')
     
     
-    
+      
+    def test_WhiteCornersSolved2(self):
+        parm = {'op':'solve',
+                'cube': 'ggrbbygbbgobrrgrrbrgoogworgwyoooywbobwyoybwyyyrwwwgrwy'}
+            
+        encodedCube = solve._solve(parm)
+        self.assertEqual(parm['solution'], 'LLUUBBlLLUFFRRUBBluLBubBUbfuFUBubLulRUrLUlUufUFUubUBUFuf')
+        self.assertEqual(parm['status'], 'ok')
         
-
+        
+    def test_WhiteCornersSolved3(self):
+        parm = {'op':'solve',
+                'cube': 'ygrrbbbbwwyyorrgwbrgbbgwryyowogoybyrwogoybgrgywogwroow'}
+        encodedCube = solve._solve(parm)
+        self.assertEqual(parm['solution'], 'FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLulUUUubUBUUUUUFufUurUR')
+        self.assertEqual(parm['status'], 'ok')
+        
+        
+    
      

@@ -1394,7 +1394,8 @@ class Cube:
             and encodedCube[15] == encodedCube[13] and encodedCube[17] == encodedCube[13] and encodedCube[24] == encodedCube[22] and encodedCube[25] == encodedCube[22] 
             and encodedCube[26] == encodedCube[22] and encodedCube[33] == encodedCube[31] and encodedCube[34] == encodedCube[31] and encodedCube[35] == encodedCube[31]):
                 return True
-       
+        else:
+            return False
         
         
         

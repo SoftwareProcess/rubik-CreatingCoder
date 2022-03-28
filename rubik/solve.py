@@ -343,7 +343,7 @@ def _solve(parms):
                             parms['solution'] = parms['solution'] + 'U'
                             
     
-               
+            parms['solution'] = CubeObject.RemoveExtraUpSpins(parms['solution'])
             parms['status'] = 'ok'
 
     

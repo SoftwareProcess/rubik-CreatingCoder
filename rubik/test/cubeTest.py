@@ -562,7 +562,7 @@ class CubeTest(unittest.TestCase):
         solution = "FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLulUUUubUBUUUUUFufUurUR" 
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.RemoveExtraUpSpins(solution)
-        dataShouldEqual = 'FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLulUUUubUBUFufUurUR'
+        dataShouldEqual = 'FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLuluubUBUFufUurUR'
         self.assertEqual(afterMethod, dataShouldEqual)
 
         

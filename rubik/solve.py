@@ -180,10 +180,8 @@ def _solve(parms):
                    and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
                         break
                      
-                rot = CubeObject.up(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'U'
+
+                
     
                
             parms['status'] = 'ok'

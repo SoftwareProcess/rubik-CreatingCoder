@@ -970,56 +970,76 @@ class Test(unittest.TestCase):
         self.assertEqual(parm['status'], 'ok')
      
     
-    def test_shouldReturnWhiteCross_2(self):
-        parm = {'op':'solve',
-                'cube': 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'}
-              
-        encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], 'RFFRRBBLL')
-        self.assertEqual(parm['status'], 'ok')
-         
-    def test_shouldReturnWhiteCross_3(self):
-        parm = {'op':'solve',
-                'cube': 'wgyybyyrygrrorygwowbwrgobbbroggogoobbwgbywororbrwwgyyw'}
-              
-        encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], 'LLUUUdfRFURRLLUUFFBB')
-        self.assertEqual(parm['status'], 'ok')
-
-         
-    def test_shouldReturnWhiteCross_4(self):
-        parm = {'op':'solve',
-                'cube': 'wggbbwygwyooorwgrybbwbggogwrrooorrobbyywyybrrrwobwygyg'}
-              
-        encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], 'FFUUlUUURdfRFUFFRRBBLL')
-        self.assertEqual(parm['status'], 'ok')
+    # def test_shouldReturnWhiteCross_2(self):
+    #     parm = {'op':'solve',
+    #             'cube': 'ybbbbwggboywrrbygwrgoygyroggobrorryowwbwygowwyrrowoybg'}
+    #
+    #     encodedCube = solve._solve(parm)     
+    #     self.assertEqual(parm['solution'], 'RFFRRBBLL')
+    #     self.assertEqual(parm['status'], 'ok')
+    #
+    # def test_shouldReturnWhiteCross_3(self):
+    #     parm = {'op':'solve',
+    #             'cube': 'wgyybyyrygrrorygwowbwrgobbbroggogoobbwgbywororbrwwgyyw'}
+    #
+    #     encodedCube = solve._solve(parm)     
+    #     self.assertEqual(parm['solution'], 'LLUUUdfRFURRLLUUFFBB')
+    #     self.assertEqual(parm['status'], 'ok')
+    #
+    #
+    # def test_shouldReturnWhiteCross_4(self):
+    #     parm = {'op':'solve',
+    #             'cube': 'wggbbwygwyooorwgrybbwbggogwrrooorrobbyywyybrrrwobwygyg'}
+    #
+    #     encodedCube = solve._solve(parm)     
+    #     self.assertEqual(parm['solution'], 'FFUUlUUURdfRFUFFRRBBLL')
+    #     self.assertEqual(parm['status'], 'ok')
+    #
+    #
+    # def test_shouldReturnWhiteCross_5(self):
+    #     parm = {'op':'solve',
+    #             'cube': 'rgobbrwgywyobrbgwyywwyggryogbwyowygorogoyrbwbgrrowrbob'}
+    #
+    #     encodedCube = solve._solve(parm)     
+    #     self.assertEqual(parm['solution'], 'dfRFBBdrBRfdFLLRRUUBBUFFLL')
+    #     self.assertEqual(parm['status'], 'ok')
+    #
+    # def test_shouldReturnWhiteCross_6_blank(self):
+    #     parm = {'op':'solve',
+    #             'cube': 'bbyrbgobrbooorggrgwryrggygorbryobwobgyboyywyrywwwwwgwo'}
+    #
+    #     encodedCube = solve._solve(parm)     
+    #     self.assertEqual(parm['solution'], '')
+    #     self.assertEqual(parm['status'], 'ok')
+    #
+    # def test_shouldReturnWhiteCross_7_allOrange(self):
+    #     parm = {'op':'solve',
+    #             'cube': 'gobobrwbwroygryorrgowggryryowwwowbwrgbobyyrgybybgwboyg'}
+    #
+    #     encodedCube = solve._solve(parm)     
+    #     self.assertEqual(parm['solution'], 'lBDbLLUBDbLLdlFLUULLFFUURRUBBLL')
+    #     self.assertEqual(parm['status'], 'ok')
+    
+    
         
-        
-    def test_shouldReturnWhiteCross_5(self):
+    def test_WhiteCornersSolvedGivenExample(self):
         parm = {'op':'solve',
-                'cube': 'rgobbrwgywyobrbgwyywwyggryogbwyowygorogoyrbwbgrrowrbob'}
-              
-        encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], 'dfRFBBdrBRfdFLLRRUUBBUFFLL')
-        self.assertEqual(parm['status'], 'ok')
+                'cube': 'gbwrryrrobroggyyggyoyoogoogbrwobgrbbrbgyybryowwbwwwyww'}
+            
+        encodedCube = solve._solve(parm)
+        #self.assertEqual(encodedCube, updatedParms)
+        #=======================================================================
+        # cubeString = encodedCube.get('cube')
+        # cubeList = list(cubeString)
+        # self.assertEqual(cubeList[46], cubeList[49])
+        # self.assertEqual(cubeList[48], cubeList[49])
+        # self.assertEqual(cubeList[50], cubeList[49])
+        # self.assertEqual(cubeList[52], cubeList[49])
+        #=======================================================================
         
-    def test_shouldReturnWhiteCross_6_blank(self):
-        parm = {'op':'solve',
-                'cube': 'bbyrbgobrbooorggrgwryrggygorbryobwobgyboyywyrywwwwwgwo'}
-              
-        encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], '')
+        self.assertEqual(parm['solution'], 'LuulRur')
         self.assertEqual(parm['status'], 'ok')
-        
-    def test_shouldReturnWhiteCross_7_allOrange(self):
-        parm = {'op':'solve',
-                'cube': 'gobobrwbwroygryorrgowggryryowwwowbwrgbobyyrgybybgwboyg'}
-              
-        encodedCube = solve._solve(parm)     
-        self.assertEqual(parm['solution'], 'lBDbLLUBDbLLdlFLUULLFFUURRUBBLL')
-        self.assertEqual(parm['status'], 'ok')
-        
+    
         
 
      

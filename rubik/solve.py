@@ -473,7 +473,6 @@ def _solve(parms):
         result.pop('solution', None)
         
 
-    
     if(deleteCube):
         result.pop('cube', None)
         

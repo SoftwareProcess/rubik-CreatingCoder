@@ -948,8 +948,6 @@ class Test(unittest.TestCase):
     #===========================================================================
     
     
-    
-
         
     def test_alreadysolved(self):
         parm = {'op':'solve',
@@ -990,6 +988,15 @@ class Test(unittest.TestCase):
         self.assertEqual(parm['solution'], 'FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLuluubUBUFufUurUR')
         self.assertEqual(parm['status'], 'ok')
         
+    def test_WhiteCornersSolved3(self):
+        parm = {'op':'solve',
+                'cube': 'wrobbgbywbgrrrrroryywbgbyggogbwooyrogbbyyoryywogwwwowg'}
+        encodedCube = solve._solve(parm)
+        self.assertEqual(parm['solution'], 'LLRRBBUfdFLLURRLLUUFFBBruRUUBubUUFufUufUF')
+        self.assertEqual(parm['status'], 'ok')
+        
+        
+    
         
     
      

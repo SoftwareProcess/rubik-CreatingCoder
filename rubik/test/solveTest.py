@@ -988,7 +988,7 @@ class Test(unittest.TestCase):
         self.assertEqual(parm['solution'], 'FFdfRFBDLbllBDbLLFFRRBBLLluLRUrBUbLuluubUBUFufUurUR')
         self.assertEqual(parm['status'], 'ok')
         
-    def test_WhiteCornersSolved3(self):
+    def test_WhiteCornersSolved4(self):
         parm = {'op':'solve',
                 'cube': 'wrobbgbywbgrrrrroryywbgbyggogbwooyrogbbyyoryywogwwwowg'}
         encodedCube = solve._solve(parm)

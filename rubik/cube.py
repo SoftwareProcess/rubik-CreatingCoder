@@ -1385,7 +1385,7 @@ class Cube:
         solution = solution + 'UFuf'
         return (encodedCube, solution)
     
-    
+    #Update this method in the final iteration to loop through 
     @staticmethod
     def CornersAreSolved(encodedCube):
         if(encodedCube[45]==encodedCube[49] and encodedCube[46]==encodedCube[49] and encodedCube[47]==encodedCube[49] and encodedCube[48]==encodedCube[49] and 

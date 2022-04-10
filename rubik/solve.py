@@ -176,8 +176,8 @@ def _solve(parms):
                     parms['solution'] = tup[1]
     
     
-                if(encodedCube[46]== encodedCube[49] and encodedCube[48]== encodedCube[49] 
-                   and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
+                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[34] == encodedCube[31] 
+                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
                         break
                     
                 rot = CubeObject.up(encodedCube)

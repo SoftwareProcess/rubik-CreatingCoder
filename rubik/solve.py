@@ -342,6 +342,10 @@ def _solve(parms):
                             encodedCube = rot
                             parms['solution'] = parms['solution'] + 'U'
                             
+            #next for loop here
+    
+    
+    
     
             parms['solution'] = CubeObject.RemoveExtraUpSpins(parms['solution'])
             parms['status'] = 'ok'

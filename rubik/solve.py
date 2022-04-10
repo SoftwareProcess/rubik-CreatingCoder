@@ -47,8 +47,8 @@ def _solve(parms):
             for i in range(4):
 #=================Start of Logic for finding solution for white cross=================   
 
-                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[39] == encodedCube[31] 
-                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
+                if(encodedCube[46]== encodedCube[49] and encodedCube[48]== encodedCube[49] 
+                   and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
                         break
                     
                 if(encodedCube[46] == encodedCube[49]):                
@@ -155,10 +155,6 @@ def _solve(parms):
             #logic for flipping tiles over from yellow face to white (bottom)
             for i in range(4):
                 
-                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[39] == encodedCube[31] 
-                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
-                        break
-                
                 if(encodedCube[1] == encodedCube[4] and encodedCube[43] == encodedCube[49]):
                     tup =CubeObject.blueAligned(encodedCube, parms['solution'])
                     encodedCube = tup[0]
@@ -180,8 +176,8 @@ def _solve(parms):
                     parms['solution'] = tup[1]
     
     
-                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[39] == encodedCube[31] 
-                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
+                if(encodedCube[46]== encodedCube[49] and encodedCube[48]== encodedCube[49] 
+                   and encodedCube[50]== encodedCube[49] and encodedCube[52]== encodedCube[49]):
                         break
                     
                 rot = CubeObject.up(encodedCube)
@@ -485,6 +481,5 @@ def _solve(parms):
 
 
     
-
 
 

@@ -187,7 +187,7 @@ def _solve(parms):
                      
 
 ##Start of White Corners
-            for i in range(4):
+            for i in range(5):
             
                 if(CubeObject.CornersAreSolved(encodedCube) == True):
                     break   

@@ -1408,6 +1408,9 @@ class Cube:
             solution = solution.replace("UUU", "u")
             
         return solution
+    
+    
+    
             
         
         

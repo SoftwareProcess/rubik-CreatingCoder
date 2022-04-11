@@ -1583,4 +1583,12 @@ class Cube:
         encodedCube = rot
         solution = solution + 'UFufulUL'
         return (encodedCube, solution)
+    
+    
+    @staticmethod
+    def blueFaceMiddleLeftStatus(encodedCube):
+        if(encodedCube[3]==encodedCube[4] and encodedCube[32]==encodedCube[31]):
+                return True
+        else:
+            return False
         

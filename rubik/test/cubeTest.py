@@ -635,14 +635,19 @@ class CubeTest(unittest.TestCase):
         dataShouldEqual = ('yybbbrbbbrgrbrrrrrgryggggggooooooooobyyyyygbywwwwwwwww', 'UFufulUL')
         self.assertEqual(afterMethod, dataShouldEqual)
         
-    def test_middle_layer_blueface_left_wrong(self):
+    def test_middle_layer_blueface_left_true(self):
         encodedCube = 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'  
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.blueFaceMiddleLeftStatus(encodedCube)
         dataShouldEqual = (True)
         self.assertEqual(afterMethod, dataShouldEqual)
         
-        
-        
+    
+    def test_middle_layer_blueface_right_true(self):
+        encodedCube = 'bbbbbbbbbrrrrrrrrrgggggggggoooooooooyyyyyyyyywwwwwwwww'  
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.blueFaceMiddleRightStatus(encodedCube)
+        dataShouldEqual = (True)
+        self.assertEqual(afterMethod, dataShouldEqual)
       
     

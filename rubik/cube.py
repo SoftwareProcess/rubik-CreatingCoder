@@ -1405,11 +1405,32 @@ class Cube:
             solution = solution.replace("UUUU", "")
             
         if('UUU' in solution):
-            solution = solution.replace("UUU", "u")
-            
+            solution = solution.replace("UUU", "u") 
         return solution
     
     
+    
+    @staticmethod
+    def blueFaceMiddleLeft(encodedCube, solution):
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.leftPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.up(encodedCube)
+        encodedCube = rot
+        rot = Cube.left(encodedCube)
+        encodedCube = rot
+        rot = Cube.up(encodedCube)
+        encodedCube = rot
+        rot = Cube.front(encodedCube)
+        encodedCube = rot
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.frontPrime(encodedCube)
+        encodedCube = rot
+        
+        solution = solution + 'ulULUFuf'
+        return (encodedCube, solution)
     
             
         

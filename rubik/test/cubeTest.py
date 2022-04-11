@@ -571,7 +571,7 @@ class CubeTest(unittest.TestCase):
         solution = ""
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.blueFaceMiddleLeft(encodedCube, solution)
-        dataShouldEqual = ('ulULUFuf', 'oorbbgbbbgyoyrrrrrbgbbgygggrygooooooyryrybygywwwwwwwww')
+        dataShouldEqual = ('oorbbgbbbgyoyrrrrrbgbbgygggrygooooooyryrybygywwwwwwwww', 'ulULUFuf')
         self.assertEqual(afterMethod, dataShouldEqual)
         
     

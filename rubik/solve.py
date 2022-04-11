@@ -351,7 +351,7 @@ def _solve(parms):
             parms['status'] = 'ok'
 
     
-    ################################end of white bottom#########################################
+    ################################end of cube solution finder#########################################
     
     #if statement skips over for loop if NoneType
     if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms and checkReturnsOkCube == True):

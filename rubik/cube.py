@@ -1454,7 +1454,27 @@ class Cube:
         solution = solution + 'URurufUF'
         return (encodedCube, solution)
             
-        
+            
+    @staticmethod
+    def redFaceMiddleLeft(encodedCube, solution): 
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot
+        rot = Cube.frontPrime(encodedCube)
+        encodedCube = rot  
+        rot = Cube.up(encodedCube)
+        encodedCube = rot  
+        rot = Cube.front(encodedCube)
+        encodedCube = rot  
+        rot = Cube.up(encodedCube)
+        encodedCube = rot  
+        rot = Cube.right(encodedCube)
+        encodedCube = rot  
+        rot = Cube.upPrime(encodedCube)
+        encodedCube = rot  
+        rot = Cube.rightPrime(encodedCube)
+        encodedCube = rot    
+        solution = solution + 'ufUFURur'
+        return (encodedCube, solution)
         
         
         

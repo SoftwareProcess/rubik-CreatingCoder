@@ -1432,6 +1432,8 @@ class Cube:
         solution = solution + 'ulULUFuf'
         return (encodedCube, solution)
     
+    
+    
             
         
         

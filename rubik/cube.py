@@ -1678,3 +1678,14 @@ class Cube:
         else:
             return False
         
+    @staticmethod
+    def allYellowOnTopDaisy(encodedCube):
+        if( (encodedCube[1] == encodedCube[40] or encodedCube[43] == encodedCube[40]) and  
+            (encodedCube[10] == encodedCube[40] or encodedCube[41] == encodedCube[40]) and 
+            (encodedCube[19] == encodedCube[40] or encodedCube[37] == encodedCube[40]) and 
+            (encodedCube[28] == encodedCube[40] or encodedCube[39] == encodedCube[40]) ):  
+                return True
+        else:
+            return False
+    
+        

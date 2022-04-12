@@ -1644,3 +1644,37 @@ class Cube:
         else:
             return False
         
+    @staticmethod
+    def middleLayerSolved(encodedCube):
+        if(encodedCube[3]==encodedCube[4]
+           and encodedCube[5]==encodedCube[4]
+           and encodedCube[6]==encodedCube[4]
+           and encodedCube[7]==encodedCube[4]
+           and encodedCube[8]==encodedCube[4]
+           and encodedCube[12]==encodedCube[13]
+           and encodedCube[14]==encodedCube[13]
+           and encodedCube[15]==encodedCube[13]
+           and encodedCube[16]==encodedCube[13]
+           and encodedCube[17]==encodedCube[13]
+           and encodedCube[21]==encodedCube[22]
+           and encodedCube[23]==encodedCube[22]
+           and encodedCube[24]==encodedCube[22]
+           and encodedCube[25]==encodedCube[22]
+           and encodedCube[26]==encodedCube[22]
+           and encodedCube[30]==encodedCube[31]
+           and encodedCube[32]==encodedCube[31]
+           and encodedCube[33]==encodedCube[31]
+           and encodedCube[34]==encodedCube[31]
+           and encodedCube[35]==encodedCube[31]
+           and encodedCube[45]==encodedCube[49]
+           and encodedCube[46]==encodedCube[49]
+           and encodedCube[47]==encodedCube[49]
+           and encodedCube[48]==encodedCube[49]
+           and encodedCube[50]==encodedCube[49]
+           and encodedCube[51]==encodedCube[49]
+           and encodedCube[52]==encodedCube[49]
+           and encodedCube[53]==encodedCube[49]):
+                return True
+        else:
+            return False
+        

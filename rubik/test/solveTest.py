@@ -1010,5 +1010,8 @@ class Test(unittest.TestCase):
         self.assertEqual(parm['solution'], 'ulULUFufurURUBubUUFufulULURurufUFuubUBULulufUFURurU')
         self.assertEqual(parm['status'], 'ok')
         
+        
+    
+        
     
      

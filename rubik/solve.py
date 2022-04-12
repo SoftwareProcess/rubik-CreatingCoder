@@ -429,8 +429,7 @@ def _solve(parms):
                         tup =CubeObject.orangeFaceMiddleRight(encodedCube, parms['solution'])
                         encodedCube = tup[0]
                         parms['solution'] = tup[1]
-                    
-                    
+                                      
                 else:    
                     rot = CubeObject.up(encodedCube)
                     parms['cube'] = rot
@@ -440,7 +439,6 @@ def _solve(parms):
             parms['solution'] = CubeObject.RemoveExtraUpSpins(parms['solution'])
             parms['status'] = 'ok'
 
-    
     ################################end of cube solution finder#########################################
     
     #if statement skips over for loop if NoneType

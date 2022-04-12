@@ -686,19 +686,22 @@ class CubeTest(unittest.TestCase):
         dataShouldEqual = (True)
         self.assertEqual(afterMethod, dataShouldEqual)
         
-    #and is not solved
-    # def test_all_daisy_top_contain_yellow(self):
-    #     encodedCube = ''  
-    #     CubeObject = rubik.Cube()
-    #     afterMethod = CubeObject.allYellowOnTopDaisyAndNotSolved(encodedCube)
-    #     dataShouldEqual = (True)
-    #     self.assertEqual(afterMethod, dataShouldEqual)
-    
-    
     def test_middle_layer_solved_true(self):
         encodedCube = 'gyobbbbbbbyrrrrrrryyrgggggggyyooooooyobrybogywwwwwwwww'  
         CubeObject = rubik.Cube()
         afterMethod = CubeObject.middleLayerSolved(encodedCube)
         dataShouldEqual = (True)
         self.assertEqual(afterMethod, dataShouldEqual)
+        
+        
+    def test_all_daisy_top_contain_yellow(self):
+        encodedCube = 'rrrbbobbbgoygrrrrrgbbggogggygbborooooyoyyyyyywwwwwwwww'  
+        CubeObject = rubik.Cube()
+        afterMethod = CubeObject.allYellowOnTopDaisy(encodedCube)
+        dataShouldEqual = (True)
+        self.assertEqual(afterMethod, dataShouldEqual)
+        
+    
+        
+    
     

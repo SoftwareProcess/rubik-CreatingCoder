@@ -1005,9 +1005,9 @@ class Test(unittest.TestCase):
     
     def test_solve_middle_layer(self):
         parm = {'op':'solve',
-                'cube': 'ogrbbygrybbbgryowyygwrgwrbrbrwgowyororowyygowwbgywogob'}
+                'cube': 'ulULUFufurURUBubUUFufulULURurufUFuubUBULulufUFURurU'}
         encodedCube = solve._solve(parm)
-        self.assertEqual(parm['solution'], '')
+        self.assertEqual(parm['solution'], 'yyrrbgbbbgbrororrryoobgrgggyybbogooogybryyogywwwwwwwww')
         self.assertEqual(parm['status'], 'ok')
         
     

@@ -343,10 +343,100 @@ def _solve(parms):
                             parms['solution'] = parms['solution'] + 'U'
                             
             #next for loop here
-    
-    
-    
-    
+            for i in range(32):
+                
+                if(CubeObject.middleLayerSolved(encodedCube) == True):
+                    break   
+                
+                if(encodedCube[1] == encodedCube[4] and encodedCube[43] == encodedCube[31]):
+                    tup =CubeObject.blueFaceMiddleLeft(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
+                    
+                if(encodedCube[1] == encodedCube[4] and encodedCube[43] == encodedCube[13]):
+                    tup =CubeObject.blueFaceMiddleRight(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]  
+                    
+                if(encodedCube[10] == encodedCube[13] and encodedCube[41] == encodedCube[4]):
+                    tup =CubeObject.redFaceMiddleLeft(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
+                    
+                if(encodedCube[10] == encodedCube[13] and encodedCube[41] == encodedCube[22]):
+                    tup =CubeObject.redFaceMiddleRight(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
+                    
+                if(encodedCube[19] == encodedCube[22] and encodedCube[37] == encodedCube[13]):
+                    tup =CubeObject.greenFaceMiddleLeft(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
+                    
+                if(encodedCube[19] == encodedCube[22] and encodedCube[37] == encodedCube[31]):
+                    tup =CubeObject.greenFaceMiddleRight(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
+                    
+                if(encodedCube[28] == encodedCube[31] and encodedCube[39] == encodedCube[22]):
+                    tup =CubeObject.orangeFaceMiddleLeft(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
+                    
+                if(encodedCube[28] == encodedCube[31] and encodedCube[39] == encodedCube[4]):
+                    tup =CubeObject.orangeFaceMiddleRight(encodedCube, parms['solution'])
+                    encodedCube = tup[0]
+                    parms['solution'] = tup[1]
+                    
+                if (CubeObject.allYellowOnTopDaisy(encodedCube) == True and CubeObject.middleLayerSolved(encodedCube) == False):   
+                    
+                    if(CubeObject.blueFaceMiddleLeftStatus(encodedCube) == False and encodedCube[3] != encodedCube[40] and encodedCube[32] != encodedCube[40]):
+                        tup =CubeObject.blueFaceMiddleLeft(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                        
+                    elif(CubeObject.blueFaceMiddleRightStatus(encodedCube) == False and encodedCube[5] != encodedCube[40] and encodedCube[12] != encodedCube[40]):
+                        tup =CubeObject.blueFaceMiddleRight(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                        
+                    elif(CubeObject.redFaceMiddleLeftStatus(encodedCube) == False and encodedCube[12] != encodedCube[40] and encodedCube[5] != encodedCube[40]):
+                        tup =CubeObject.redFaceMiddleLeft(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                        
+                    elif(CubeObject.redFaceMiddleRightStatus(encodedCube) == False and encodedCube[14] != encodedCube[40] and encodedCube[21] != encodedCube[40]):
+                        tup =CubeObject.redFaceMiddleRight(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                        
+                    elif(CubeObject.greenFaceMiddleLeftStatus(encodedCube) == False and encodedCube[21] != encodedCube[40] and encodedCube[14] != encodedCube[40]):
+                        tup =CubeObject.greenFaceMiddleLeft(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                    
+                    elif(CubeObject.greenFaceMiddleRightStatus(encodedCube) == False and encodedCube[23] != encodedCube[40] and encodedCube[30] != encodedCube[40]):
+                        tup =CubeObject.greenFaceMiddleRight(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                        
+                    elif(CubeObject.orangeFaceMiddleLeftStatus(encodedCube) == False and encodedCube[30] != encodedCube[40] and encodedCube[23] != encodedCube[40]):
+                        tup =CubeObject.orangeFaceMiddleLeft(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                    
+                    elif(CubeObject.orangeFaceMiddleRightStatus(encodedCube) == False and encodedCube[32] != encodedCube[40] and encodedCube[3] != encodedCube[40]):
+                        tup =CubeObject.orangeFaceMiddleRight(encodedCube, parms['solution'])
+                        encodedCube = tup[0]
+                        parms['solution'] = tup[1]
+                    
+                    
+                else:    
+                    rot = CubeObject.up(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'U'
+                    
             parms['solution'] = CubeObject.RemoveExtraUpSpins(parms['solution'])
             parms['status'] = 'ok'
 

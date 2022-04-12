@@ -342,7 +342,7 @@ def _solve(parms):
                             encodedCube = rot
                             parms['solution'] = parms['solution'] + 'U'
                             
-            #next for loop here
+#MIDDLE LAYER
             for i in range(32):
                 
                 if(CubeObject.middleLayerSolved(encodedCube) == True):

@@ -1630,3 +1630,10 @@ class Cube:
         else:
             return False
         
+    @staticmethod
+    def orangeFaceMiddleLeftStatus(encodedCube):
+        if(encodedCube[30]==encodedCube[31] and encodedCube[23]==encodedCube[22]):
+                return True
+        else:
+            return False
+        

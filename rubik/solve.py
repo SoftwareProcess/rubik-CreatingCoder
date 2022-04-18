@@ -96,6 +96,26 @@ def whiteCross(parms, CubeObject, tup, encodedCube):
         parms['solution'] = tup[1]
     return encodedCube, tup
 
+
+def flipWhiteCross(parms, CubeObject, tup, encodedCube):
+    if (encodedCube[1] == encodedCube[4] and encodedCube[43] == encodedCube[49]):
+        tup = CubeObject.blueAligned(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[10] == encodedCube[13] and encodedCube[41] == encodedCube[49]):
+        tup = CubeObject.redAligned(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[19] == encodedCube[22] and encodedCube[37] == encodedCube[49]):
+        tup = CubeObject.greenAligned(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[28] == encodedCube[31] and encodedCube[39] == encodedCube[49]):
+        tup = CubeObject.orangeAligned(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    return encodedCube, tup
+
 def _solve(parms):
     
     rot = ""
@@ -141,25 +161,7 @@ def _solve(parms):
             #logic for flipping tiles over from yellow face to white (bottom)
             for i in range(4):
                 
-                if(encodedCube[1] == encodedCube[4] and encodedCube[43] == encodedCube[49]):
-                    tup =CubeObject.blueAligned(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-                    
-                if(encodedCube[10] == encodedCube[13] and encodedCube[41] == encodedCube[49]):
-                    tup =CubeObject.redAligned(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-                
-                if(encodedCube[19] == encodedCube[22] and encodedCube[37] == encodedCube[49]):
-                    tup =CubeObject.greenAligned(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-                     
-                if(encodedCube[28] == encodedCube[31] and encodedCube[39] == encodedCube[49]):
-                    tup =CubeObject.orangeAligned(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
+                encodedCube, tup = flipWhiteCross(parms, CubeObject, tup, encodedCube)
     
     
                 if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[34] == encodedCube[31] 

@@ -12,6 +12,90 @@ import rubik.check as check
 
 
     
+
+def whiteCross(parms, CubeObject, tup, encodedCube):
+    if (encodedCube[46] == encodedCube[49]):
+        tup = CubeObject.pos46(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[48] == encodedCube[49]):
+        tup = CubeObject.pos48(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[50] == encodedCube[49]):
+        tup = CubeObject.pos50(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[52] == encodedCube[49]):
+        tup = CubeObject.pos52(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[1] == encodedCube[49]):
+        tup = CubeObject.pos1(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[3] == encodedCube[49]):
+        tup = CubeObject.pos3(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[5] == encodedCube[49]):
+        tup = CubeObject.pos5(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[7] == encodedCube[49]):
+        tup = CubeObject.pos7(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[10] == encodedCube[49]):
+        tup = CubeObject.pos10(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[12] == encodedCube[49]):
+        tup = CubeObject.pos12(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[14] == encodedCube[49]):
+        tup = CubeObject.pos14(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[16] == encodedCube[49]):
+        tup = CubeObject.pos16(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[19] == encodedCube[49]):
+        tup = CubeObject.pos19(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[21] == encodedCube[49]):
+        tup = CubeObject.pos21(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[23] == encodedCube[49]):
+        tup = CubeObject.pos23(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[25] == encodedCube[49]):
+        tup = CubeObject.pos25(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[28] == encodedCube[49]):
+        tup = CubeObject.pos28(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[30] == encodedCube[49]):
+        tup = CubeObject.pos30(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[32] == encodedCube[49]):
+        tup = CubeObject.pos32(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    if (encodedCube[34] == encodedCube[49]):
+        tup = CubeObject.pos34(encodedCube, parms['solution'])
+        encodedCube = tup[0]
+        parms['solution'] = tup[1]
+    return encodedCube, tup
+
 def _solve(parms):
     
     rot = ""
@@ -51,105 +135,7 @@ def _solve(parms):
                    and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
                         break
                     
-                if(encodedCube[46] == encodedCube[49]):                
-                    tup = CubeObject.pos46(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-                    
-                if(encodedCube[48] == encodedCube[49]):
-                    tup = CubeObject.pos48(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-                                     
-                if(encodedCube[50] == encodedCube[49]):
-                    tup =CubeObject.pos50(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-                           
-                if(encodedCube[52] == encodedCube[49]):
-                    tup =CubeObject.pos52(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-    
-                if(encodedCube[1] == encodedCube[49]):
-                    tup =CubeObject.pos1(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-
-                if(encodedCube[3] == encodedCube[49]):
-                    tup =CubeObject.pos3(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-
-                if(encodedCube[5] == encodedCube[49]):
-                    tup =CubeObject.pos5(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]       
- 
-                if(encodedCube[7] == encodedCube[49]):
-                    tup =CubeObject.pos7(encodedCube, parms['solution']) 
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]  
-               
-                if(encodedCube[10] == encodedCube[49]):
-                    tup =CubeObject.pos10(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1] 
-               
-                if(encodedCube[12] == encodedCube[49]):
-                    tup =CubeObject.pos12(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]     
-                 
-                if(encodedCube[14] == encodedCube[49]):
-                    tup =CubeObject.pos14(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]   
-              
-                if(encodedCube[16] == encodedCube[49]):
-                    tup =CubeObject.pos16(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]  
-
-                if(encodedCube[19] == encodedCube[49]):
-                    tup =CubeObject.pos19(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1] 
-
-                if(encodedCube[21] == encodedCube[49]):
-                    tup =CubeObject.pos21(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1] 
-
-                if(encodedCube[23] == encodedCube[49]):
-                    tup =CubeObject.pos23(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-
-                if(encodedCube[25] == encodedCube[49]):
-                    tup =CubeObject.pos25(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-               
-                if(encodedCube[28] == encodedCube[49]):
-                    tup =CubeObject.pos28(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]
-
-                if(encodedCube[30] == encodedCube[49]):
-                    tup =CubeObject.pos30(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]             
-
-                if(encodedCube[32] == encodedCube[49]):
-                    tup =CubeObject.pos32(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]       
-
-                if(encodedCube[34] == encodedCube[49]):
-                    tup =CubeObject.pos34(encodedCube, parms['solution'])
-                    encodedCube = tup[0]
-                    parms['solution'] = tup[1]   
+                encodedCube, tup = whiteCross(parms, CubeObject, tup, encodedCube)   
 
     
             #logic for flipping tiles over from yellow face to white (bottom)

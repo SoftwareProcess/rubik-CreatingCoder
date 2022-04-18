@@ -308,74 +308,6 @@ def middleLayerNeedsMoving(parms, CubeObject, tup, encodedCube):
         parms['solution'] = tup[1]
     return encodedCube
 
-
-def rotationInput(parms, rot, CubeObject, encodedCube, letter):
-    if (letter == 'R'):
-        #performs R rotation
-        rot = CubeObject.right(encodedCube)
-        ##sets dict after being rotated
-        parms['cube'] = rot
-        #sets status to ok
-        parms['status'] = 'ok'
-        #updates encodedCube for subsequent calls for rotations
-        encodedCube = rot
-    if (letter == 'r'):
-        rot = CubeObject.rightPrime(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-#NOTE: if letter is found empty, do F turn
-    if (letter == 'F'):
-        rot = CubeObject.front(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'f'):
-        rot = CubeObject.frontPrime(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'L'):
-        rot = CubeObject.left(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'l'):
-        rot = CubeObject.leftPrime(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'B'):
-        rot = CubeObject.back(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'b'):
-        rot = CubeObject.backPrime(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'U'):
-        rot = CubeObject.up(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'u'):
-        rot = CubeObject.upPrime(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'D'):
-        rot = CubeObject.down(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-    if (letter == 'd'):
-        rot = CubeObject.downPrime(encodedCube)
-        parms['cube'] = rot
-        parms['status'] = 'ok'
-        encodedCube = rot
-
 def _solve(parms):
     
     rot = ""
@@ -523,7 +455,82 @@ def _solve(parms):
                 del parms['cube']
                 break
             
-            rotationInput(parms, rot, CubeObject, encodedCube, letter)  
+            if(letter == 'R'):
+                #performs R rotation
+                rot = CubeObject.right(encodedCube)
+                ##sets dict after being rotated
+                parms['cube'] = rot
+                #sets status to ok
+                parms['status'] = 'ok'
+                #updates encodedCube for subsequent calls for rotations
+                encodedCube = rot
+        
+            if(letter == 'r'):
+                rot = CubeObject.rightPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+            
+            #NOTE: if letter is found empty, do F turn 
+            if(letter == 'F'):   
+                rot = CubeObject.front(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                  
+            if(letter == 'f'):   
+                rot = CubeObject.frontPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'L'):   
+                rot = CubeObject.left(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+        
+            if(letter == 'l'):   
+                rot = CubeObject.leftPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'B'):   
+                rot = CubeObject.back(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'b'):   
+                rot = CubeObject.backPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+        
+            if(letter == 'U'):   
+                rot = CubeObject.up(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'u'):   
+                rot = CubeObject.upPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot     
+        
+            if(letter == 'D'):   
+                rot = CubeObject.down(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'd'):   
+                rot = CubeObject.downPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot  
                      
           
     neededKeys = [ 'op', 'rotate', 'cube', 'status', 'solution']

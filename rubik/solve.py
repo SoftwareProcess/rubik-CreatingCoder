@@ -10,11 +10,6 @@
 import rubik.cube as rubik
 import rubik.check as check 
 
-
-    
-
-
-
 def _solve(parms):
     
     rot = ""
@@ -38,7 +33,6 @@ def _solve(parms):
     
     encodedCube = parms.get('cube',None)
     
-
     #this solves
     if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
          
@@ -55,13 +49,11 @@ def _solve(parms):
                         break
                     
                 encodedCube, tup = whiteCross(parms, CubeObject, tup, encodedCube)   
-
     
             #logic for flipping tiles over from yellow face to white (bottom)
             for i in range(4):
                 
                 encodedCube, tup = flipWhiteCross(parms, CubeObject, tup, encodedCube)
-    
     
                 if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[34] == encodedCube[31] 
                    and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
@@ -89,8 +81,7 @@ def _solve(parms):
                     
 #BOTOM RIGHT CORNERS
                 encodedCube, tup = bottomRight(parms, CubeObject, tup, encodedCube)
-                
-                
+                               
 #TOP LEFT CORNERS
                 if (encodedCube[0] == encodedCube[49] or encodedCube[27] == encodedCube[49] or encodedCube[18] == encodedCube[49] or encodedCube[9] == encodedCube[49]):
                     for i in range(4):
@@ -106,7 +97,6 @@ def _solve(parms):
                             encodedCube = rot
                             parms['solution'] = parms['solution'] + 'U'
                             
-
 #TOP RIGHT CORNERS
                 if (encodedCube[2] == encodedCube[49] or encodedCube[11] == encodedCube[49] or encodedCube[20] == encodedCube[49] or encodedCube[29] == encodedCube[49]):
                     for i in range(4):
@@ -129,8 +119,7 @@ def _solve(parms):
                 
                 encodedCube, tup = middleLayerReadyForAlg(parms, CubeObject, tup, encodedCube)
                     
-                if (CubeObject.allYellowOnTopDaisy(encodedCube) == True and CubeObject.middleLayerSolved(encodedCube) == False):   
-                    
+                if (CubeObject.allYellowOnTopDaisy(encodedCube) == True and CubeObject.middleLayerSolved(encodedCube) == False):    
                     encodedCube = middleLayerNeedsMoving(parms, CubeObject, tup, encodedCube)
                                       
                 else:    
@@ -238,43 +227,34 @@ def _solve(parms):
                 parms['cube'] = rot
                 parms['status'] = 'ok'
                 encodedCube = rot  
-                     
-          
-    neededKeys = [ 'op', 'rotate', 'cube', 'status', 'solution']
-      
-    
+                            
+    neededKeys = [ 'op', 'rotate', 'cube', 'status', 'solution']   
     result = {}  
     
     for key in parms:
         if key in neededKeys:
             result[key] = parms[key] 
     
-    
     if('cube' in result and result['cube']== ""):
         result['status'] = status
         del result['cube']
-    
-            
+             
     #removes op and rotate key value from dict
     del result['op']
         
     if('rotate' in result):
         del result['rotate']
-
-    ##
+    
     if(checkReturnsOkCube == False):
         result['status'] = status
         result.pop('cube', None)
-        result.pop('solution', None)
-        
+        result.pop('solution', None)     
 
     if(deleteCube):
         result.pop('cube', None)
         
     return result
 ###End of Solve###
-
-
 
 def whiteCross(parms, CubeObject, tup, encodedCube):
     if (encodedCube[46] == encodedCube[49]):

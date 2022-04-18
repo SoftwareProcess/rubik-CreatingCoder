@@ -13,6 +13,269 @@ import rubik.check as check
 
     
 
+
+
+def _solve(parms):
+    
+    rot = ""
+    allowedLettersForRotation = 'FfRrBbLlUuDd'
+    CubeObject = rubik.Cube()
+    deleteCube = False
+    tup =()
+   
+    checkVal = check._check(parms)
+    status = checkVal.get('status', None)
+    
+    if(status =='ok'):
+        checkReturnsOkCube = True
+    else: checkReturnsOkCube = False
+    
+    
+    if('rotate' in parms):
+        rotation = parms.get('rotate', None)
+    else:
+        rotation = ''
+    
+    encodedCube = parms.get('cube',None)
+    
+
+    #this solves
+    if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
+         
+        ecLength = len(str(encodedCube))       
+        if(encodedCube != "" and ecLength == 54):
+            parms['solution'] = ''
+            deleteCube = True
+            
+            for i in range(4):
+#=================Start of Logic for finding solution for white cross=================   
+
+                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[34] == encodedCube[31] 
+                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
+                        break
+                    
+                encodedCube, tup = whiteCross(parms, CubeObject, tup, encodedCube)   
+
+    
+            #logic for flipping tiles over from yellow face to white (bottom)
+            for i in range(4):
+                
+                encodedCube, tup = flipWhiteCross(parms, CubeObject, tup, encodedCube)
+    
+    
+                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[34] == encodedCube[31] 
+                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
+                        break
+                    
+                rot = CubeObject.up(encodedCube)
+                parms['cube'] = rot
+                encodedCube = rot
+                parms['solution'] = parms['solution'] + 'U'
+                     
+
+##Start of White Corners
+            for i in range(5):
+            
+                if(CubeObject.CornersAreSolved(encodedCube) == True):
+                    break   
+                
+                encodedCube, tup = whiteCorners(parms, CubeObject, tup, encodedCube)
+                    
+#BOTTOM    
+                encodedCube, tup = whiteBottom(parms, CubeObject, tup, encodedCube)
+                    
+#BOTTOM LEFT CORNERS
+                encodedCube, tup = bottomLeft(parms, CubeObject, tup, encodedCube)
+                    
+#BOTOM RIGHT CORNERS
+                encodedCube, tup = bottomRight(parms, CubeObject, tup, encodedCube)
+                
+                
+#TOP LEFT CORNERS
+                if (encodedCube[0] == encodedCube[49] or encodedCube[27] == encodedCube[49] or encodedCube[18] == encodedCube[49] or encodedCube[9] == encodedCube[49]):
+                    for i in range(4):
+                        encodedCube, tup = topLeft(parms, CubeObject, tup, encodedCube)
+                        
+                        
+                        if(encodedCube[0] != encodedCube[49] and encodedCube[27] != encodedCube[49] and encodedCube[18] != encodedCube[49] and encodedCube[9] != encodedCube[49]):
+                            break
+                        
+                        else:
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                            
+
+#TOP RIGHT CORNERS
+                if (encodedCube[2] == encodedCube[49] or encodedCube[11] == encodedCube[49] or encodedCube[20] == encodedCube[49] or encodedCube[29] == encodedCube[49]):
+                    for i in range(4):
+                        encodedCube, tup = topRight(parms, CubeObject, tup, encodedCube)
+                        
+                        if(encodedCube[2] != encodedCube[49] and encodedCube[11] != encodedCube[49] and encodedCube[20] != encodedCube[49] and encodedCube[29] != encodedCube[49]):
+                            break
+                        
+                        else:
+                            rot = CubeObject.up(encodedCube)
+                            parms['cube'] = rot
+                            encodedCube = rot
+                            parms['solution'] = parms['solution'] + 'U'
+                            
+#MIDDLE LAYER
+            for i in range(32):
+                
+                if(CubeObject.middleLayerSolved(encodedCube) == True):
+                    break   
+                
+                encodedCube, tup = middleLayerReadyForAlg(parms, CubeObject, tup, encodedCube)
+                    
+                if (CubeObject.allYellowOnTopDaisy(encodedCube) == True and CubeObject.middleLayerSolved(encodedCube) == False):   
+                    
+                    encodedCube = middleLayerNeedsMoving(parms, CubeObject, tup, encodedCube)
+                                      
+                else:    
+                    rot = CubeObject.up(encodedCube)
+                    parms['cube'] = rot
+                    encodedCube = rot
+                    parms['solution'] = parms['solution'] + 'U'
+                    
+            parms['solution'] = CubeObject.RemoveExtraUpSpins(parms['solution'])
+            parms['status'] = 'ok'
+
+    ################################end of cube solution finder#########################################
+    
+    #if statement skips over for loop if NoneType
+    if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms and checkReturnsOkCube == True):
+        
+        #for statement iterates through Rotation letters one at a time
+        #and performs the necessary moves
+        for letter in rotation:
+        
+            if (letter not in allowedLettersForRotation and letter !="" and letter != None):
+                parms['status']= 'error: invalid rotation'
+                del parms['cube']
+                break
+            
+            #If cube is empty
+            if(parms['cube'] == ''):
+                parms['status']= 'error: invalid rotation'
+                del parms['cube']
+                break
+            
+            if(letter == 'R'):
+                #performs R rotation
+                rot = CubeObject.right(encodedCube)
+                ##sets dict after being rotated
+                parms['cube'] = rot
+                #sets status to ok
+                parms['status'] = 'ok'
+                #updates encodedCube for subsequent calls for rotations
+                encodedCube = rot
+        
+            if(letter == 'r'):
+                rot = CubeObject.rightPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+            
+            #NOTE: if letter is found empty, do F turn 
+            if(letter == 'F'):   
+                rot = CubeObject.front(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                  
+            if(letter == 'f'):   
+                rot = CubeObject.frontPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'L'):   
+                rot = CubeObject.left(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+        
+            if(letter == 'l'):   
+                rot = CubeObject.leftPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'B'):   
+                rot = CubeObject.back(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'b'):   
+                rot = CubeObject.backPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+        
+            if(letter == 'U'):   
+                rot = CubeObject.up(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'u'):   
+                rot = CubeObject.upPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot     
+        
+            if(letter == 'D'):   
+                rot = CubeObject.down(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot
+                
+            if(letter == 'd'):   
+                rot = CubeObject.downPrime(encodedCube)
+                parms['cube'] = rot
+                parms['status'] = 'ok'
+                encodedCube = rot  
+                     
+          
+    neededKeys = [ 'op', 'rotate', 'cube', 'status', 'solution']
+      
+    
+    result = {}  
+    
+    for key in parms:
+        if key in neededKeys:
+            result[key] = parms[key] 
+    
+    
+    if('cube' in result and result['cube']== ""):
+        result['status'] = status
+        del result['cube']
+    
+            
+    #removes op and rotate key value from dict
+    del result['op']
+        
+    if('rotate' in result):
+        del result['rotate']
+
+    ##
+    if(checkReturnsOkCube == False):
+        result['status'] = status
+        result.pop('cube', None)
+        result.pop('solution', None)
+        
+
+    if(deleteCube):
+        result.pop('cube', None)
+        
+    return result
+###End of Solve###
+
+
+
 def whiteCross(parms, CubeObject, tup, encodedCube):
     if (encodedCube[46] == encodedCube[49]):
         tup = CubeObject.pos46(encodedCube, parms['solution'])
@@ -306,268 +569,6 @@ def middleLayerNeedsMoving(parms, CubeObject, tup, encodedCube):
         tup = CubeObject.orangeFaceMiddleRight(encodedCube, parms['solution'])
         encodedCube = tup[0]
         parms['solution'] = tup[1]
-    return encodedCube
-
-def _solve(parms):
-    
-    rot = ""
-    allowedLettersForRotation = 'FfRrBbLlUuDd'
-    CubeObject = rubik.Cube()
-    deleteCube = False
-    tup =()
-   
-    checkVal = check._check(parms)
-    status = checkVal.get('status', None)
-    
-    if(status =='ok'):
-        checkReturnsOkCube = True
-    else: checkReturnsOkCube = False
-    
-    
-    if('rotate' in parms):
-        rotation = parms.get('rotate', None)
-    else:
-        rotation = ''
-    
-    encodedCube = parms.get('cube',None)
-    
-
-    #this solves
-    if(rotation =='' or rotation == None or 'rotate' not in parms and checkReturnsOkCube == True):
-         
-        ecLength = len(str(encodedCube))       
-        if(encodedCube != "" and ecLength == 54):
-            parms['solution'] = ''
-            deleteCube = True
-            
-            for i in range(4):
-#=================Start of Logic for finding solution for white cross=================   
-
-                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[34] == encodedCube[31] 
-                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
-                        break
-                    
-                encodedCube, tup = whiteCross(parms, CubeObject, tup, encodedCube)   
-
-    
-            #logic for flipping tiles over from yellow face to white (bottom)
-            for i in range(4):
-                
-                encodedCube, tup = flipWhiteCross(parms, CubeObject, tup, encodedCube)
-    
-    
-                if(encodedCube[46]== encodedCube[49] and encodedCube[7] == encodedCube[4] and encodedCube[48]== encodedCube[49] and encodedCube[34] == encodedCube[31] 
-                   and encodedCube[50]== encodedCube[49] and encodedCube[16] == encodedCube[13] and encodedCube[52]== encodedCube[49] and encodedCube[25] == encodedCube[22]):
-                        break
-                    
-                rot = CubeObject.up(encodedCube)
-                parms['cube'] = rot
-                encodedCube = rot
-                parms['solution'] = parms['solution'] + 'U'
-                     
-
-##Start of White Corners
-            for i in range(5):
-            
-                if(CubeObject.CornersAreSolved(encodedCube) == True):
-                    break   
-                
-                encodedCube, tup = whiteCorners(parms, CubeObject, tup, encodedCube)
-                    
-#BOTTOM    
-                encodedCube, tup = whiteBottom(parms, CubeObject, tup, encodedCube)
-                    
-#BOTTOM LEFT CORNERS
-                encodedCube, tup = bottomLeft(parms, CubeObject, tup, encodedCube)
-                    
-#BOTOM RIGHT CORNERS
-                encodedCube, tup = bottomRight(parms, CubeObject, tup, encodedCube)
-                
-                
-#TOP LEFT CORNERS
-                if (encodedCube[0] == encodedCube[49] or encodedCube[27] == encodedCube[49] or encodedCube[18] == encodedCube[49] or encodedCube[9] == encodedCube[49]):
-                    for i in range(4):
-                        encodedCube, tup = topLeft(parms, CubeObject, tup, encodedCube)
-                        
-                        
-                        if(encodedCube[0] != encodedCube[49] and encodedCube[27] != encodedCube[49] and encodedCube[18] != encodedCube[49] and encodedCube[9] != encodedCube[49]):
-                            break
-                        
-                        else:
-                            rot = CubeObject.up(encodedCube)
-                            parms['cube'] = rot
-                            encodedCube = rot
-                            parms['solution'] = parms['solution'] + 'U'
-                            
-
-#TOP RIGHT CORNERS
-                if (encodedCube[2] == encodedCube[49] or encodedCube[11] == encodedCube[49] or encodedCube[20] == encodedCube[49] or encodedCube[29] == encodedCube[49]):
-                    for i in range(4):
-                        encodedCube, tup = topRight(parms, CubeObject, tup, encodedCube)
-                        
-                        if(encodedCube[2] != encodedCube[49] and encodedCube[11] != encodedCube[49] and encodedCube[20] != encodedCube[49] and encodedCube[29] != encodedCube[49]):
-                            break
-                        
-                        else:
-                            rot = CubeObject.up(encodedCube)
-                            parms['cube'] = rot
-                            encodedCube = rot
-                            parms['solution'] = parms['solution'] + 'U'
-                            
-#MIDDLE LAYER
-            for i in range(32):
-                
-                if(CubeObject.middleLayerSolved(encodedCube) == True):
-                    break   
-                
-                encodedCube, tup = middleLayerReadyForAlg(parms, CubeObject, tup, encodedCube)
-                    
-                if (CubeObject.allYellowOnTopDaisy(encodedCube) == True and CubeObject.middleLayerSolved(encodedCube) == False):   
-                    
-                    encodedCube = middleLayerNeedsMoving(parms, CubeObject, tup, encodedCube)
-                                      
-                else:    
-                    rot = CubeObject.up(encodedCube)
-                    parms['cube'] = rot
-                    encodedCube = rot
-                    parms['solution'] = parms['solution'] + 'U'
-                    
-            parms['solution'] = CubeObject.RemoveExtraUpSpins(parms['solution'])
-            parms['status'] = 'ok'
-
-    ################################end of cube solution finder#########################################
-    
-    #if statement skips over for loop if NoneType
-    if(parms.get('rotate') != None and parms.get('rotate') != "" and 'rotate' in parms and checkReturnsOkCube == True):
-        
-        #for statement iterates through Rotation letters one at a time
-        #and performs the necessary moves
-        for letter in rotation:
-        
-            if (letter not in allowedLettersForRotation and letter !="" and letter != None):
-                parms['status']= 'error: invalid rotation'
-                del parms['cube']
-                break
-            
-            #If cube is empty
-            if(parms['cube'] == ''):
-                parms['status']= 'error: invalid rotation'
-                del parms['cube']
-                break
-            
-            if(letter == 'R'):
-                #performs R rotation
-                rot = CubeObject.right(encodedCube)
-                ##sets dict after being rotated
-                parms['cube'] = rot
-                #sets status to ok
-                parms['status'] = 'ok'
-                #updates encodedCube for subsequent calls for rotations
-                encodedCube = rot
-        
-            if(letter == 'r'):
-                rot = CubeObject.rightPrime(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-            
-            #NOTE: if letter is found empty, do F turn 
-            if(letter == 'F'):   
-                rot = CubeObject.front(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                  
-            if(letter == 'f'):   
-                rot = CubeObject.frontPrime(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                
-            if(letter == 'L'):   
-                rot = CubeObject.left(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-        
-            if(letter == 'l'):   
-                rot = CubeObject.leftPrime(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                
-            if(letter == 'B'):   
-                rot = CubeObject.back(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                
-            if(letter == 'b'):   
-                rot = CubeObject.backPrime(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-        
-            if(letter == 'U'):   
-                rot = CubeObject.up(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                
-            if(letter == 'u'):   
-                rot = CubeObject.upPrime(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot     
-        
-            if(letter == 'D'):   
-                rot = CubeObject.down(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot
-                
-            if(letter == 'd'):   
-                rot = CubeObject.downPrime(encodedCube)
-                parms['cube'] = rot
-                parms['status'] = 'ok'
-                encodedCube = rot  
-                     
-          
-    neededKeys = [ 'op', 'rotate', 'cube', 'status', 'solution']
-      
-    
-    result = {}  
-    
-    for key in parms:
-        if key in neededKeys:
-            result[key] = parms[key] 
-    
-    
-    if('cube' in result and result['cube']== ""):
-        result['status'] = status
-        del result['cube']
-    
-            
-    #removes op and rotate key value from dict
-    del result['op']
-        
-    if('rotate' in result):
-        del result['rotate']
-
-    ##
-    if(checkReturnsOkCube == False):
-        result['status'] = status
-        result.pop('cube', None)
-        result.pop('solution', None)
-        
-
-    if(deleteCube):
-        result.pop('cube', None)
-        
-    return result
-###End of Solve###
-
-
-    
+    return encodedCube    
 
 
